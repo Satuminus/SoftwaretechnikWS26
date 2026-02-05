@@ -9,7 +9,7 @@ package "Client-Schicht" {
 package "Server-Schicht" {
   [REST API]
   [Business Logic]
-  [Auth & Authorization]
+  [Authentification & Authorization]
 }
 
 package "Datenbank-Schicht" {
@@ -20,7 +20,7 @@ package "Datenbank-Schicht" {
 [Mobile App] --> [REST API] : HTTPS / JSON
 
 [REST API] --> [Business Logic]
-[Business Logic] --> [Auth & Authorization]
+[Business Logic] --> [Authentification & Authorization]
 
 [Business Logic] --> [Relationale Datenbank]
 
