@@ -1,0 +1,60 @@
+@startuml
+title Übersicht – Zusammenhang der logischen Datenmodelle
+skinparam classAttributeIconSize 0
+hide attributes
+hide methods
+
+' Zentrale Entitäten
+class users
+class groups
+class events
+
+' Community-Funktionen
+class notes
+class polls
+class payments
+class refunds
+class tasks
+
+' Dienstleister & Abrechnung
+class providers
+class service_requests
+class offers
+class invoices
+
+' Ressourcenplanung
+class materials
+class employees
+
+' -----------------------
+' Zentrale Beziehungen
+' -----------------------
+groups --> users : Mitgliedschaften
+events --> groups
+
+notes --> groups
+polls --> groups
+payments --> groups
+refunds --> groups
+
+tasks --> events
+
+polls --> users : Stimmen
+payments --> users
+refunds --> users
+
+' Dienstleister-Fluss
+service_requests --> providers
+offers --> service_requests
+invoices --> offers
+
+' Verbindung zu Events
+offers --> events : Eventbezug
+
+' Ressourcen
+materials --> providers
+employees --> providers
+materials --> offers
+employees --> offers
+
+@enduml

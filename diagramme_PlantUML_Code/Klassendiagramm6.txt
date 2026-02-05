@@ -1,0 +1,90 @@
+@startuml
+title Logisches Datenmodell – Ressourcenplanung (Dienstleister)
+hide methods
+skinparam classAttributeIconSize 0
+
+class material_categories <<table>> {
+  PK category_id
+  name <<unique>>
+  is_active          ' optional (soft delete)
+  created_at
+}
+
+class materials <<table>> {
+  PK material_id
+  FK provider_id
+  FK category_id
+  name
+  available_qty
+  power_watt
+  storage_dimensions
+  storage_weight
+  flight_weight
+  purchase_price
+  rent_price_on_day
+  rent_count
+  maintenance_cycle_days
+  last_maintenance_at
+  storage_location
+  image_url
+  amortization_progress
+  created_at
+  updated_at
+}
+
+class material_maintenance <<table>> {
+  PK maintenance_id
+  FK material_id
+  due_at
+  performed_at
+  note
+}
+
+class material_bookings <<table>> {
+  PK booking_id
+  FK offer_id
+  FK material_id
+  start_at
+  end_at
+  qty
+  created_at
+}
+
+class employees <<table>> {
+  PK employee_id
+  FK provider_id
+  name
+  qualification_level  ' Fachkraft/Meister/Aushilfe
+  specialty            ' Licht/Ton/...
+  driver_license_class
+  created_at
+  updated_at
+}
+
+class employee_assignments <<table>> {
+  PK assignment_id
+  FK offer_id
+  FK employee_id
+  start_at
+  end_at
+  status               ' planned/confirmed/sick/vacation
+  created_at
+}
+
+' -----------------------
+' Unidirektionale Beziehungen (FK -> PK)
+' -----------------------
+materials --> providers : FK provider_id
+materials --> material_categories : FK category_id
+
+material_maintenance --> materials : FK material_id
+
+material_bookings --> offers : FK offer_id
+material_bookings --> materials : FK material_id
+
+employees --> providers : FK provider_id
+
+employee_assignments --> offers : FK offer_id
+employee_assignments --> employees : FK employee_id
+
+@enduml

@@ -1,0 +1,93 @@
+@startuml
+title Logisches Datenmodell – Dienstleister / Abrechnung
+hide methods
+skinparam classAttributeIconSize 0
+
+class providers <<table>> {
+  PK provider_id
+  FK user_id            ' optional: wenn Dienstleister-Login existiert
+  company_name
+  homepage_slug <<unique>>
+  created_at
+}
+
+class service_requests <<table>> {
+  PK request_id
+  FK provider_id
+  FK requester_user_id   ' optional (nullable), falls anonymer Kunde möglich
+  organizer_name
+  organizer_email
+  location
+  start_at
+  end_at
+  budget
+  budget_flex
+  off_days
+  status   ' new/in_progress/offered/rejected/converted
+  created_at
+  updated_at
+}
+
+class offers <<table>> {
+  PK offer_id
+  FK request_id
+  FK provider_id
+  net
+  gross
+  discount
+  created_at
+  status  ' sent/accepted/rejected
+}
+
+class invoices <<table>> {
+  PK invoice_id
+  FK offer_id
+  FK provider_id
+  invoice_number <<unique>>
+  net
+  gross
+  discount
+  created_at
+  due_at
+  status      ' open/paid/overdue/reminded
+  bank_details
+  paid_at
+}
+
+class reminders <<table>> {
+  PK reminder_id
+  FK invoice_id
+  fee
+  new_due_at
+  created_at
+}
+
+class provider_ratings <<table>> {
+  PK rating_id
+  FK provider_id
+  FK user_id
+  stars
+  text
+  created_at
+}
+
+' -----------------------
+' Unidirektionale Beziehungen (FK -> PK)
+' -----------------------
+providers --> users : FK user_id (optional)
+
+service_requests --> providers : FK provider_id
+service_requests --> users : FK requester_user_id (optional)
+
+offers --> service_requests : FK request_id
+offers --> providers : FK provider_id
+
+invoices --> offers : FK offer_id
+invoices --> providers : FK provider_id
+
+reminders --> invoices : FK invoice_id
+
+provider_ratings --> providers : FK provider_id
+provider_ratings --> users : FK user_id
+
+@enduml

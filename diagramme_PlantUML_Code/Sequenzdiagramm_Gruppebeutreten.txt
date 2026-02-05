@@ -1,0 +1,33 @@
+@startuml
+title Sequenzdiagramm – Gruppe per Beitrittscode beitreten (US-12)
+
+actor "Benutzer" as U
+boundary "Web/Mobile Client" as C
+control "REST API" as API
+control "GroupService" as S
+database "DB" as DB
+
+U -> C : Code eingeben + \"Beitreten\" klicken
+C -> API : POST /groups/{groupId}/members/join\n{ join_code }\nAuthorization: Bearer token
+
+API -> S : joinGroup(userId, groupId, join_code)
+
+S -> DB : SELECT group_id, join_code, status\nFROM groups WHERE group_id = ?
+DB --> S : Gruppe (join_code, status)
+
+S -> DB : SELECT status\nFROM group_memberships\nWHERE group_id=? AND user_id=?
+DB --> S : (kein Eintrag) / Status vorhanden
+
+alt Code korrekt UND Gruppe aktiv UND noch kein Mitglied
+  S -> DB : INSERT INTO group_memberships\n(group_id, user_id, role_name, status, joined_at)\nVALUES (..., 'MITGLIED','active', now())
+  DB --> S : OK
+  S --> API : Erfolg (membership_id)
+  API --> C : 201 Created + Mitgliedschaft
+  C --> U : Bestätigung + Gruppenansicht
+else ungültiger Code / gesperrt / bereits Mitglied
+  S --> API : Fehler (z.B. 400/403/409)
+  API --> C : Error JSON
+  C --> U : Fehlermeldung anzeigen
+end
+
+@enduml

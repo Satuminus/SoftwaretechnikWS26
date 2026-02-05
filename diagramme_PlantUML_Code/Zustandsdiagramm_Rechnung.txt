@@ -1,0 +1,32 @@
+@startuml
+title Zustandsdiagramm: Rechnung
+
+[*] --> Entwurf : Rechnung erstellen
+
+Entwurf --> Offen : Rechnung versenden
+Entwurf --> Storniert : Rechnung verwerfen
+
+Offen --> Bezahlt : Zahlung eingegangen / bezahlt markieren
+Offen --> Ueberfaellig : Frist abgelaufen
+
+Ueberfaellig --> Bezahlt : Zahlung eingegangen / bezahlt markieren
+Ueberfaellig --> Gemahnt : Mahnung erzeugen
+
+Gemahnt --> Bezahlt : Zahlung eingegangen / bezahlt markieren
+Gemahnt --> Gemahnt : Erinnerung senden [z.B. alle 7 Tage]
+
+Bezahlt --> [*]
+Storniert --> [*]
+
+note right of Ueberfaellig
+In Anforderungen: Erinnerung nach
+\"gewissem Zeitraum (üblich 30 Tage)\"
+=> Frist/Reminder in NFA/Regeln beschreiben.
+end note
+
+note right of Gemahnt
+Mahnung enthält Mahngebühr und
+neuen Zahlungszeitraum.
+end note
+
+@enduml

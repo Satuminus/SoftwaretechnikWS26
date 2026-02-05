@@ -1,0 +1,27 @@
+@startuml
+title Drei-Schichten-Architektur – EventHub
+
+package "Client-Schicht" {
+  [Web Client]
+  [Mobile App]
+}
+
+package "Server-Schicht" {
+  [REST API]
+  [Business Logic]
+  [Auth & Authorization]
+}
+
+package "Datenbank-Schicht" {
+  [Relationale Datenbank]
+}
+
+[Web Client] --> [REST API] : HTTPS / JSON
+[Mobile App] --> [REST API] : HTTPS / JSON
+
+[REST API] --> [Business Logic]
+[Business Logic] --> [Auth & Authorization]
+
+[Business Logic] --> [Relationale Datenbank]
+
+@enduml

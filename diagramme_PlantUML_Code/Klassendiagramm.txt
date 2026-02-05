@@ -1,0 +1,304 @@
+@startuml
+hide circle
+skinparam classAttributeIconSize 0
+
+' =========================
+' Identity / Accounts
+' =========================
+class Benutzer {
+  vorname
+  nachname
+  email
+  benutzername
+  passwortHash
+  passwortSalt
+  bevorzugterKanal
+  sprache
+  twoFA_aktiv
+  datenschutzAkzeptiertAm
+  datenschutzVersion
+}
+
+class Institution {
+  name
+  typ
+  lizenzModell  ' community/premium
+}
+
+class Rolle {
+  name  ' z.B. ORGANISATOR, MITGLIED, LESE, INSTITUTION_ADMIN, DIENSTLEISTER, MITARBEITER
+}
+
+class Mitgliedschaft {
+  beitrittsDatum
+  status  ' aktiv/gesperrt/verlassen
+}
+
+Institution "0..1" o-- "0..*" Benutzer : verwaltet Nutzer
+Benutzer "1" -- "0..*" Mitgliedschaft
+Mitgliedschaft "1" -- "1" Gruppe
+Mitgliedschaft "1" -- "1" Rolle
+
+' =========================
+' Gruppen / Events
+' =========================
+class Gruppe {
+  name
+  beschreibung
+  beitrittscode
+  erstelltAm
+  status  ' aktiv/archiviert/geloescht
+}
+
+class Event {
+  titel
+  beschreibung
+  start
+  ende
+  ort
+  minTeilnehmer
+  mindestBudget
+  status  ' geplant/aktiv/abgeschlossen/archiviert
+  publicSlug  ' feste URL
+}
+
+Benutzer "1" -- "0..*" Gruppe : erstellt >
+Gruppe "1" o-- "0..*" Event : umfasst
+
+' =========================
+' Notizen / Umfragen / Termine
+' =========================
+abstract class Notiz {
+  erstelltAm
+  geaendertAm
+  typFarbe
+}
+
+class FreitextNotiz {
+  text
+}
+
+class TerminNotiz {
+  titel
+  datumZeit
+  ort
+  details
+}
+
+class AusgabeNotiz {
+  betrag
+  bezeichnung
+}
+
+class Umfrage {
+  frage
+  mehrfachwahl
+  erstelltAm
+  endetAm
+}
+
+class UmfrageOption {
+  text
+}
+
+class Stimme {
+  abgegebenAm
+}
+
+Gruppe "1" *-- "0..*" Notiz : Notizen
+Notiz <|-- FreitextNotiz
+Notiz <|-- TerminNotiz
+Notiz <|-- AusgabeNotiz
+
+Gruppe "1" *-- "0..*" Umfrage
+Umfrage "1" *-- "2..*" UmfrageOption
+Benutzer "1" -- "0..*" Umfrage : erstellt >
+Benutzer "1" -- "0..*" Stimme
+Stimme "1" -- "1" UmfrageOption
+
+' =========================
+' Finanzen (Einzahlungen / Rückzahlungen / Ausgaben)
+' =========================
+class Einzahlung {
+  betrag
+  datum
+  kanal
+  kommentar
+}
+
+class Rueckzahlung {
+  betrag
+  datum
+  begruendung
+}
+
+class Kassensturz {
+  ' abgeleitet/berichtend (keine Persistenz nötig)
+}
+
+Gruppe "1" *-- "0..*" Einzahlung
+Benutzer "1" -- "0..*" Einzahlung : taetigt >
+Gruppe "1" *-- "0..*" Rueckzahlung
+Benutzer "1" -- "0..*" Rueckzahlung : empfaengt >
+
+' =========================
+' Aufgabenmanagement
+' =========================
+class Aufgabe {
+  titel
+  beschreibung
+  faelligAm
+  status  ' offen/inBearbeitung/erledigt
+  erstelltAm
+}
+
+class AufgabenZuweisung {
+  uebernommenAm
+  erinnertAm
+}
+
+Event "1" *-- "0..*" Aufgabe
+Aufgabe "1" -- "0..*" AufgabenZuweisung
+AufgabenZuweisung "1" -- "1" Benutzer : verantwortlich
+
+' =========================
+' Medien / Dokumentation
+' =========================
+class Medium {
+  typ  ' foto/video
+  url
+  hochgeladenAm
+  beschreibung
+}
+
+class Kommentar {
+  text
+  erstelltAm
+}
+
+Event "1" *-- "0..*" Medium
+Benutzer "1" -- "0..*" Medium : lädt hoch >
+Event "1" *-- "0..*" Kommentar
+Benutzer "1" -- "0..*" Kommentar : schreibt >
+
+' =========================
+' Dienstleister / B2B (Premium)
+' =========================
+class Dienstleister {
+  firmenname
+  homepageSlug
+  durchschnittsBewertung
+}
+
+class Anfrage {
+  ort
+  start
+  ende
+  veranstalterName
+  veranstalterEmail
+  budget
+  budgetSpielraum
+  offDays
+  status ' neu/inBearbeitung/angebot/abgelehnt/konvertiert
+}
+
+class Angebot {
+  netto
+  brutto
+  rabatt
+  erstelltAm
+  status ' gesendet/angenommen/abgelehnt
+}
+
+class Rechnung {
+  rechnungsnummer
+  netto
+  brutto
+  rabatt
+  erstelltAm
+  faelligAm
+  status ' offen/bezahlt/ueberfaellig/gemahnt
+  kontodaten
+}
+
+class Mahnung {
+  mahngebuehr
+  neuerFaelligAm
+  erstelltAm
+}
+
+Benutzer "0..1" -- "0..*" Anfrage : stellt (Kunde) >
+Dienstleister "1" o-- "0..*" Anfrage : erhaelt
+Anfrage "1" o-- "0..1" Angebot : erzeugt >
+Angebot "1" o-- "0..1" Rechnung : nach Event >
+Rechnung "1" o-- "0..*" Mahnung
+
+class Bewertung {
+  sterne
+  text
+  erstelltAm
+}
+Dienstleister "1" o-- "0..*" Bewertung
+Benutzer "1" -- "0..*" Bewertung : verfasst >
+
+' =========================
+' Ressourcenplanung (Dienstleister)
+' =========================
+class Material {
+  name
+  verfuegbareAnzahl
+  leistungsaufnahme
+  lagerMasse
+  lagerGewicht
+  flugGewicht
+  anschaffungspreis
+  verleihpreisOnDay
+  anzahlVerleihungen
+  wartungszyklusTage
+  letzteWartung
+  lagerstandort
+  bildUrl
+  amortisationFortschritt
+}
+
+class MaterialKategorie {
+  name
+}
+
+class Wartung {
+  faelligAm
+  durchgeführtAm
+  notiz
+}
+
+class MaterialBuchung {
+  von
+  bis
+  anzahl
+}
+
+class Mitarbeiter {
+  name
+  qualifikation  ' Fachkraft/Meister/Aushilfe
+  fachgebiet     ' Licht/Ton/...
+  fuehrerschein
+}
+
+class MitarbeiterEinsatz {
+  von
+  bis
+  rolleImEvent
+  status ' geplant/bestaetigt/krank/urlaub
+}
+
+Dienstleister "1" *-- "0..*" Material
+MaterialKategorie "1" o-- "0..*" Material
+Material "1" *-- "0..*" Wartung
+Angebot "0..1" o-- "0..*" MaterialBuchung
+MaterialBuchung "1" -- "1" Material
+
+Dienstleister "1" *-- "0..*" Mitarbeiter
+Angebot "0..1" o-- "0..*" MitarbeiterEinsatz
+MitarbeiterEinsatz "1" -- "1" Mitarbeiter
+
+@enduml

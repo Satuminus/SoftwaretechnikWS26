@@ -1,0 +1,43 @@
+@startuml
+title Zustandsdiagramm: Event
+
+[*] --> Entwurf : Event anlegen
+
+Entwurf --> Geplant : Event speichern/planen
+Entwurf --> Gelöscht : Event löschen
+
+state Geplant {
+  [*] --> Bedingungen_pruefen
+  Bedingungen_pruefen --> Bedingungen_nicht_erfuellt : [teilnehmerCount < minTeilnehmer OR eingezahltSumme < mindestBudget]
+  Bedingungen_pruefen --> Freigeschaltet : [teilnehmerCount >= minTeilnehmer AND eingezahltSumme >= mindestBudget]
+
+  Bedingungen_nicht_erfuellt --> Bedingungen_pruefen : Teilnehmerbeitritt / Zahlungseingang / min-Werte ändern
+  Freigeschaltet --> Bedingungen_pruefen : Teilnehmer verlässt / Zahlung storniert / min-Werte erhöhen
+}
+
+Geplant --> Abgebrochen : Organisator bricht ab
+Freigeschaltet --> Aktiv : Startzeit erreicht / Organisator startet
+Geplant --> Aktiv : Startzeit erreicht [Bedingungen optional ignoriert]*
+
+note right of Geplant
+* Optional: Nur falls ihr erlaubt,
+dass ein Organisator trotzdem startet.
+Sonst diese Transition entfernen.
+end note
+
+Aktiv --> Abgeschlossen : Endzeit erreicht / Organisator beendet
+
+Abgeschlossen --> Archiviert : Archivieren (manuell oder nach Zeit)
+Geplant --> Archiviert : Auto-Archivierung nach Zeitraum
+Abgebrochen --> Archiviert : Auto-Archivierung nach Zeitraum
+
+Archiviert --> [*]
+
+' Löschpfade (je nach Policy)
+Geplant --> Gelöscht : Gruppe/Event löschen
+Abgeschlossen --> Gelöscht : Gruppe löschen (hard delete)
+Archiviert --> Gelöscht : Datenlöschung (DSGVO/Retention)
+
+state Gelöscht <<final>>
+
+@enduml
