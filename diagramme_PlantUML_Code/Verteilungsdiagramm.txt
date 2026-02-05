@@ -1,0 +1,47 @@
+@startuml
+title Verteilungsdiagramm (Deployment) – EventHub
+skinparam shadowing false
+
+' ----------------------------
+' Clients
+' ----------------------------
+node "Client-Gerät\n(Browser)" as WebClient {
+  artifact "Web UI\n(HTML/CSS/JS)" as WebUI
+}
+
+node "Client-Gerät\n(Mobile App)" as MobileClient {
+  artifact "Mobile App\n(iOS/Android)" as MobileApp
+}
+
+' ----------------------------
+' Server / Backend
+' ----------------------------
+node "Backend-Server\n(App Server)" as AppServer {
+  artifact "EventHub Backend\nREST API" as Backend
+  component "Auth & Authorization" as Auth
+  component "Business Logic" as Logic
+}
+
+database "Datenbank-Server\n(RDBMS)" as DBServer {
+  artifact "EventHub DB\n(Tabellen/Schema)" as DB
+}
+
+' ----------------------------
+' Optionale externe Systeme
+' ----------------------------
+node "Notification Provider\n(E-Mail/SMS/Push)" as Notify
+node "Kalenderdienst\n(z.B. CalDAV/Google)" as Calendar
+node "Objektspeicher\n(Bilder/Videos)" as Storage
+
+' ----------------------------
+' Verbindungen
+' ----------------------------
+WebUI --> Backend : HTTPS / REST (JSON)
+MobileApp --> Backend : HTTPS / REST (JSON)
+
+Backend --> DB : DB-Verbindung (SQL)
+Backend --> Notify : HTTPS API\n(Benachrichtigungen)
+Backend --> Calendar : HTTPS API\n(Kalendersync)
+Backend --> Storage : HTTPS API\n(Medien Upload/Download)
+
+@enduml

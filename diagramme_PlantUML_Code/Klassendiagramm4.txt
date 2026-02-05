@@ -1,0 +1,72 @@
+@startuml
+title Logisches Datenmodell – Finanzen / Aufgaben
+hide methods
+skinparam classAttributeIconSize 0
+
+' =========================
+' Finanzen (Bewegungsdaten)
+' =========================
+class payments <<table>> {
+  PK payment_id
+  FK group_id
+  FK user_id
+  amount
+  paid_at
+  channel
+  comment
+  status        ' booked/deleted/reversed
+  created_at
+}
+
+class refunds <<table>> {
+  PK refund_id
+  FK group_id
+  FK user_id              ' Empfänger
+  FK initiated_by_user_id ' Organisator
+  amount
+  refunded_at
+  reason
+  created_at
+}
+
+' =========================
+' Aufgabenmanagement
+' =========================
+class tasks <<table>> {
+  PK task_id
+  FK event_id
+  FK created_by_user_id
+  title
+  description
+  due_at
+  status        ' open/in_progress/done
+  created_at
+  updated_at
+}
+
+class task_assignments <<table>> {
+  PK assignment_id
+  FK task_id
+  FK user_id
+  assigned_at
+  accepted      ' optional: Aufgabe übernommen
+  reminded_at
+}
+
+' =========================
+' Unidirektionale Beziehungen (FK -> PK)
+' =========================
+payments --> groups : FK group_id
+payments --> users  : FK user_id
+
+refunds --> groups : FK group_id
+refunds --> users  : FK user_id
+refunds --> users  : FK initiated_by_user_id
+
+tasks --> events : FK event_id
+tasks --> users  : FK created_by_user_id
+
+task_assignments --> tasks : FK task_id
+task_assignments --> users : FK user_id
+
+@enduml

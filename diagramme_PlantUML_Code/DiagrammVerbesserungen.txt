@@ -1,0 +1,33 @@
+Zustandsdiagramm_Event
+
+„Gelöscht“ vs. „Archiviert“ kurz erklären
+
+Du hast beides modelliert
+Ich empfehle im Text (1–2 Sätze):
+
+Archivierte Events bleiben lesbar erhalten.
+Gelöschte Events werden dauerhaft entfernt (z. B. DSGVO).
+
+---
+
+Zustandsdiagramm_Rechnung
+
+Mini-Feinschliff (optional, kein Muss)
+Textliche Klarstellung (1 Satz)
+
+Falls noch nicht geschehen, empfehle ich unter dem Diagramm:
+
+Überfällige Rechnungen können durch das System automatisch gemahnt werden. Nach Zahlungseingang wird der Zustand „bezahlt“ erreicht.
+
+2. „Storniert“ nur behalten, wenn erwähnt
+
+Wenn ihr nirgendwo von Rechnungsstorno sprecht:
+
+Zustand weglassen
+
+Wenn ihr ihn drinlasst:
+
+Ein Satz Erklärung genügt
+
+---
+

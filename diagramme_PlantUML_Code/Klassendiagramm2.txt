@@ -1,0 +1,95 @@
+@startuml
+title Logisches Datenmodell – Benutzer / Gruppe / Event
+hide methods
+skinparam classAttributeIconSize 0
+
+class users <<table>> {
+  PK user_id
+  first_name
+  last_name
+  email <<unique>>
+  username <<unique>>
+  password_hash
+  password_salt
+  twofa_enabled
+  preferred_channel
+  ui_language
+  privacy_accepted_at
+  privacy_version
+  created_at
+  updated_at
+}
+
+class institutions <<table>> {
+  PK institution_id
+  name
+  type
+  license_model  ' community/premium
+  created_at
+}
+
+class institution_members <<table>> {
+  PK institution_member_id
+  FK institution_id
+  FK user_id
+  institution_role  ' ADMIN/MEMBER
+  created_at
+}
+
+class groups <<table>> {
+  PK group_id
+  FK created_by_user_id
+  FK institution_id  ' optional (nullable)
+  name
+  description
+  join_code <<unique>>
+  status  ' active/archived/deleted
+  created_at
+  archived_at
+}
+
+class group_memberships <<table>> {
+  PK membership_id
+  FK group_id
+  FK user_id
+  role_name  ' ORGANISATOR/MITGLIED/LESE/...
+  status     ' active/left/blocked
+  joined_at
+  left_at
+  blocked_at
+  blocked_reason
+}
+
+class events <<table>> {
+  PK event_id
+  FK group_id
+  FK created_by_user_id
+  title
+  description
+  location
+  start_at
+  end_at
+  min_participants
+  min_budget
+  status  ' draft/planned/active/completed/archived/cancelled
+  public_slug <<unique>>
+  created_at
+  updated_at
+}
+
+' -----------------------
+' Unidirektionale Beziehungen (FK -> PK)
+' -----------------------
+institution_members --> institutions : FK institution_id
+institution_members --> users : FK user_id
+
+groups --> users : FK created_by_user_id
+groups --> institutions : FK institution_id (optional)
+
+group_memberships --> groups : FK group_id
+group_memberships --> users : FK user_id
+
+events --> groups : FK group_id
+events --> users : FK created_by_user_id
+
+@enduml

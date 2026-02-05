@@ -1,0 +1,74 @@
+@startuml
+title Logisches Datenmodell – Notizen / Umfragen
+hide methods
+skinparam classAttributeIconSize 0
+
+class notes <<table>> {
+  PK note_id
+  FK group_id
+  FK created_by_user_id
+  note_type        ' TEXT/DATE/EXPENSE
+  color_code
+  content_text     ' für Freitext
+  created_at
+  updated_at
+}
+
+class note_appointments <<table>> {
+  PK note_id        ' zugleich FK -> notes.note_id
+  title
+  starts_at
+  location
+  details
+}
+
+class note_expenses <<table>> {
+  PK note_id        ' zugleich FK -> notes.note_id
+  amount
+  label
+}
+
+class polls <<table>> {
+  PK poll_id
+  FK group_id
+  FK created_by_user_id
+  question
+  multiple_choice  ' bool
+  ends_at
+  created_at
+}
+
+class poll_options <<table>> {
+  PK option_id
+  FK poll_id
+  text
+  sort_index
+}
+
+class poll_votes <<table>> {
+  PK vote_id
+  FK poll_id
+  FK option_id
+  FK user_id
+  voted_at
+}
+
+' -----------------------
+' Unidirektionale Beziehungen (FK -> PK)
+' -----------------------
+notes --> groups : FK group_id
+notes --> users : FK created_by_user_id
+
+note_appointments --> notes : PK/FK note_id
+note_expenses --> notes : PK/FK note_id
+
+polls --> groups : FK group_id
+polls --> users : FK created_by_user_id
+
+poll_options --> polls : FK poll_id
+
+poll_votes --> polls : FK poll_id
+poll_votes --> poll_options : FK option_id
+poll_votes --> users : FK user_id
+
+@enduml
