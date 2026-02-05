@@ -341,31 +341,44 @@ Die folgenden Zustandsdiagramme zeigen Navigation und mögliche Zustandsübergä
 ## 4.3 Webbrowser-Mockups
 ### 4.3.1 Login & Registrierung
 ![UI-Mockup Login und Registrierung](mockups/login.png)
+Abgedeckte User Stories: US-01, US-02, US-03, US-04, US-05
 ### 4.3.2 Dashboard
 ![UI-Mockup Dashboard](mockups/Dashboard.png)
+Abgedeckte User Stories: US-10, US-12, US-30, US-42
 ### 4.3.3 Gruppenübersicht
 ![UI-Mockup Gruppenübersicht](mockups/Gruppenuebersicht.png)
+Abgedeckte User Stories: US-10, US-11, US-12, US-13, US-14
 ### 4.3.4 Event-Detailseite
 ![UI-Mockup Event-Detailseite](mockups/Event-Detail.png)
+Abgedeckte User Stories: US-14, US-16, US-17, US-18, US-19, US-20, US-21, US-22, US-23, US-24, US-25, US-26, US-27, US-28, US-29, US-30, US-31, US-32, US-34, US-35, US-39, US-40
 ### 4.3.5 Finanzen
 ![UI-Mockup Finanzen](mockups/Finanzen.png)
+Abgedeckte User Stories: US-25, US-26, US-27, US-28, US-29
 ### 4.3.6 Notizen & Umfragen
 ![UI-Mockup Notizen und Umfragen](mockups/Notizen_Umfragen.png)
+Abgedeckte User Stories: US-17, US-18, US-19, US-20, US-21, US-22, US-23, US-24
 ### 4.3.7 Aufgabenplanung
 ![UI-Mockup Aufgabenplanung](mockups/Aufgabenübersicht.png)
+Abgedeckte User Stories: US-30, US-31, US-32, US-33
 ### 4.3.8 Profil & Einstellungen
 ![UI-Mockup Profil & Einstellungen](mockups/Profil.png)
+Abgedeckte User Stories: US-03, US-06, US-07, US-08, US-09, US-41, US-42a, US-42b, US-42c
 ### 4.3.9 Dienstleister-Dashboard
 ![UI-Mockup Dienstleister-Dashboard](mockups/dienstleister_dashboard.png)
+Abgedeckte User Stories: US-43, US-44, US-45, US-46, US-47, US-48, US-49
 ## 4.4 Mobile-App-Mockups
 ### 4.4.1 Dashboard
 ![UI-Mockup Dashboard Mobil](mockups/mobile_dashboard.png)
+Abgedeckte User Stories: US-10, US-12, US-30, US-42
 ### 4.4.2 Event-Details
 ![UI-Mockup Event-Details Mobil](mockups/mobile_eventdetail.png)
+Abgedeckte User Stories: US-14, US-17, US-18, US-19, US-21, US-22, US-23, US-24, US-25, US-26, US-30, US-31, US-32
 ### 4.4.3 Aufgaben
 ![UI-Mockup Aufgaben Mobil](mockups/mobile_aufgaben.png)
+Abgedeckte User Stories: US-30, US-31, US-32, US-33
 ### 4.4.4 Finanzen
 ![UI-Mockup Finanzen Mobil](mockups/mobile_finanzen.png)
+Abgedeckte User Stories: US-25, US-26, US-27, US-28, US-29
 ## 4.5 Zuordnung Screens ↔ User Stories
 
 
