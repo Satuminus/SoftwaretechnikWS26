@@ -1,0 +1,30 @@
+@startuml
+title Sequenzdiagramm – Einzahlung erfassen (US-25)
+
+actor "Benutzer" as U
+boundary "Web/Mobile Client" as C
+control "REST API" as API
+control "FinanceService" as S
+database "DB" as DB
+
+U -> C : Betrag eingeben + \"Einzahlen\" klicken
+C -> API : POST /groups/{groupId}/payments\n{ amount, channel, comment }\nAuthorization: Bearer token
+
+API -> S : createPayment(userId, groupId, amount, channel, comment)
+
+S -> DB : SELECT status\nFROM group_memberships\nWHERE group_id=? AND user_id=?
+DB --> S : status (active/blocked/left) / kein Eintrag
+
+alt Mitglied aktiv
+  S -> DB : INSERT INTO payments\n(group_id, user_id, amount, paid_at, channel, comment, status, created_at)\nVALUES (..., now(), ..., 'booked', now())
+  DB --> S : OK (payment_id)
+  S --> API : Erfolg (payment_id)
+  API --> C : 201 Created + Payment
+  C --> U : Bestätigung + aktualisierte Finanzübersicht
+else kein Mitglied / gesperrt / verlassen
+  S --> API : Fehler (403 Forbidden / 409 Conflict)
+  API --> C : Error JSON
+  C --> U : Fehlermeldung anzeigen
+end
+
+@enduml
