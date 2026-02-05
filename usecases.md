@@ -4,7 +4,7 @@
 ### 1.1.1 Zielsetzung des Softwareprodukts
 Die Zielsetzung des Softwareprodukts ist es, eine Zentrale Platform zur Planung, Organisation, Durchführung und Nachbereitung von Veranstaltungen zu erstellen. Dazu sollen viele verschiedene Tools zusammengelegt werden, wie zum Beispiel verschiedene Messenger, Email, Excel und Ticketsysteme. Also sammelt man alle relevanten Informationen an einem Ort/ auf einer Platform. Das System soll Transparenz über Termine, Aufgaben, Finanzen und Teilnehmer bieten. Dabei soll das Softwareprodukt sowohl für private als auch kommerziele Nutzung dienen. Weitere Anforderungen sind die Endgeräteunabhänigkeit und die Skalierbarkeit des Produktes. Das Produkt bietet eine Kombination aus Eventplanung, Finanzverwaltung und Dienstleisterintegration.
 ### 1.1.2 Produktname und Begründung
-Wir nennen das Softwareprodukt "EventHub". Der Name ist leicht merkbar und simpel, spiegelt den Zweck der Software gut wieder und international verständlich. Außerdem ist er nicht zu technisch aber gleichzeitig professionell.
+Wir nennen das Softwareprodukt "EventHub". Der Name ist leicht merkbar und simpel, spiegelt den Zweck der Software gut wieder und ist international verständlich. Außerdem ist er nicht zu technisch aber gleichzeitig professionell.
 
 ## 1.2 Akteure und Rollen
 ### 1.2.1 Nicht registrierte/unangemeldete Akteure
@@ -211,6 +211,9 @@ Das können zum Beispiel Lehrer oder Firmenverantwortliche sein:
 |----------|----------------------|-----------------|----------------|--------------------|-----------|
 | US-41 Kalender synchronisieren | Benutzer | Termine synchronisieren | sie automatisch im Kalender erscheinen | Synchronisation funktioniert | Könnte |
 | US-42 Benachrichtigungen senden | System | Nachrichten versenden | Nutzer informiert bleiben | Versand über gewählten Kanal erfolgt | Sollte |
+| US-42a Sprachassistent verbinden | Benutzer | einen digitalen Sprachassistenten koppeln | ich per Sprache auf meine Events zugreifen kann | Verbindung wird autorisiert und Konto ist verknüpft | Könnte |
+| US-42b Termine per Sprache abfragen | Benutzer | meine nächsten Termine per Sprachbefehl abrufen | ich Informationen freihändig erhalten kann | Assistent gibt korrekte Termine aus | Könnte |
+| US-42c Aktion per Sprache ausführen | Benutzer | einfache Aktionen wie Aufgaben abhaken oder Einzahlungen bestätigen per Sprache ausführen | ich schnell reagieren kann ohne die App zu öffnen | Aktion wird korrekt ausgeführt und im System gespeichert | Könnte |
 
 ## 2.12 FG11 Dienstleister und Anfragen
 
@@ -233,14 +236,73 @@ Das können zum Beispiel Lehrer oder Firmenverantwortliche sein:
 
 # 3 Nicht-funktionale Anforderungen (ISO 25010)
 
-## 3.1 Usability
-## 3.2 Performance und Skalierbarkeit
-## 3.3 Sicherheit
-## 3.4 Datenschutz (DSGVO)
-## 3.5 Zuverlässigkeit und Verfügbarkeit
-## 3.6 Kompatibilität (Browser, Mobile, Plattformen)
-## 3.7 Wartbarkeit und Erweiterbarkeit
-## 3.8 Barrierefreiheit und Internationalisierung
+
+## 3.1 Performance Efficiency
+Die Plattform soll gemäß der Aufgabenstellung auch bei sehr vielen gleichzeitigen Benutzern eine hohe Leistungsfähigkeit aufweisen. Das System muss skalierbar sein und darf auch bei paralleler Nutzung mehrerer Gruppen und Events keine spürbaren Verzögerungen zeigen. Aktionen sollen innerhalb von maximal zwei Sekunden verarbeitet werden und der Seitenaufbau soll auch bei normaler Netzwerklatenz nur wenige Sekunden dauern. Das System soll mehrere tausende, gleichzeitige Benutzer unterstützen und bei steigender Last einfach weiter skalierbar sein z.B durch weitere Serverinstanzen.
+
+Zusätzlich werden zur Sicherstellung einer stabilen Performance sinnvolle ergänzende Maßnahmen definiert. Ressourcenintensive Prozesse wie Datei-Uploads oder größere Berechnungen sollen asynchron im Hintergrund ausgeführt werden, damit die Benutzeroberfläche weiterhin reaktionsfähig bleibt. Der Ressourcenverbrauch von CPU, Arbeitsspeicher und Datenbank soll überwacht und regelmäßig optimiert werden, um auch bei wachsendem Datenbestand eine gleichbleibende Leistung zu gewährleisten.
+
+Damit werden zunächst die explizit geforderten Punkte aus der Aufgabenstellung (Skalierbarkeit und hohe Performance bei vielen Nutzern) umgesetzt und anschließend technisch sinnvolle Ergänzungen zur Absicherung der Systemqualität vorgenommen.
+
+
+## 3.2 Compatibility
+Das System soll auf unterschiedlichen Endgeräten und Softwareumgebungen nutzbar sein. Gemäß der Aufgabenstellung muss die Anwendung sowohl im Webbrowser als auch auf mobilen Endgeräten lauffähig sein und funktional konsistent sein. Alle wesentlichen Funktionen der Webversion sollen somit auch in der mobilen Anwendung in gleicher oder gleichwertiger Form zur Verfügung stehen.
+
+Die Webanwendung soll in aktuellen Versionen der gängigen Browser Google Chrome, Microsoft Edge, Mozilla Firefox und Safari ohne zusätzliche Plugins oder Erweiterungen nutzbar sein. Für mobile Endgeräte soll eine Unterstützung der Betriebssysteme Android und iOS gewährleistet werden.
+
+Darüber hinaus soll das System die Integration externer Dienste ermöglichen. Es sollen Kalenderdienste wie Google Calendar, Outlook und iCal angebunden werden können, sodass Termine automatisch synchronisiert werden. Weitere Schnittstellen, beispielsweise zu Zahlungs- oder Ticketingsystemen, sollen über REST‑APIs realisiert werden.
+
+Ergänzend werden folgende technische Maßnahmen geplant, um eine hohe Geräteunabhängigkeit sicherzustellen: Die Benutzeroberfläche soll responsiv gestaltet sein und sich automatisch an unterschiedliche Bildschirmgrößen und Auflösungen anpassen. Damit wird die explizit geforderte Endgeräteunabhängigkeit umgesetzt und durch zusätzliche Maßnahmen zur praktischen Nutzbarkeit abgesichert.
+
+
+## 3.3 Usability (Gebrauchstauglichkeit)
+Die Anwendung soll gemäß der Aufgabenstellung ohne lange Einarbeitung nutzbar sein. Neue Nutzer sollen grundlegende Funktionen wie das Erstellen oder Beitreten von Gruppen, das Anlegen von Notizen sowie das Verwalten von Aufgaben und Zahlungen intuitiv bedienen können, ohne zuvor eine Schulung oder umfangreiche Anleitung zu benötigen.
+
+Die Benutzeroberfläche soll klar strukturiert und konsistent aufgebaut sein. Navigationselemente, Bezeichnungen und Strukturen sollen über alle Bereiche der Anwendung hinweg einheitlich verwendet werden, damit sich Nutzer schnell orientieren können. Zentrale Funktionen sollen mit wenigen Interaktionen erreichbar sein, sodass typische Aufgaben ohne nervige Zwischenschritte ausgeführt werden können.
+
+Systemmeldungen und Fehlermeldungen sollen verständlich formuliert sein und dem Nutzer konkrete Hinweise zur Behebung von Problemen geben. Unterschiedliche Inhalte, wie beispielsweise Notiztypen oder Statusinformationen, sollen visuell eindeutig unterscheidbar dargestellt werden, etwa durch Farben oder Symbole.
+
+Zusätzlich werden sinnvolle ergänzende Maßnahmen zur Verbesserung der Gebrauchstauglichkeit berücksichtigt. Die Oberfläche soll responsiv gestaltet sein, ausreichend große Bedienelemente besitzen und auch auf mobilen Geräten gut lesbar und bedienbar bleiben. Damit wird die explizit geforderte einfache Nutzbarkeit umgesetzt und durch weitere Maßnahmen zur praktischen Benutzerfreundlichkeit ergänzt.
+
+
+## 3.4 Reliability (Zuverlässigkeit)
+Das System soll zuverlässig betrieben werden können und die zentralen Funktionen der Plattform dauerhaft bereitstellen. Da über die Anwendung unter anderem organisatorische Informationen und Finanzdaten (Einzahlungen und Ausgaben) verwaltet werden, muss eine konsistente Speicherung dieser Daten gewährleistet sein, sodass keine Daten durch technische Störungen verloren gehen oder in einen widersprüchlichen Zustand geraten.
+
+Zur Konkretisierung werden folgende Qualitätsziele festgelegt: Änderungen an relevanten Daten (z. B. Zahlungen, Ausgaben, Aufgabenstatus) sollen dauerhaft und konsistent gespeichert werden. Bei temporären Netzwerkproblemen oder kurzfristigen Serverstörungen sollen Benutzeraktionen nicht zu unvollständigen oder doppelten Einträgen führen. Außerdem sollen regelmäßig automatische Datensicherungen durchgeführt werden, sodass eine Wiederherstellung nach Systemausfällen möglich ist.
+
+Ergänzend werden sinnvolle technische Maßnahmen definiert, um die Zuverlässigkeit praktisch abzusichern. Fehlerzustände sollen protokolliert werden (Logging), und kritische Systemzustände sollen überwacht werden (Monitoring), um Ausfälle frühzeitig zu erkennen. Für zentrale Prozesse sollen geeignete Mechanismen vorgesehen werden, die eine sichere Verarbeitung auch bei hoher Last unterstützen.
+
+
+## 3.5 Security (Sicherheit)
+Die Aufgabenstellung legt einen besonderen Fokus auf Sicherheitsanforderungen. Die Datenkommunikation zwischen Client und Server muss verschlüsselt erfolgen, damit Inhalte nicht von Unbefugten abgefangen werden können. Passwörter dürfen nicht im Klartext gespeichert werden und müssen in der Datenbank ausschließlich in gehashter und gesalzener Form vorliegen. Zusätzlich sollen Nutzer zu starken Passwörtern ermutigt werden und es soll eine Zwei-Faktor-Authentifizierung, beispielsweise per SMS oder vergleichbar, unterstützt werden.
+
+Weiterhin ist aufgrund des Rollen- und Rechtesystems sicherzustellen, dass Benutzer nur auf diejenigen Gruppen- und Eventdaten zugreifen können, für die sie berechtigt sind. Insbesondere müssen administrative Aktionen wie das Entfernen oder Sperren von Mitgliedern auf Organisatoren bzw. Institutionsadministratoren beschränkt sein.
+
+Ergänzend werden technische Schutzmaßnahmen festgelegt, die in modernen Web- und App-Systemen üblich sind. Dazu zählen der Schutz vor typischen Angriffen wie SQL-Injection, Cross-Site Scripting (XSS) und Cross-Site Request Forgery (CSRF) sowie sichere Sitzungsverwaltung (z. B. Timeout bei Inaktivität). Sicherheitsrelevante Ereignisse wie fehlgeschlagene Loginversuche oder Änderungen sicherheitskritischer Einstellungen sollen protokolliert werden.
+
+
+## 3.6 Maintainability (Wartbarkeit)
+Für eine langfristige Nutzung und Weiterentwicklung soll die Plattform wartbar und gut erweiterbar sein. Gemäß der Aufgabenstellung wird ein Client-Server-System umgesetzt, das auf mobilen Endgeräten und im Webbrowser verfügbar ist. Daraus ergibt sich eine klare Trennung zwischen Client, Server und Datenhaltung, sodass Änderungen an einzelnen Komponenten möglichst isoliert vorgenommen werden können.
+
+Zur Konkretisierung werden folgende Qualitätsziele festgelegt: Schnittstellen zwischen den Systemkomponenten sollen klar definiert und dokumentiert sein. Insbesondere ist eine dokumentierte REST-API bereitzustellen, die die Kommunikation zwischen Client und Server nachvollziehbar beschreibt. Die Struktur des Systems soll so gestaltet sein, dass neue Funktionen (z. B. zusätzliche Integrationen oder neue Notiztypen) ohne grundlegende Umstrukturierung ergänzt werden können.
+
+Ergänzend werden Maßnahmen vorgesehen, die Wartbarkeit praktisch unterstützen. Dazu gehören ein konsistenter Code-Stil, eine nachvollziehbare Struktur der Komponenten sowie die Möglichkeit, zentrale Funktionen automatisiert zu testen. Konfigurationswerte (z. B. Rollenrechte oder Systemparameter) sollen soweit sinnvoll ohne Codeänderungen anpassbar sein.
+
+
+## 3.7 Portability (Übertragbarkeit)
+Das System soll auf aktuellen Plattformen betrieben werden können und nicht von spezieller Hardware abhängig sein. Da die Anwendung sowohl im Webbrowser als auch auf mobilen Endgeräten genutzt wird, soll die Lösung auf den gängigen Betriebssystemen lauffähig sein. Dazu gehören insbesondere Android und iOS für mobile Geräte sowie aktuelle Desktop-Umgebungen für die Webnutzung.
+
+Zur Konkretisierung wird festgelegt, dass die Serverkomponenten auf unterschiedlichen Serverumgebungen betrieben werden können sollen. Das Deployment soll standardisiert möglich sein, sodass ein Umzug zwischen unterschiedlichen Umgebungen (z. B. verschiedene Hosting-Anbieter) ohne große Anpassungen realisierbar bleibt.
+
+Ergänzend werden sinnvolle technische Maßnahmen berücksichtigt, um die Übertragbarkeit zu erhöhen. Dazu zählen standardisierte Deploymentverfahren (z. B. Containerisierung) sowie der Export und Import von Daten in gängigen Formaten, sofern dies für administrative oder datenschutzbezogene Zwecke erforderlich ist.
+
+
+## 3.8 Datenschutz (nicht aus der ISO)
+Neben den ISO-Qualitätsmerkmalen sind in der Aufgabenstellung explizite Anforderungen an Datenschutz und Vertraulichkeit genannt. Nutzerdaten müssen gemäß Datenschutzgrundverordnung (DSGVO) behandelt werden, und die Datenschutzrichtlinie muss von den Nutzern bestätigt werden, bevor die Software vollständig genutzt werden kann. Private Informationen, insbesondere Kontaktinformationen und ausgetauschte Nachrichten, dürfen nicht in falsche Hände geraten. Die Aufgabenstellung fordert daher eine verschlüsselte Speicherung und einen verschlüsselten Austausch sensibler Daten; darüber hinaus wird ein Ende-zu-Ende-Verschlüsselungssystem als mögliche Lösung genannt.
+
+Zur Konkretisierung werden folgende Anforderungen festgelegt: Es soll nur die für den Betrieb notwendige Menge personenbezogener Daten gespeichert werden (Datenminimierung). Nutzer sollen ihre eigenen Daten einsehen können und es soll ein Verfahren vorgesehen werden, um personenbezogene Daten auf Anfrage zu löschen. Der Zugriff auf personenbezogene Daten muss durch geeignete Berechtigungen geschützt werden.
+
+Ergänzend werden sinnvolle Maßnahmen vorgesehen, um Datenschutzanforderungen praktisch umzusetzen. Dazu gehören ein nachvollziehbares Lösch- und Aufbewahrungskonzept für Daten, sowie eine sichere Protokollierung, ohne dabei vertrauliche Inhalte im Klartext zu speichern.
 
 # 4 Graphische Benutzungsschnittstelle
 
