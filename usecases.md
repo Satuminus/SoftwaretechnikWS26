@@ -339,16 +339,383 @@ Texte sind gut lesbar gestaltet und Bedienelemente ausreichend groß dimensionie
 
 ## 4.3 Webbrowser-Mockups
 ### 4.3.1 Login & Registrierung
+Promt: "Erstelle ein wireframe-ui mockup einer desktop-website mit dem Namen "EventHub". Grauskala, keine Designelemente, nur einfache Rechtecke und Text-Label.
+
+Layout:
+desktop browser window {
+zentrierter content-bereich ohne sidebar,
+
+oben logo und schriftzug "EventHub",
+
+darunter rechteckige login-box mit title "Login",
+
+in der box mehrere rechteckige eingabefelder:
+
+E-Mail
+
+Passwort
+
+darunter button "Login",
+
+darunter text-links:
+
+"Registrieren"
+
+"Passwort vergessen",
+
+ checkbox "Angemeldet bleiben",
+
+ kleiner hinweisbereich "2-Faktor-Authentifizierung Code",
+
+unter der login-box eine zweite kleinere box oder link "Anmelden"
+}
+
+Stil: flach, minimal, nur rechtecke und platzhaltertext, kein realistisches UI-design, kein schatten, keine farben, nur wireframe."
 ### 4.3.2 Dashboard
+Prompt: "Erstelle ein wireframe-ui mockup einer desktop-website mit dem Namen "EventHub". Grauskala, keine Designelemente, nur einfache Rechtecke und Text-Label.
+
+Layout:
+desktop browser window {
+top header bar { "EventHub" Schriftzug und Logo links und Navigation mit "Dashboard", "Gruppen", "Aufgaben", "Profil" rechts }
+sidebar navigation on the left { "Dashboard" (active), "Gruppen", "Aufgaben", "Finanzen", "Profil" }
+mittiger Content-Bereich rechts neben der Sidebar {
+title: "Dashboard",
+
+darunter mehrere übersichts-karten in einem grid-layout:
+
+karte "Meine Gruppen" -> liste von 3 rechteckigen listen-objekten mit Gruppennamen
+
+karte "Nächste Termine" -> liste von 3 rechteckigen listen-objekten mit Datum + Titel
+
+karte "Offene Aufgaben" -> liste von 3 rechteckigen listen-objekten mit Aufgabenname + Status
+
+karte "Benachrichtigungen" -> liste von 2-3 rechteckigen meldungen
+
+oben rechts ein button "+ Gruppe erstellen"
+}
+}
+
+Stil: flach, minimal, nur rechtecke und platzhaltertext, kein realistisches UI-design, kein schatten, keine farben, nur wireframe."
 ### 4.3.3 Gruppenübersicht
+Promt: "Erstelle ein wireframe-ui mockup einer desktop-website mit dem Namen "EventHub". Grauskala, keine Designelemente, nur einfache Rechtecke und Text-Label.
+
+Layout:
+desktop browser window {
+top header bar { "EventHub" Schriftzug und Logo links und Navigation mit "Dashboard", "Gruppen", "Aufgaben", "Profil" rechts }
+sidebar navigation on the left { "Gruppen" (active), "Dashboard", "Aufgaben", "Finanzen", "Profil" }
+mittiger Content-Bereich rechts neben der Sidebar {
+title: "Gruppenübersicht",
+
+oben eine suchleiste "Gruppe suchen" und ein eingabefeld "Beitrittscode eingeben" mit button "Beitreten",
+
+darunter sektion "Meine Gruppen" → liste von 4 rechteckigen listen-objekten mit:
+
+Gruppenname
+
+kurze Beschreibung
+
+1x Button "Öffnen"
+
+1x Button "Verlassen",
+
+oben rechts ein button "+ Gruppe erstellen"
+}
+}
+
+Stil: flach, minimal, nur rechtecke und platzhaltertext, kein realistisches UI-design, kein schatten, keine farben, nur wireframe."
 ### 4.3.4 Event-Detailseite
+Promt: "Erstelle ein wireframe-ui mockup einer desktop-website mit dem Namen "EventHub". Grauskala, keine Designelemente, nur einfache Rechtecke und Text-Label. Layout: desktop browser window { top header bar { "Eventhub" Schriftzug und logo links und navigation mit "Dashboard", Gruppen", "Aufgaben", "Profil" rechts} sidebar navigation on the left {"Übersicht "(active), "Notizen/Umfragen", "Aufgaben", "Finanzen", "Medien", "Mitglieder"}Mittiger Content-Bereich recht neben der sidebar {title: "Event-Detail", darunter eine Zeile mit "Event-Titel" und "Ort,Datum", darunter action buttons: "+Notiz erstellen", "+Aufgabe hinzufügen", "Mitglieder verwalten", darunter Sektion "Übersicht" -> untergeordnet liste von 3 rechteckigen listen-objekten mit "Notizen/Aufgaben" als Titel und "Beschreibung der Notiz/Aufgabe" als untertext"}"
 ### 4.3.5 Finanzen
+Prompt:"
+Erstelle ein wireframe-ui mockup einer desktop-website mit dem Namen "EventHub". Grauskala, keine Designelemente, nur einfache Rechtecke und Text-Label.
+
+Layout:
+desktop browser window {
+top header bar { "EventHub" Schriftzug und Logo links und Navigation mit "Dashboard", "Gruppen", "Aufgaben", "Profil" rechts }
+sidebar navigation on the left { "Übersicht", "Notizen/Umfragen", "Aufgaben", "Finanzen" (active), "Medien", "Mitglieder" }
+mittiger Content-Bereich rechts neben der Sidebar {
+title: "Finanzen",
+
+oben budget-übersicht als rechteckige info-boxen:
+
+"Budget-Ziel"
+
+"Aktueller Stand"
+
+"Restbetrag"
+
+darunter action buttons: "+ Einzahlung hinzufügen", "+ Ausgabe erfassen", "Rückzahlung auslösen",
+
+darunter tabelle mit mehreren rechteckigen listen-objekten:
+
+Datum
+
+Typ (Einzahlung/Ausgabe)
+
+Beschreibung
+
+Betrag
+
+Buttons "Bearbeiten", "Löschen"
+
+optional einfache fortschrittsleiste als rechteckiger balken für Budgetfortschritt
+}
+}
+
+Stil: flach, minimal, nur rechtecke und platzhaltertext, kein realistisches UI-design, kein schatten, keine farben, nur wireframe."
 ### 4.3.6 Notizen & Umfragen
+Promt: "Erstelle ein wireframe-ui mockup einer desktop-website mit dem Namen "EventHub". Grauskala, keine Designelemente, nur einfache Rechtecke und Text-Label.
+
+Layout:
+desktop browser window {
+top header bar { "EventHub" Schriftzug und Logo links und Navigation mit "Dashboard", "Gruppen", "Aufgaben", "Profil" rechts }
+sidebar navigation on the left { "Übersicht", "Notizen/Umfragen" (active), "Aufgaben", "Finanzen", "Medien", "Mitglieder" }
+mittiger Content-Bereich rechts neben der Sidebar {
+title: "Notizen & Umfragen",
+
+oben action buttons: "+ Notiz erstellen", "+ Umfrage erstellen",
+
+darunter filterleiste mit dropdown "Typ filtern" und suchfeld,
+
+darunter liste von 4 rechteckigen listen-objekten mit:
+
+Titel der Notiz/Umfrage
+
+kurzer Beschreibungstext
+
+Status oder Anzahl Stimmen
+
+Buttons "Bearbeiten", "Löschen", 
+
+bei einer geöffneten Umfrage zusätzlich rechteckige Antwortoptionen mit Button "Ja" und Button "Nein" 
+}
+}
+
+Stil: flach, minimal, nur rechtecke und platzhaltertext, kein realistisches UI-design, kein schatten, keine farben, nur wireframe."
 ### 4.3.7 Aufgabenplanung
+Promt: "Erstelle ein wireframe-ui mockup einer desktop-website mit dem Namen "EventHub". Grauskala, keine Designelemente, nur einfache Rechtecke und Text-Label.
+
+Layout:
+desktop browser window {
+top header bar { "EventHub" Schriftzug und Logo links und Navigation mit "Dashboard", "Gruppen", "Aufgaben", "Profil" rechts }
+sidebar navigation on the left { "Übersicht", "Notizen/Umfragen", "Aufgaben" (active), "Finanzen", "Medien", "Mitglieder" }
+mittiger Content-Bereich rechts neben der Sidebar {
+title: "Aufgabenmanagement",
+
+oben action button: "+ Aufgabe erstellen",
+
+darunter filterleiste mit dropdown "Status filtern" und suchfeld,
+
+darunter aufgabenliste als mehrere rechteckige listen-objekte mit:
+
+Aufgabenname
+
+kurze Beschreibung
+
+zugewiesene Person
+
+Status-Anzeige (offen / in Bearbeitung / erledigt)
+
+Buttons "Übernehmen", "Bearbeiten", "Erledigt",
+
+optional gruppiert in sektionen "Offen", "In Bearbeitung", "Erledigt"
+}
+}
+
+Stil: flach, minimal, nur rechtecke und platzhaltertext, kein realistisches UI-design, kein schatten, keine farben, nur wireframe."
 ### 4.3.8 Profil & Einstellungen
+Promt:"Erstelle ein wireframe-ui mockup einer desktop-website mit dem Namen "EventHub". Grauskala, keine Designelemente, nur einfache Rechtecke und Text-Label.
+
+Layout:
+desktop browser window {
+top header bar { "EventHub" Schriftzug und Logo links und Navigation mit "Dashboard", "Gruppen", "Aufgaben", "Profil" rechts }
+sidebar navigation on the left { "Dashboard", "Gruppen", "Aufgaben", "Finanzen", "Profil" (active) }
+mittiger Content-Bereich rechts neben der Sidebar {
+title: "Profil & Einstellungen",
+
+sektion "Profilinformationen" mit mehreren rechteckigen eingabefeldern:
+
+Name
+
+E-Mail
+
+Passwort ändern
+
+Speichern Button,
+
+sektion "Benachrichtigungen" mit checkboxen oder toggles:
+
+E-Mail
+
+Push
+
+SMS,
+
+sektion "Sprache" mit dropdown auswahl,
+
+sektion "Integrationen" mit zwei rechteckigen boxen:
+
+"Kalender synchronisieren" mit Button "Verbinden"
+
+"Sprachassistent koppeln" mit Button "Verbinden",
+
+unten Button "Logout"
+}
+}
+
+Stil: flach, minimal, nur rechtecke und platzhaltertext, kein realistisches UI-design, kein schatten, keine farben, nur wireframe."
+### 4.3.9 Dienstleister-Dashboard
+Promt: "Erstelle ein wireframe-ui mockup einer desktop-website mit dem Namen "EventHub". Grauskala, keine Designelemente, nur einfache Rechtecke und Text-Label.
+
+Layout:
+desktop browser window {
+top header bar { "EventHub" Schriftzug und Logo links und Navigation mit "Dashboard", "Anfragen", "Angebote", "Rechnungen", "Ressourcen", "Profil" rechts }
+sidebar navigation on the left { "Dashboard" (active), "Anfragen", "Angebote", "Rechnungen", "Material", "Mitarbeiter", "Profil" }
+mittiger Content-Bereich rechts neben der Sidebar {
+title: "Dienstleister Dashboard",
+
+darunter mehrere übersichts-karten in einem grid-layout:
+
+karte "Neue Anfragen" → liste von 3 rechteckigen einträgen mit Eventname + Datum + Button "Öffnen"
+
+karte "Offene Angebote" → liste von 2 rechteckigen einträgen mit Preis + Status
+
+karte "Offene Rechnungen" → liste von 2 rechteckigen einträgen mit Betrag + Fälligkeitsdatum
+
+karte "Ressourcenstatus" → einfache liste von Material oder Mitarbeitern mit Verfügbarkeit
+
+}
+}
+
+Stil: flach, minimal, nur rechtecke und platzhaltertext, kein realistisches UI-design, kein schatten, keine farben, nur wireframe."
 
 ## 4.4 Mobile-App-Mockups
-### 4.4.1 Navigation und Besonderheiten
-### 4.4.2 Screens analog zur Webversion
+### 4.4.1 Dashboard
+Prompt: "Erstelle ein wireframe-ui mockup einer mobilen app-version der website mit dem Namen "EventHub". Hochformat, smartphone-format, Grauskala, keine Designelemente, nur einfache Rechtecke und Text-Label.
 
+Layout:
+smartphone screen im hochformat {
+
+oben eine schmale header bar mit schriftzug "EventHub",
+
+mittiger content-bereich mit vertikal gestapelten karten:
+
+karte "Meine Gruppen" → liste von 2–3 rechteckigen einträgen
+
+karte "Nächste Termine" → liste von 2 rechteckigen einträgen
+
+karte "Offene Aufgaben" → liste von 2 rechteckigen einträgen
+
+karte "Benachrichtigungen" → liste von 2 rechteckigen meldungen
+
+unten feste bottom-navigation bar mit 4 icons/text-labels:
+"Dashboard" (active), "Gruppen", "Aufgaben", "Profil"
+
+alle elemente groß und touch-geeignet, einfache rechtecke, viel abstand zwischen elementen
+}
+
+Stil: flach, minimal, nur rechtecke und platzhaltertext, kein realistisches UI-design, kein schatten, keine farben, nur wireframe."
+### 4.4.2 Event-Detail
+Prompt: "Erstelle ein wireframe-ui mockup einer mobilen app-version der website mit dem Namen "EventHub". Hochformat, smartphone-format, Grauskala, keine Designelemente, nur einfache Rechtecke und Text-Label.
+
+Layout:
+smartphone screen im hochformat {
+
+oben header bar mit titel "Event-Detail" und zurück-button,
+
+darunter event-informationen als block:
+
+Event-Titel
+
+Datum
+
+Ort
+
+darunter horizontale tab-leiste oder segmentierte navigation mit:
+"Übersicht" (active), "Notizen", "Aufgaben", "Finanzen",
+
+darunter scrollbarer content-bereich mit mehreren rechteckigen listen-objekten (Notizen/Aufgaben),
+
+unten zwei große touch-buttons:
+"+ Notiz"
+"+ Aufgabe"
+
+alle elemente groß, vertikal gestapelt, fingerfreundliche abstände, einfache rechtecke, kein desktop-layout
+}
+
+Stil: flach, minimal, nur rechtecke und platzhaltertext, kein realistisches UI-design, kein schatten, keine farben, nur wireframe."
+
+### 4.4.3 Aufgaben
+Promt: "Erstelle ein wireframe-ui mockup einer mobilen app-version der website mit dem Namen "EventHub". Hochformat, smartphone-format, Grauskala, keine Designelemente, nur einfache Rechtecke und Text-Label.
+
+Layout:
+smartphone screen im hochformat {
+
+oben header bar mit titel "Aufgaben",
+
+darunter filterleiste mit dropdown "Status" und suchfeld,
+
+darunter vertikal gestapelte aufgabenliste mit mehreren großen rechteckigen einträgen:
+
+Aufgabenname
+
+kurze Beschreibung
+
+zugewiesene Person
+
+Statusanzeige
+
+rechts oder unten pro eintrag große touch-buttons:
+"Übernehmen"
+"Erledigt",
+
+unten feste bottom-navigation bar mit:
+"Dashboard", "Gruppen", "Aufgaben" (active), "Profil"
+
+alle elemente groß, fingerfreundlich, viel abstand, nur einfache rechtecke
+}
+
+Stil: flach, minimal, nur rechtecke und platzhaltertext, kein realistisches UI-design, kein schatten, keine farben, nur wireframe."
+
+### 4.4.4 Finanzen
+Prompt: "Erstelle ein wireframe-ui mockup einer mobilen app-version der website mit dem Namen "EventHub". Hochformat, smartphone-format, Grauskala, keine Designelemente, nur einfache Rechtecke und Text-Label.
+
+Layout:
+smartphone screen im hochformat {
+
+oben header bar mit titel "Finanzen",
+
+darunter budget-übersicht als große info-boxen:
+
+"Budget-Ziel"
+
+"Aktueller Stand"
+
+"Restbetrag"
+
+darunter zwei große touch-buttons nebeneinander oder gestapelt:
+"+ Einzahlung"
+"+ Ausgabe",
+
+darunter vertikal gestapelte liste von einträgen mit:
+
+Datum
+
+Beschreibung
+
+Betrag (+ oder −)
+
+kleiner button "Details",
+
+unten feste bottom-navigation bar mit:
+"Dashboard", "Gruppen", "Aufgaben", "Profil"
+
+alle elemente groß, vertikal, fingerfreundlich, nur einfache rechtecke und text
+}
+
+Stil: flach, minimal, nur rechtecke und platzhaltertext, kein realistisches UI-design, kein schatten, keine farben, nur wireframe."
 ## 4.5 Zuordnung Screens ↔ User Stories
+
+
+# Übersicht verwendeter Hilfsmittel
+##
