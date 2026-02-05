@@ -308,10 +308,34 @@ Ergänzend werden sinnvolle Maßnahmen vorgesehen, um Datenschutzanforderungen p
 
 ## 4.1 Designprinzipien und UX-Grundlagen
 
+### 4.1.1 Zielsetzung der Benutzeroberfläche
+Die Benutzeroberfläche von EventHub soll eine einfache und intuitive Bedienung der Plattform ermöglichen. Nutzer sollen typische Aufgaben wie Gruppen beitreten, Events verwalten, Aufgaben bearbeiten oder Zahlungen durchführen ohne Schulung ausführen können. Die Oberfläche ist daher klar strukturiert, reduziert gestaltet und auf die wesentlichen Funktionen fokussiert.
+
+### 4.1.2 Konsistenz und Navigationskonzept
+Alle Bereiche der Anwendung verwenden ein einheitliches Layout und wiederkehrende Navigationselemente. Gleichartige Funktionen sind an denselben Positionen erreichbar, sodass sich Nutzer schnell orientieren können. Zentrale Aktionen sind direkt sichtbar und nicht in tiefen Menüstrukturen versteckt. Häufig genutzte Funktionen sind mit maximal zwei bis drei Interaktionen erreichbar.
+
+### 4.1.3 Rollenbasierte Darstellung
+Die Oberfläche ist rollenabhängig gestaltet. Benutzer sehen ausschließlich Funktionen, für die sie berechtigt sind. Teilnehmer erhalten eine vereinfachte Ansicht mit Fokus auf Teilnahme und Interaktion, während Organisatoren und Institutionsadministratoren zusätzliche Verwaltungsfunktionen erhalten. Dadurch wird die Komplexität reduziert und Fehlbedienung vermieden.
+
+### 4.1.4 Responsives Design und Geräteunabhängigkeit
+Die Anwendung ist responsiv gestaltet und passt sich automatisch an unterschiedliche Bildschirmgrößen und Endgeräte an. Die Webversion ist für Desktop-Browser optimiert, während mobile Endgeräte eine vereinfachte Navigation und größere Bedienelemente erhalten. Alle wesentlichen Funktionen stehen auf beiden Plattformen in gleichwertiger Form zur Verfügung.
+
+### 4.1.5 Fehlervermeidung und Systemfeedback
+Pflichtfelder werden eindeutig gekennzeichnet und Eingaben vor dem Speichern validiert. Kritische Aktionen wie Löschen oder Rückzahlungen werden durch Bestätigungsdialoge abgesichert. Das System informiert Nutzer jederzeit über den aktuellen Status, beispielsweise durch Ladeanzeigen, Erfolgsmeldungen oder verständliche Fehlermeldungen. Dadurch bleibt das Systemverhalten nachvollziehbar und transparent.
+
+### 4.1.6 Barrierearme Bedienbarkeit
+Texte sind gut lesbar gestaltet und Bedienelemente ausreichend groß dimensioniert, sodass die Anwendung auch auf mobilen Geräten oder Touchscreens komfortabel nutzbar ist. Kontraste und klare Beschriftungen unterstützen eine schnelle Erfassbarkeit der Inhalte.
+
+
 ## 4.2 Navigationsmodelle
 ### 4.2.1 Zustandsdiagramm – Privatnutzer
+![Zustandsdiagramm Privatnutzer](pngs/zustandsdiagramm_privatnutzer.png)
+
 ### 4.2.2 Zustandsdiagramm – Organisator
+![Zustandsdiagramm Organisator](pngs/zustandsdiagramm_organisator.png)
+
 ### 4.2.3 Zustandsdiagramm – Dienstleister
+![Zustandsdiagramm dienstleister](pngs/zustandsdiagramm_dienstleister.png)
 
 ## 4.3 Webbrowser-Mockups
 ### 4.3.1 Login & Registrierung
