@@ -366,6 +366,15 @@ Abgedeckte User Stories: US-03, US-06, US-07, US-08, US-09, US-41, US-42a, US-42
 ### 4.3.9 Dienstleister-Dashboard
 ![UI-Mockup Dienstleister-Dashboard](mockups/dienstleister_dashboard.png)
 Abgedeckte User Stories: US-43, US-44, US-45, US-46, US-47, US-48, US-49
+### 4.3.10 Rollen- und Rechteverwaltung
+![UI-Mockup Rollen- und Rechteverwaltung](mockups/rollen_rechteverwaltung.png)
+Abgedeckte User Stories: US-36, US-37
+### 4.3.11 Eventanfrage
+![UI-Mockup Eventanfrage](mockups/eventanfrage.png)
+Abgedeckte User Stories: US-43
+### 4.3.12 Eventübersicht (Lesemodus)
+![UI-Mockup Eventübersicht](mockups/eventuebersicht_lesemodus.png)
+Abgedeckte User Stories: US-37
 ## 4.4 Mobile-App-Mockups
 ### 4.4.1 Dashboard
 ![UI-Mockup Dashboard Mobil](mockups/mobile_dashboard.png)
@@ -385,7 +394,7 @@ Abgedeckte User Stories: US-25, US-26, US-27, US-28, US-29
 # 5 Übersicht verwendeter Hilfsmittel
 ## 5.1 OpenAI ChatGPT (openai.com, chatgpt.com)
 ### 5.1.1 Generierung von Mockups
-ChatGPT wurde zur Generierung von Mockups genutzt. Die jeweils verwendeten Prompts werden hier ausgelistet. Jedes generierte Mockup wurde per Bildbearbeitungsprogramm meist noch ein wenig verändert. Die Prompts selber wurden per Hand erstellt.
+ChatGPT wurde zur Generierung von Mockups genutzt. Die jeweils verwendeten Prompts werden hier ausgelistet. Jedes generierte Mockup wurde per Bildbearbeitungsprogramm meist noch ein wenig verändert. Die Prompts selber wurden per Hand erstellt und in ein einfaches Eingabefeld in ChatGPT 5.2 eingefügt (Version Stand 05.02.2026).
 #### 5.1.1.1 Login & Registrierung
 Promt: "Erstelle ein wireframe-ui mockup einer desktop-website mit dem Namen "EventHub". Grauskala, keine Designelemente, nur einfache Rechtecke und Text-Label.
 
@@ -756,6 +765,81 @@ unten feste bottom-navigation bar mit:
 "Dashboard", "Gruppen", "Aufgaben", "Profil"
 
 alle elemente groß, vertikal, fingerfreundlich, nur einfache rechtecke und text
+}
+
+Stil: flach, minimal, nur rechtecke und platzhaltertext, kein realistisches UI-design, kein schatten, keine farben, nur wireframe."
+#### 5.1.1.14 Rollen- und Rechteverteilung
+Prompt: "Erstelle ein wireframe-ui mockup einer desktop-website mit dem Namen “EventHub”. Grauskala, keine Designelemente, nur einfache Rechtecke und Text-Label.
+
+Layout:
+desktop browser window {
+top header bar { “EventHub” Schriftzug links, Navigation “Dashboard”, “Events”, “Benutzer”, “Admin” }
+sidebar navigation on the left { “Übersicht”, “Events”, “Benutzer”, “Rollen & Rechte” (active) }
+
+mittiger Content-Bereich rechts neben der Sidebar {
+title: “Rollen- und Rechteverwaltung”,
+
+oben dropdown “Institution auswählen”,
+
+darunter tabelle mit mehreren rechteckigen zeilen:
+Spalten:
+Benutzer | Rolle | Lesen | Schreiben
+
+Spalte Benutzer enthält Benutzernamen,
+Spalte Rolle enthäht Platzhalter Rollenname,
+Spalten lesen und schreiben sind checkboxen,
+
+
+oben rechts button “+ Rolle vergeben”,
+unten rechts button “Speichern”
+}
+}
+
+Stil: flach, minimal, nur rechtecke und platzhaltertext, kein realistisches UI-design, kein schatten, keine farben, nur wireframe."
+#### 5.1.1.15 Eventanfrage
+Promt: "Erstelle ein wireframe-ui mockup einer desktop-website mit dem Namen "EventHub". Grauskala, keine Designelemente, nur einfache Rechtecke und Text-Label.
+
+Layout:
+desktop browser window {
+zentrierter content-bereich ohne sidebar {
+
+title: "Eventanfrage stellen",
+
+mehrere rechteckige formularfelder:
+
+Firmenname / Name
+
+Kontakt E-Mail
+
+Eventdatum
+
+Ort
+
+Budget
+
+Beschreibung / Anforderungen (großes Textfeld)
+
+darunter button "Anfrage senden"
+}
+}
+
+Stil: flach, minimal, nur rechtecke und platzhaltertext, kein realistisches UI-design, kein schatten, keine farben, nur wireframe."
+#### 5.1.1.16 Eventübersicht (Lesemodus)
+Promt: "Erstelle ein wireframe-ui mockup einer desktop-website mit dem Namen "EventHub". Grauskala, keine Designelemente, nur einfache Rechtecke und Text-Label.
+
+Layout:
+desktop browser window {
+top header bar { "EventHub" }
+
+sidebar navigation on the left { "Übersicht" (active), "Notizen", "Aufgaben", "Finanzen" }
+
+mittiger Content-Bereich {
+title: "Eventübersicht (Lesemodus)",
+
+liste von einträgen ohne buttons oder bearbeitungsoptionen,
+
+kleiner hinweistext oben: "Schreibrechte deaktiviert – nur Lesen möglich"
+}
 }
 
 Stil: flach, minimal, nur rechtecke und platzhaltertext, kein realistisches UI-design, kein schatten, keine farben, nur wireframe."
