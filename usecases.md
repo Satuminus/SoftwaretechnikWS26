@@ -99,7 +99,45 @@ Das können zum Beispiel Lehrer oder Firmenverantwortliche sein:
 #### 
 
 ## 1.3 Glossar der Fachdomäne
-### 1.3.1 Begriffsdefinitionen
+### 1.3.1 Event
+Eine geplante Veranstaltung innerhalb des Systems, die organisatorische Informationen wie Termine, Aufgaben, Finanzen, Teilnehmer und Dokumentation bündelt.
+
+### 1.3.2 Gruppe
+Eine Menge von Benutzern, die gemeinsam ein Event planen oder daran teilnehmen. Gruppen dienen als organisatorische Einheit zur Zusammenarbeit.
+
+### 1.3.3 Teilnehmer (Privatnutzer)
+Ein registrierter Benutzer, der einer oder mehreren Gruppen beitritt und aktiv an Events teilnimmt, beispielsweise durch Abstimmungen, Aufgabenübernahme oder Einzahlungen.
+
+### 1.3.4 Organisator (Gruppenleiter)
+Ein Benutzer mit erweiterten Rechten innerhalb einer Gruppe, der Events erstellt, Mitglieder verwaltet und organisatorische Entscheidungen trifft.
+
+### 1.3.5 Dienstleister
+Ein externer Anbieter von Leistungen oder Ressourcen für Events, der Anfragen empfängt, Angebote erstellt, Rechnungen ausstellt und Material sowie Personal plant.
+
+### 1.3.6 Aufgabe
+Ein konkretes To-do innerhalb eines Events, das einer oder mehreren Personen zugewiesen werden kann und einen Status wie offen, in Bearbeitung oder erledigt besitzt.
+
+### 1.3.7 Notiz
+Ein freier Informationseintrag innerhalb eines Events zur Dokumentation von Ideen, Absprachen oder Hinweisen.
+
+### 1.3.8 Umfrage
+Ein strukturiertes Abstimmungswerkzeug mit mehreren Antwortoptionen, das zur Entscheidungsfindung innerhalb einer Gruppe genutzt wird.
+
+### 1.3.9 Budget
+Der für ein Event verfügbare Geldrahmen, bestehend aus Einzahlungen und Ausgaben, der zur Planung und Kontrolle der Finanzierung dient.
+
+### 1.3.10 Rolle
+Eine Sammlung von Berechtigungen, die festlegt, welche Funktionen ein Benutzer im System ausführen darf, beispielsweise Lesen, Bearbeiten oder Administrieren.
+
+### 1.3.11 Institution
+Eine organisatorische Einheit wie Schule oder Unternehmen, die mehrere Events verwaltet und eigene Administratoren besitzt.
+
+### 1.3.12 Institutionsadministrator
+Ein Benutzer mit globalen Verwaltungsrechten innerhalb einer Institution, der Rollen vergibt und Benutzerkonten verwaltet.
+
+### 1.3.13 Ressource
+Materielle oder personelle Mittel (z. B. Geräte oder Mitarbeiter), die einem Event zugeordnet und eingeplant werden.
+
 
 
 # 2 Funktionale Anforderungen
