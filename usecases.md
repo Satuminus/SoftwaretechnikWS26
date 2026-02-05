@@ -328,6 +328,7 @@ Texte sind gut lesbar gestaltet und Bedienelemente ausreichend groß dimensionie
 
 
 ## 4.2 Navigationsmodelle
+Die folgenden Zustandsdiagramme zeigen Navigation und mögliche Zustandsübergänge der Benutzeroberfläche.
 ### 4.2.1 Zustandsdiagramm – Privatnutzer
 ![Zustandsdiagramm Privatnutzer](pngs/zustandsdiagramm_privatnutzer.png)
 
@@ -339,6 +340,40 @@ Texte sind gut lesbar gestaltet und Bedienelemente ausreichend groß dimensionie
 
 ## 4.3 Webbrowser-Mockups
 ### 4.3.1 Login & Registrierung
+![UI-Mockup Login und Registrierung](mockups/login.png)
+### 4.3.2 Dashboard
+![UI-Mockup Dashboard](mockups/Dashboard.png)
+### 4.3.3 Gruppenübersicht
+![UI-Mockup Gruppenübersicht](mockups/Gruppenuebersicht.png)
+### 4.3.4 Event-Detailseite
+![UI-Mockup Event-Detailseite](mockups/Event-Detail.png)
+### 4.3.5 Finanzen
+![UI-Mockup Finanzen](mockups/Finanzen.png)
+### 4.3.6 Notizen & Umfragen
+![UI-Mockup Notizen und Umfragen](mockups/Notizen_Umfragen.png)
+### 4.3.7 Aufgabenplanung
+![UI-Mockup Aufgabenplanung](mockups/Aufgabenübersicht.png)
+### 4.3.8 Profil & Einstellungen
+![UI-Mockup Profil & Einstellungen](mockups/Profil.png)
+### 4.3.9 Dienstleister-Dashboard
+![UI-Mockup Dienstleister-Dashboard](mockups/dienstleister_dashboard.png)
+## 4.4 Mobile-App-Mockups
+### 4.4.1 Dashboard
+![UI-Mockup Dashboard Mobil](mockups/mobile_dashboard.png)
+### 4.4.2 Event-Details
+![UI-Mockup Event-Details Mobil](mockups/mobile_eventdetail.png)
+### 4.4.3 Aufgaben
+![UI-Mockup Aufgaben Mobil](mockups/mobile_aufgaben.png)
+### 4.4.4 Finanzen
+![UI-Mockup Finanzen Mobil](mockups/mobile_finanzen.png)
+## 4.5 Zuordnung Screens ↔ User Stories
+
+
+# 5 Übersicht verwendeter Hilfsmittel
+## 5.1 OpenAI ChatGPT (openai.com, chatgpt.com)
+### 5.1.1 Generierung von Mockups
+ChatGPT wurde zur Generierung von Mockups genutzt. Die jeweils verwendeten Prompts werden hier ausgelistet. Jedes generierte Mockup wurde per Bildbearbeitungsprogramm meist noch ein wenig verändert. Die Prompts selber wurden per Hand erstellt.
+#### 5.1.1.1 Login & Registrierung
 Promt: "Erstelle ein wireframe-ui mockup einer desktop-website mit dem Namen "EventHub". Grauskala, keine Designelemente, nur einfache Rechtecke und Text-Label.
 
 Layout:
@@ -371,7 +406,7 @@ unter der login-box eine zweite kleinere box oder link "Anmelden"
 }
 
 Stil: flach, minimal, nur rechtecke und platzhaltertext, kein realistisches UI-design, kein schatten, keine farben, nur wireframe."
-### 4.3.2 Dashboard
+#### 5.1.1.2 Dashboard
 Prompt: "Erstelle ein wireframe-ui mockup einer desktop-website mit dem Namen "EventHub". Grauskala, keine Designelemente, nur einfache Rechtecke und Text-Label.
 
 Layout:
@@ -396,7 +431,7 @@ oben rechts ein button "+ Gruppe erstellen"
 }
 
 Stil: flach, minimal, nur rechtecke und platzhaltertext, kein realistisches UI-design, kein schatten, keine farben, nur wireframe."
-### 4.3.3 Gruppenübersicht
+#### 5.1.1.3 Gruppenübersicht
 Promt: "Erstelle ein wireframe-ui mockup einer desktop-website mit dem Namen "EventHub". Grauskala, keine Designelemente, nur einfache Rechtecke und Text-Label.
 
 Layout:
@@ -423,9 +458,10 @@ oben rechts ein button "+ Gruppe erstellen"
 }
 
 Stil: flach, minimal, nur rechtecke und platzhaltertext, kein realistisches UI-design, kein schatten, keine farben, nur wireframe."
-### 4.3.4 Event-Detailseite
+#### 5.1.1.4 Event-Detailseite
 Promt: "Erstelle ein wireframe-ui mockup einer desktop-website mit dem Namen "EventHub". Grauskala, keine Designelemente, nur einfache Rechtecke und Text-Label. Layout: desktop browser window { top header bar { "Eventhub" Schriftzug und logo links und navigation mit "Dashboard", Gruppen", "Aufgaben", "Profil" rechts} sidebar navigation on the left {"Übersicht "(active), "Notizen/Umfragen", "Aufgaben", "Finanzen", "Medien", "Mitglieder"}Mittiger Content-Bereich recht neben der sidebar {title: "Event-Detail", darunter eine Zeile mit "Event-Titel" und "Ort,Datum", darunter action buttons: "+Notiz erstellen", "+Aufgabe hinzufügen", "Mitglieder verwalten", darunter Sektion "Übersicht" -> untergeordnet liste von 3 rechteckigen listen-objekten mit "Notizen/Aufgaben" als Titel und "Beschreibung der Notiz/Aufgabe" als untertext"}"
-### 4.3.5 Finanzen
+
+#### 5.1.1.5 Finanzen
 Prompt:"
 Erstelle ein wireframe-ui mockup einer desktop-website mit dem Namen "EventHub". Grauskala, keine Designelemente, nur einfache Rechtecke und Text-Label.
 
@@ -463,7 +499,7 @@ optional einfache fortschrittsleiste als rechteckiger balken für Budgetfortschr
 }
 
 Stil: flach, minimal, nur rechtecke und platzhaltertext, kein realistisches UI-design, kein schatten, keine farben, nur wireframe."
-### 4.3.6 Notizen & Umfragen
+#### 5.1.1.6 Notizen & Umfragen
 Promt: "Erstelle ein wireframe-ui mockup einer desktop-website mit dem Namen "EventHub". Grauskala, keine Designelemente, nur einfache Rechtecke und Text-Label.
 
 Layout:
@@ -492,7 +528,7 @@ bei einer geöffneten Umfrage zusätzlich rechteckige Antwortoptionen mit Button
 }
 
 Stil: flach, minimal, nur rechtecke und platzhaltertext, kein realistisches UI-design, kein schatten, keine farben, nur wireframe."
-### 4.3.7 Aufgabenplanung
+#### 5.1.1.7 Aufgabenplanung
 Promt: "Erstelle ein wireframe-ui mockup einer desktop-website mit dem Namen "EventHub". Grauskala, keine Designelemente, nur einfache Rechtecke und Text-Label.
 
 Layout:
@@ -523,7 +559,7 @@ optional gruppiert in sektionen "Offen", "In Bearbeitung", "Erledigt"
 }
 
 Stil: flach, minimal, nur rechtecke und platzhaltertext, kein realistisches UI-design, kein schatten, keine farben, nur wireframe."
-### 4.3.8 Profil & Einstellungen
+#### 5.1.1.8 Profil & Einstellungen
 Promt:"Erstelle ein wireframe-ui mockup einer desktop-website mit dem Namen "EventHub". Grauskala, keine Designelemente, nur einfache Rechtecke und Text-Label.
 
 Layout:
@@ -564,7 +600,7 @@ unten Button "Logout"
 }
 
 Stil: flach, minimal, nur rechtecke und platzhaltertext, kein realistisches UI-design, kein schatten, keine farben, nur wireframe."
-### 4.3.9 Dienstleister-Dashboard
+#### 5.1.1.9 Dienstleister-Dashboard
 Promt: "Erstelle ein wireframe-ui mockup einer desktop-website mit dem Namen "EventHub". Grauskala, keine Designelemente, nur einfache Rechtecke und Text-Label.
 
 Layout:
@@ -588,9 +624,7 @@ karte "Ressourcenstatus" → einfache liste von Material oder Mitarbeitern mit V
 }
 
 Stil: flach, minimal, nur rechtecke und platzhaltertext, kein realistisches UI-design, kein schatten, keine farben, nur wireframe."
-
-## 4.4 Mobile-App-Mockups
-### 4.4.1 Dashboard
+#### 5.1.1.10 Dashboard - Mobil
 Prompt: "Erstelle ein wireframe-ui mockup einer mobilen app-version der website mit dem Namen "EventHub". Hochformat, smartphone-format, Grauskala, keine Designelemente, nur einfache Rechtecke und Text-Label.
 
 Layout:
@@ -615,7 +649,7 @@ alle elemente groß und touch-geeignet, einfache rechtecke, viel abstand zwische
 }
 
 Stil: flach, minimal, nur rechtecke und platzhaltertext, kein realistisches UI-design, kein schatten, keine farben, nur wireframe."
-### 4.4.2 Event-Detail
+#### 5.1.1.11 Event-Detail - Mobil
 Prompt: "Erstelle ein wireframe-ui mockup einer mobilen app-version der website mit dem Namen "EventHub". Hochformat, smartphone-format, Grauskala, keine Designelemente, nur einfache Rechtecke und Text-Label.
 
 Layout:
@@ -644,8 +678,7 @@ alle elemente groß, vertikal gestapelt, fingerfreundliche abstände, einfache r
 }
 
 Stil: flach, minimal, nur rechtecke und platzhaltertext, kein realistisches UI-design, kein schatten, keine farben, nur wireframe."
-
-### 4.4.3 Aufgaben
+####  5.1.1.12 Aufgaben - Mobil
 Promt: "Erstelle ein wireframe-ui mockup einer mobilen app-version der website mit dem Namen "EventHub". Hochformat, smartphone-format, Grauskala, keine Designelemente, nur einfache Rechtecke und Text-Label.
 
 Layout:
@@ -676,8 +709,7 @@ alle elemente groß, fingerfreundlich, viel abstand, nur einfache rechtecke
 }
 
 Stil: flach, minimal, nur rechtecke und platzhaltertext, kein realistisches UI-design, kein schatten, keine farben, nur wireframe."
-
-### 4.4.4 Finanzen
+#### 5.1.1.13 Finanzen - Mobil
 Prompt: "Erstelle ein wireframe-ui mockup einer mobilen app-version der website mit dem Namen "EventHub". Hochformat, smartphone-format, Grauskala, keine Designelemente, nur einfache Rechtecke und Text-Label.
 
 Layout:
@@ -714,8 +746,3 @@ alle elemente groß, vertikal, fingerfreundlich, nur einfache rechtecke und text
 }
 
 Stil: flach, minimal, nur rechtecke und platzhaltertext, kein realistisches UI-design, kein schatten, keine farben, nur wireframe."
-## 4.5 Zuordnung Screens ↔ User Stories
-
-
-# Übersicht verwendeter Hilfsmittel
-##
