@@ -1,7 +1,6 @@
 # 1 Fachliche Grundlagen und Anforderungen (Team A)
 
-## 1.1 Produktvision
-### 1.1.1 Zielsetzung des Softwareprodukts
+## 1.1.1 Zielsetzung des Softwareprodukts
 Die Zielsetzung des Softwareprodukts ist es, eine Zentrale Platform zur Planung, Organisation, Durchführung und Nachbereitung von Veranstaltungen zu erstellen. Dazu sollen viele verschiedene Tools zusammengelegt werden, wie zum Beispiel verschiedene Messenger, Email, Excel und Ticketsysteme. Also sammelt man alle relevanten Informationen an einem Ort/ auf einer Platform. Das System soll Transparenz über Termine, Aufgaben, Finanzen und Teilnehmer bieten. Dabei soll das Softwareprodukt sowohl für private als auch kommerziele Nutzung dienen. Weitere Anforderungen sind die Endgeräteunabhänigkeit und die Skalierbarkeit des Produktes. Das Produkt bietet eine Kombination aus Eventplanung, Finanzverwaltung und Dienstleisterintegration.
 ### 1.1.2 Produktname und Begründung
 Wir nennen das Softwareprodukt "EventHub". Der Name ist leicht merkbar und simpel, spiegelt den Zweck der Software gut wieder und ist international verständlich. Außerdem ist er nicht zu technisch aber gleichzeitig professionell.
