@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2026.2.5)  5 FEB 2026 23:19
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2026.2.5)  6 FEB 2026 11:07
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -33,7 +33,7 @@ Package: inputenc 2024/02/08 v1.3d Input encoding file
 Package: babel 2025/02/14 v25.4 The multilingual framework for pdfLaTeX, LuaLaTeX and XeLaTeX
 \babel@savecnt=\count270
 \U@D=\dimen142
-\l@unhyphenated=\language3
+\l@unhyphenated=\language8
  (/usr/share/texmf-dist/tex/generic/babel/txtbabel.def)
 \bbl@readstream=\read2
 \bbl@dirlevel=\count271
@@ -41,16 +41,6 @@ Package: babel 2025/02/14 v25.4 The multilingual framework for pdfLaTeX, LuaLaTe
 Language: ngerman 2024/12/10 v2.15 German support for babel (post-1996 orthography)
  (/usr/share/texmf-dist/tex/generic/babel-german/ngermanb.ldf
 Language: ngermanb 2024/12/10 v2.15 German support for babel (post-1996 orthography)
-
-
-Package babel Warning: No hyphenation patterns were preloaded for
-(babel)                the language 'German (new orthography)' into the format.
-(babel)                Please, configure your TeX system to add them and
-(babel)                rebuild the format. Now I will use the patterns
-(babel)                preloaded for \language=0 instead on input line 48.
-
-Package babel Info: Hyphen rules for 'ngerman' set to \l@english
-(babel)             (\language0). Reported on input line 49.
 Package babel Info: Making " an active character on input line 122.
 ))) (/usr/share/texmf-dist/tex/generic/babel/locale/de/babel-ngerman.tex
 Package babel Info: Importing font and identification data for ngerman
@@ -297,31 +287,89 @@ Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 285.
 )
 \Hy@SectionHShift=\skip59
+) (/usr/share/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
+Package: fancyvrb 2024/01/20 4.5c verbatim text (tvz,hv)
+\FV@CodeLineNo=\count302
+\FV@InFile=\read3
+\FV@TabBox=\box63
+\c@FancyVerbLine=\count303
+\FV@StepNumber=\count304
+\FV@OutFile=\write3
+) (/usr/share/texmf-dist/tex/latex/fvextra/fvextra.sty
+Package: fvextra 2025/03/04 v1.12.0 fvextra - extensions and patches for fancyvrb
+ (/usr/share/texmf-dist/tex/latex/upquote/upquote.sty
+Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verbatim
+ (/usr/share/texmf-dist/tex/latex/base/textcomp.sty
+Package: textcomp 2024/04/24 v2.1b Standard LaTeX package
+)) (/usr/share/texmf-dist/tex/latex/lineno/lineno.sty
+Package: lineno 2025/01/29 line numbers on paragraphs v5.4
+\linenopenalty=\count305
+\output=\toks29
+\linenoprevgraf=\count306
+\linenumbersep=\dimen180
+\linenumberwidth=\dimen181
+\c@linenumber=\count307
+\c@pagewiselinenumber=\count308
+\c@LN@truepage=\count309
+\c@internallinenumber=\count310
+\c@internallinenumbers=\count311
+\quotelinenumbersep=\dimen182
+\bframerule=\dimen183
+\bframesep=\dimen184
+\bframebox=\box64
+LaTeX Info: Redefining \\ on input line 3187.
+)
+\c@FancyVerbWriteLine=\count312
+\c@FancyVerbBufferLine=\count313
+\c@FV@TrueTabGroupLevel=\count314
+\c@FV@TrueTabCounter=\count315
+\FV@TabBox@Group=\box65
+\FV@bgcolorstructbox=\box66
+\FV@TmpLength=\skip60
+\c@FV@HighlightLinesStart=\count316
+\c@FV@HighlightLinesStop=\count317
+\FV@LoopCount=\count318
+\FV@NCharsBox=\box67
+\FV@BreakIndent=\dimen185
+\FV@BreakIndentNChars=\count319
+\FV@BreakSymbolSepLeft=\dimen186
+\FV@BreakSymbolSepLeftNChars=\count320
+\FV@BreakSymbolSepRight=\dimen187
+\FV@BreakSymbolSepRightNChars=\count321
+\FV@BreakSymbolIndentLeft=\dimen188
+\FV@BreakSymbolIndentLeftNChars=\count322
+\FV@BreakSymbolIndentRight=\dimen189
+\FV@BreakSymbolIndentRightNChars=\count323
+\c@FancyVerbLineBreakLast=\count324
+\FV@LineBox=\box68
+\FV@LineIndentBox=\box69
+\c@FV@BreakBufferDepth=\count325
+\FV@LineWidth=\dimen190
 ) (/usr/share/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count302
-\l__pdf_internal_box=\box63
+\l__color_backend_stack_int=\count326
+\l__pdf_internal_box=\box70
 ) (./abgabe.aux)
 \openout1 = `abgabe.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -357,20 +405,20 @@ LaTeX Font Info:    ... okay on input line 37.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Info: Redefining \microtypecontext on input line 37.
-Package microtype Info: Applying patch `item' on input line 37.
-Package microtype Info: Applying patch `toc' on input line 37.
-Package microtype Info: Applying patch `eqnum' on input line 37.
-Package microtype Info: Applying patch `footnote' on input line 37.
-Package microtype Info: Applying patch `verbatim' on input line 37.
-LaTeX Info: Redefining \microtypesetup on input line 37.
+LaTeX Info: Redefining \microtypecontext on input line 53.
+Package microtype Info: Applying patch `item' on input line 53.
+Package microtype Info: Applying patch `toc' on input line 53.
+Package microtype Info: Applying patch `eqnum' on input line 53.
+Package microtype Info: Applying patch `footnote' on input line 53.
+Package microtype Info: Applying patch `verbatim' on input line 53.
+LaTeX Info: Redefining \microtypesetup on input line 53.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `alltext-nott'.
-LaTeX Info: Redefining \showhyphens on input line 37.
+LaTeX Info: Redefining \showhyphens on input line 53.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
@@ -378,32 +426,32 @@ Package microtype Info: No adjustment of character kerning.
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman (RS)
 ) (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count303
-\scratchdimen=\dimen180
-\scratchbox=\box64
-\nofMPsegments=\count304
-\nofMParguments=\count305
-\everyMPshowfont=\toks29
-\MPscratchCnt=\count306
-\MPscratchDim=\dimen181
-\MPnumerator=\count307
-\makeMPintoPDFobject=\count308
-\everyMPtoPDFconversion=\toks30
+\scratchcounter=\count327
+\scratchdimen=\dimen191
+\scratchbox=\box71
+\nofMPsegments=\count328
+\nofMParguments=\count329
+\everyMPshowfont=\toks30
+\MPscratchCnt=\count330
+\MPscratchDim=\dimen192
+\MPnumerator=\count331
+\makeMPintoPDFobject=\count332
+\everyMPtoPDFconversion=\toks31
 ) (/usr/share/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
  (/usr/share/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-Package hyperref Info: Link coloring OFF on input line 37.
+Package hyperref Info: Link coloring OFF on input line 53.
  (./abgabe.out) (./abgabe.out)
-\@outlinefile=\write3
-\openout3 = `abgabe.out'.
+\@outlinefile=\write4
+\openout4 = `abgabe.out'.
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <14.4> on input line 39.
+(Font)              <14.4> on input line 55.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 39.
+(Font)              <7> on input line 55.
  (./abgabe.toc
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <12> on input line 3.
@@ -416,1257 +464,979 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}])
-\tf@toc=\write4
-\openout4 = `abgabe.toc'.
+\tf@toc=\write5
+\openout5 = `abgabe.toc'.
 
 
 
 [2]
 
 [3{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
-Overfull \hbox (0.26172pt too wide) in paragraph at lines 106--107
- []\T1/cmr/bx/n/12 (-20) Institutionsadministrator[] \T1/cmr/m/n/12 (-20) Das kön-nen zum Beispiel Lehrer oder Fir-men-ver-ant-wortliche
- []
-
-
 
 [4]
 
 [5]
 
 [6]
-Underfull \hbox (badness 10000) in paragraph at lines 256--256
-[]|\T1/cmr/bx/n/12 (+20) In mein-er
+Underfull \hbox (badness 10000) in paragraph at lines 272--272
+[]|\T1/cmr/bx/n/12 (+20) In mei-ner
  []
 
 
-Overfull \hbox (10.6852pt too wide) in paragraph at lines 256--256
+Overfull \hbox (10.6852pt too wide) in paragraph at lines 272--272
 []|\T1/cmr/bx/n/12 (-20) Priorität| 
  []
 
 
-Overfull \hbox (100.45313pt too wide) in alignment at lines 256--256
+Overfull \hbox (100.45313pt too wide) in alignment at lines 272--272
  [] [] [] [] [] [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 256--256
-[]|\T1/cmr/bx/n/12 (+20) In mein-er
+Underfull \hbox (badness 10000) in paragraph at lines 272--272
+[]|\T1/cmr/bx/n/12 (+20) In mei-ner
  []
 
 
-Overfull \hbox (10.6852pt too wide) in paragraph at lines 256--256
+Overfull \hbox (10.6852pt too wide) in paragraph at lines 272--272
 []|\T1/cmr/bx/n/12 (-20) Priorität| 
  []
 
 
-Overfull \hbox (100.45313pt too wide) in alignment at lines 256--256
+Overfull \hbox (100.45313pt too wide) in alignment at lines 272--272
  [] [] [] [] [] [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 256--256
-[]|\T1/cmr/m/n/12 (+20) US-01 Reg-
- []
-
-
-Underfull \hbox (badness 1838) in paragraph at lines 256--256
+Underfull \hbox (badness 1838) in paragraph at lines 272--272
 []|\T1/cmr/m/n/12 (+20) ich das Sys-tem
  []
 
 
-Underfull \hbox (badness 1888) in paragraph at lines 256--256
+Underfull \hbox (badness 1888) in paragraph at lines 272--272
 \T1/cmr/m/n/12 (+20) ge-füllt und Ac-count
  []
 
 
-Underfull \hbox (badness 4686) in paragraph at lines 256--256
+Underfull \hbox (badness 4686) in paragraph at lines 272--272
 []|\T1/cmr/m/n/12 (+20) ich Zu-griff auf
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 256--256
-\T1/cmr/m/n/12 (+20) meine Dat-en
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 256--256
+Underfull \hbox (badness 10000) in paragraph at lines 272--272
 []|\T1/cmr/m/n/12 (+20) niemand mein
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 256--256
+Underfull \hbox (badness 10000) in paragraph at lines 272--272
 \T1/cmr/m/n/12 (+20) Kon-to miss-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 256--256
-[]|\T1/cmr/m/n/12 (+20) mein Pass-wort
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 256--256
+Underfull \hbox (badness 10000) in paragraph at lines 272--272
 []|\T1/cmr/m/n/12 (+20) Zwei-Faktor-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 256--256
+Underfull \hbox (badness 10000) in paragraph at lines 272--272
 \T1/cmr/m/n/12 (-9) Authentifizierung
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 256--256
-[]|\T1/cmr/m/n/12 (+20) mein Ac-count
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 256--256
+Underfull \hbox (badness 10000) in paragraph at lines 272--272
 []|\T1/cmr/m/n/12 (+20) zusätzlicher Fak-tor
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 256--256
+Underfull \hbox (badness 10000) in paragraph at lines 272--272
 \T1/cmr/m/n/12 (+20) wird beim Lo-gin
  []
 
 
-Overfull \hbox (100.45313pt too wide) in alignment at lines 256--256
+Overfull \hbox (100.45313pt too wide) in alignment at lines 272--272
  [] [] [] [] [] [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 263--263
-[]|\T1/cmr/bx/n/12 (+20) In mein-er
+Underfull \hbox (badness 10000) in paragraph at lines 279--279
+[]|\T1/cmr/bx/n/12 (+20) In mei-ner
  []
 
 
-Overfull \hbox (10.6852pt too wide) in paragraph at lines 263--263
+Overfull \hbox (10.6852pt too wide) in paragraph at lines 279--279
 []|\T1/cmr/bx/n/12 (-20) Priorität| 
  []
 
 
-Overfull \hbox (100.45313pt too wide) in alignment at lines 263--263
+Overfull \hbox (100.45313pt too wide) in alignment at lines 279--279
  [] [] [] [] [] [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 263--263
-[]|\T1/cmr/bx/n/12 (+20) In mein-er
+Underfull \hbox (badness 10000) in paragraph at lines 279--279
+[]|\T1/cmr/bx/n/12 (+20) In mei-ner
  []
 
 
-Overfull \hbox (10.6852pt too wide) in paragraph at lines 263--263
+Overfull \hbox (10.6852pt too wide) in paragraph at lines 279--279
 []|\T1/cmr/bx/n/12 (-20) Priorität| 
  []
 
 
-Overfull \hbox (100.45313pt too wide) in alignment at lines 263--263
+Overfull \hbox (100.45313pt too wide) in alignment at lines 279--279
  [] [] [] [] [] [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 263--263
-[]|\T1/cmr/m/n/12 (+20) US-06 Pro-fil
+Underfull \hbox (badness 10000) in paragraph at lines 279--279
+[]|\T1/cmr/m/n/12 (+20) gespeicherte Da-ten
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 263--263
-[]|\T1/cmr/m/n/12 (+20) gespeicherte Dat-en
+Underfull \hbox (badness 2042) in paragraph at lines 279--279
+[]|\T1/cmr/m/n/12 (+20) sie ak-tu-ell blei-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 263--263
-[]|\T1/cmr/m/n/12 (+20) US-07 Pro-fil
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 263--263
-[]|\T1/cmr/m/n/12 (+20) sie ak-tuell
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 263--263
+Underfull \hbox (badness 10000) in paragraph at lines 279--279
 []|\T1/cmr/m/n/12 (+20) Änderungen wer-den
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 263--263
-\T1/cmr/m/n/12 (+20) nika-tion-sweg
+Underfull \hbox (badness 10000) in paragraph at lines 279--279
+\T1/cmr/m/n/12 (+20) ni-ka-ti-ons-weg
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 263--263
+Underfull \hbox (badness 10000) in paragraph at lines 279--279
 []|\T1/cmr/m/n/12 (+20) bevorzugte Be-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 263--263
-\T1/cmr/m/n/12 (+12) nachrich-ti-gun-gen
+Underfull \hbox (badness 10000) in paragraph at lines 279--279
+\T1/cmr/m/n/12 (+12) nach-rich-ti-gun-gen
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 263--263
-[]|\T1/cmr/m/n/12 (+20) ich passende
+Underfull \hbox (badness 10000) in paragraph at lines 279--279
+[]|\T1/cmr/m/n/12 (+20) ich pas-sen-de
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 263--263
-\T1/cmr/m/n/12 (+20) Nachricht-en
+Underfull \hbox (badness 10000) in paragraph at lines 279--279
+\T1/cmr/m/n/12 (+20) Nach-rich-ten
  []
 
 
-Underfull \hbox (badness 1394) in paragraph at lines 263--263
-[]|\T1/cmr/m/n/12 (+20) die Sprache än-
+Underfull \hbox (badness 1394) in paragraph at lines 279--279
+[]|\T1/cmr/m/n/12 (+20) die Spra-che än-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 263--263
-[]|\T1/cmr/m/n/12 (+20) UI-Texte wer-den
- []
-
-
-Overfull \hbox (100.45313pt too wide) in alignment at lines 263--263
+Overfull \hbox (100.45313pt too wide) in alignment at lines 279--279
  [] [] [] [] [] [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 273--273
-[]|\T1/cmr/bx/n/12 (+20) In mein-er
+Underfull \hbox (badness 10000) in paragraph at lines 289--289
+[]|\T1/cmr/bx/n/12 (+20) In mei-ner
  []
 
 
-Overfull \hbox (10.6852pt too wide) in paragraph at lines 273--273
+Overfull \hbox (10.6852pt too wide) in paragraph at lines 289--289
 []|\T1/cmr/bx/n/12 (-20) Priorität| 
  []
 
 
-Overfull \hbox (100.45313pt too wide) in alignment at lines 273--273
+Overfull \hbox (100.45313pt too wide) in alignment at lines 289--289
  [] [] [] [] [] [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 273--273
-[]|\T1/cmr/bx/n/12 (+20) In mein-er
+Underfull \hbox (badness 10000) in paragraph at lines 289--289
+[]|\T1/cmr/bx/n/12 (+20) In mei-ner
  []
 
 
-Overfull \hbox (10.6852pt too wide) in paragraph at lines 273--273
+Overfull \hbox (10.6852pt too wide) in paragraph at lines 289--289
 []|\T1/cmr/bx/n/12 (-20) Priorität| 
  []
 
 
-Overfull \hbox (100.45313pt too wide) in alignment at lines 273--273
+Overfull \hbox (100.45313pt too wide) in alignment at lines 289--289
  [] [] [] [] [] [] 
  []
 
 
-Underfull \hbox (badness 1173) in paragraph at lines 273--273
-[]|\T1/cmr/m/n/12 (+20) US-10 Gruppe
+Underfull \hbox (badness 1173) in paragraph at lines 289--289
+[]|\T1/cmr/m/n/12 (+20) US-10 Grup-pe
  []
 
 
-Underfull \hbox (badness 1755) in paragraph at lines 273--273
-[]|\T1/cmr/m/n/12 (+20) Name und Beschrei-
+Underfull \hbox (badness 1755) in paragraph at lines 289--289
+[]|\T1/cmr/m/n/12 (+20) Name und Be-schrei-
  []
 
 
-Underfull \hbox (badness 3396) in paragraph at lines 273--273
-\T1/cmr/m/n/12 (+20) bung wer-den gespe-
+Underfull \hbox (badness 1360) in paragraph at lines 289--289
+\T1/cmr/m/n/12 (+20) bung wer-den ge-spei-
  []
 
 
-Underfull \hbox (badness 1173) in paragraph at lines 273--273
-[]|\T1/cmr/m/n/12 (+20) US-11 Gruppe
+Underfull \hbox (badness 1173) in paragraph at lines 289--289
+[]|\T1/cmr/m/n/12 (+20) US-11 Grup-pe
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 273--273
-[]|\T1/cmr/m/n/12 (+20) meine Gruppe
+Underfull \hbox (badness 1173) in paragraph at lines 289--289
+[]|\T1/cmr/m/n/12 (+20) US-12 Grup-pe
  []
 
 
-Underfull \hbox (badness 1173) in paragraph at lines 273--273
-[]|\T1/cmr/m/n/12 (+20) US-12 Gruppe
+Underfull \hbox (badness 10000) in paragraph at lines 289--289
+[]|\T1/cmr/m/n/12 (+20) ich teil-neh-men
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 273--273
-[]|\T1/cmr/m/n/12 (+20) einer Gruppe
+Underfull \hbox (badness 1173) in paragraph at lines 289--289
+[]|\T1/cmr/m/n/12 (+20) US-13 Grup-pe
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 273--273
-[]|\T1/cmr/m/n/12 (+20) ich teil-nehmen
+Underfull \hbox (badness 1831) in paragraph at lines 289--289
+[]|\T1/cmr/m/n/12 (+20) US-14 Mit-glie-
  []
 
 
-Underfull \hbox (badness 1173) in paragraph at lines 273--273
-[]|\T1/cmr/m/n/12 (+20) US-13 Gruppe
+Underfull \hbox (badness 1831) in paragraph at lines 289--289
+[]|\T1/cmr/m/n/12 (+20) US-15 Mit-glie-
  []
 
 
-Underfull \hbox (badness 3657) in paragraph at lines 273--273
-[]|\T1/cmr/m/n/12 (+20) ich nicht mehr
+Underfull \hbox (badness 2680) in paragraph at lines 289--289
+[]|\T1/cmr/m/n/12 (+20) Regeln durch-ge-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 273--273
-[]|\T1/cmr/m/n/12 (+20) US-14 Mit-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 273--273
-[]|\T1/cmr/m/n/12 (+20) ich Überblick
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 273--273
-[]|\T1/cmr/m/n/12 (+20) US-15 Mit-
- []
-
-
-Underfull \hbox (badness 2181) in paragraph at lines 273--273
-\T1/cmr/m/n/12 (+20) glieder ver-wal-
- []
-
-
-Underfull \hbox (badness 2680) in paragraph at lines 273--273
-[]|\T1/cmr/m/n/12 (+20) Regeln durchge-
- []
-
-
-Underfull \hbox (badness 1430) in paragraph at lines 273--273
-\T1/cmr/m/n/12 (+20) teil-nehmer fes-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 273--273
-[]|\T1/cmr/m/n/12 (+20) Event nur
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 273--273
-\T1/cmr/m/n/12 (+20) bei genug
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 273--273
-\T1/cmr/m/n/12 (+20) Teil-nehmern
- []
-
-
-Overfull \hbox (100.45313pt too wide) in alignment at lines 273--273
+Overfull \hbox (100.45313pt too wide) in alignment at lines 289--289
  [] [] [] [] [] [] 
  []
 
 
 
 [7]
-Underfull \hbox (badness 10000) in paragraph at lines 284--284
-[]|\T1/cmr/bx/n/12 (+20) In mein-er
+Underfull \hbox (badness 10000) in paragraph at lines 300--300
+[]|\T1/cmr/bx/n/12 (+20) In mei-ner
  []
 
 
-Overfull \hbox (10.6852pt too wide) in paragraph at lines 284--284
+Overfull \hbox (10.6852pt too wide) in paragraph at lines 300--300
 []|\T1/cmr/bx/n/12 (-20) Priorität| 
  []
 
 
-Overfull \hbox (100.45313pt too wide) in alignment at lines 284--284
+Overfull \hbox (100.45313pt too wide) in alignment at lines 300--300
  [] [] [] [] [] [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 284--284
-[]|\T1/cmr/bx/n/12 (+20) In mein-er
+Underfull \hbox (badness 10000) in paragraph at lines 300--300
+[]|\T1/cmr/bx/n/12 (+20) In mei-ner
  []
 
 
-Overfull \hbox (10.6852pt too wide) in paragraph at lines 284--284
+Overfull \hbox (10.6852pt too wide) in paragraph at lines 300--300
 []|\T1/cmr/bx/n/12 (-20) Priorität| 
  []
 
 
-Overfull \hbox (100.45313pt too wide) in alignment at lines 284--284
+Overfull \hbox (100.45313pt too wide) in alignment at lines 300--300
  [] [] [] [] [] [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 284--284
-[]|\T1/cmr/m/n/12 (+20) Infos doku-men-
+Underfull \hbox (badness 10000) in paragraph at lines 300--300
+[]|\T1/cmr/m/n/12 (+20) Infos do-ku-men-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 284--284
-[]|\T1/cmr/m/n/12 (+20) US-18 No-tiz
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 284--284
+Underfull \hbox (badness 10000) in paragraph at lines 300--300
 []|\T1/cmr/m/n/12 (+20) Änderungen wer-den
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 284--284
-[]|\T1/cmr/m/n/12 (+20) US-19 No-tiz
- []
-
-
-Underfull \hbox (badness 1077) in paragraph at lines 284--284
+Underfull \hbox (badness 1077) in paragraph at lines 300--300
 []|\T1/cmr/m/n/12 (+20) irrelevante In-fos
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 284--284
-[]|\T1/cmr/m/n/12 (+20) ich schneller
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 284--284
-\T1/cmr/m/n/12 (+20) finde, was ich
- []
-
-
-Underfull \hbox (badness 3668) in paragraph at lines 284--284
+Underfull \hbox (badness 3668) in paragraph at lines 300--300
 []|\T1/cmr/m/n/12 (+20) US-21 Ter-min
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 284--284
-[]|\T1/cmr/m/n/12 (+20) alle in-formiert
+Underfull \hbox (badness 10000) in paragraph at lines 300--300
+[]|\T1/cmr/m/n/12 (+20) alle in-for-miert
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 284--284
+Underfull \hbox (badness 10000) in paragraph at lines 300--300
 []|\T1/cmr/m/n/12 (+20) Entscheidungen
  []
 
 
-Underfull \hbox (badness 1112) in paragraph at lines 284--284
+Underfull \hbox (badness 1112) in paragraph at lines 300--300
 []|\T1/cmr/m/n/12 (+20) Antwortoptionen frei
  []
 
 
-Underfull \hbox (badness 7888) in paragraph at lines 284--284
-[]|\T1/cmr/m/n/12 (+20) meine Mei-n-ung
+Underfull \hbox (badness 7888) in paragraph at lines 300--300
+[]|\T1/cmr/m/n/12 (+20) meine Mei-nung
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 284--284
-[]|\T1/cmr/m/n/12 (+20) Transparenz
+Underfull \hbox (badness 2368) in paragraph at lines 300--300
+[]|\T1/cmr/m/n/12 (+20) Transparenz be-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 284--284
+Underfull \hbox (badness 10000) in paragraph at lines 300--300
 []|\T1/cmr/m/n/12 (+20) Stimmenverteilung
  []
 
 
-Overfull \hbox (100.45313pt too wide) in alignment at lines 284--284
+Overfull \hbox (100.45313pt too wide) in alignment at lines 300--300
  [] [] [] [] [] [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 292--292
-[]|\T1/cmr/bx/n/12 (+20) In mein-er
+Underfull \hbox (badness 10000) in paragraph at lines 308--308
+[]|\T1/cmr/bx/n/12 (+20) In mei-ner
  []
 
 
-Overfull \hbox (10.6852pt too wide) in paragraph at lines 292--292
+Overfull \hbox (10.6852pt too wide) in paragraph at lines 308--308
 []|\T1/cmr/bx/n/12 (-20) Priorität| 
  []
 
 
-Overfull \hbox (100.45313pt too wide) in alignment at lines 292--292
+Overfull \hbox (100.45313pt too wide) in alignment at lines 308--308
  [] [] [] [] [] [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 292--292
-[]|\T1/cmr/bx/n/12 (+20) In mein-er
+Underfull \hbox (badness 10000) in paragraph at lines 308--308
+[]|\T1/cmr/bx/n/12 (+20) In mei-ner
  []
 
 
-Overfull \hbox (10.6852pt too wide) in paragraph at lines 292--292
+Overfull \hbox (10.6852pt too wide) in paragraph at lines 308--308
 []|\T1/cmr/bx/n/12 (-20) Priorität| 
  []
 
 
-Overfull \hbox (100.45313pt too wide) in alignment at lines 292--292
+Overfull \hbox (100.45313pt too wide) in alignment at lines 308--308
  [] [] [] [] [] [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 292--292
-[]|\T1/cmr/m/n/12 (+20) US-25 Ein-
+Underfull \hbox (badness 2865) in paragraph at lines 308--308
+[]|\T1/cmr/m/n/12 (+20) US-25 Ein-zah-
  []
 
 
-Underfull \hbox (badness 1546) in paragraph at lines 292--292
-[]|\T1/cmr/m/n/12 (+20) Event fi-nanziert
+Underfull \hbox (badness 1546) in paragraph at lines 308--308
+[]|\T1/cmr/m/n/12 (+20) Event fi-nan-ziert
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 292--292
-[]|\T1/cmr/m/n/12 (+20) Betrag wird gespe-
+Underfull \hbox (badness 4429) in paragraph at lines 308--308
+[]|\T1/cmr/m/n/12 (+20) Betrag wird ge-spei-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 292--292
-[]|\T1/cmr/m/n/12 (+20) US-26
+Underfull \hbox (badness 10000) in paragraph at lines 308--308
+[]|\T1/cmr/m/n/12 (+20) US-26 Zah-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 292--292
-\T1/cmr/m/n/12 (+20) Zahlungs-stand
+Underfull \hbox (badness 10000) in paragraph at lines 308--308
+\T1/cmr/m/n/12 (+20) lungs-stand
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 292--292
-[]|\T1/cmr/m/n/12 (+20) ich Überblick
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 292--292
+Underfull \hbox (badness 10000) in paragraph at lines 308--308
 []|\T1/cmr/m/n/12 (+20) eingegangenes Geld
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 292--292
-\T1/cmr/m/n/12 (+20) und Ziel-summe
+Underfull \hbox (badness 10000) in paragraph at lines 308--308
+\T1/cmr/m/n/12 (+20) und Ziel-sum-me
  []
 
 
-Underfull \hbox (badness 1997) in paragraph at lines 292--292
-[]|\T1/cmr/m/n/12 (+20) Ausgaben doku-
+Underfull \hbox (badness 1997) in paragraph at lines 308--308
+[]|\T1/cmr/m/n/12 (+20) Ausgaben do-ku-
  []
 
 
-Underfull \hbox (badness 3396) in paragraph at lines 292--292
-\T1/cmr/m/n/12 (+20) bung wer-den gespe-
+Underfull \hbox (badness 3769) in paragraph at lines 308--308
+[]|\T1/cmr/m/n/12 (+20) Kosten trans-pa-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 292--292
-[]|\T1/cmr/m/n/12 (+20) US-28
+Underfull \hbox (badness 1360) in paragraph at lines 308--308
+\T1/cmr/m/n/12 (+20) bung wer-den ge-spei-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 292--292
-\T1/cmr/m/n/12 (+20) Kassenüber-
+Underfull \hbox (badness 2050) in paragraph at lines 308--308
+[]|\T1/cmr/m/n/12 (+20) US-28 Kas-sen-
  []
 
 
-Underfull \hbox (badness 4378) in paragraph at lines 292--292
+Underfull \hbox (badness 4378) in paragraph at lines 308--308
 []|\T1/cmr/m/n/12 (+20) alle Ein-nah-men
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 292--292
-[]|\T1/cmr/m/n/12 (+20) ich abrech-nen
+Underfull \hbox (badness 10000) in paragraph at lines 308--308
+[]|\T1/cmr/m/n/12 (+20) ich ab-rech-nen
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 292--292
-[]|\T1/cmr/m/n/12 (+20) US-29 Rück-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 292--292
-\T1/cmr/m/n/12 (+20) zahlung aus-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 292--292
+Underfull \hbox (badness 10000) in paragraph at lines 308--308
 []|\T1/cmr/m/n/12 (+20) Rückzahlungen
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 292--292
-[]|\T1/cmr/m/n/12 (+20) Guthaben aus-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 292--292
-[]|\T1/cmr/m/n/12 (+20) Rückzahlung wird
- []
-
-
-Overfull \hbox (100.45313pt too wide) in alignment at lines 292--292
+Overfull \hbox (100.45313pt too wide) in alignment at lines 308--308
  [] [] [] [] [] [] 
  []
 
 
 
 [8]
-Underfull \hbox (badness 10000) in paragraph at lines 299--299
-[]|\T1/cmr/bx/n/12 (+20) In mein-er
+Underfull \hbox (badness 10000) in paragraph at lines 315--315
+[]|\T1/cmr/bx/n/12 (+20) In mei-ner
  []
 
 
-Overfull \hbox (10.6852pt too wide) in paragraph at lines 299--299
+Overfull \hbox (10.6852pt too wide) in paragraph at lines 315--315
 []|\T1/cmr/bx/n/12 (-20) Priorität| 
  []
 
 
-Overfull \hbox (100.45313pt too wide) in alignment at lines 299--299
+Overfull \hbox (100.45313pt too wide) in alignment at lines 315--315
  [] [] [] [] [] [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 299--299
-[]|\T1/cmr/bx/n/12 (+20) In mein-er
+Underfull \hbox (badness 10000) in paragraph at lines 315--315
+[]|\T1/cmr/bx/n/12 (+20) In mei-ner
  []
 
 
-Overfull \hbox (10.6852pt too wide) in paragraph at lines 299--299
+Overfull \hbox (10.6852pt too wide) in paragraph at lines 315--315
 []|\T1/cmr/bx/n/12 (-20) Priorität| 
  []
 
 
-Overfull \hbox (100.45313pt too wide) in alignment at lines 299--299
+Overfull \hbox (100.45313pt too wide) in alignment at lines 315--315
  [] [] [] [] [] [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 299--299
+Underfull \hbox (badness 10000) in paragraph at lines 315--315
 []|\T1/cmr/m/n/12 (+20) Aufgaben an-le-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 299--299
+Underfull \hbox (badness 10000) in paragraph at lines 315--315
 []|\T1/cmr/m/n/12 (+20) To-dos ge-plant
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 299--299
-[]|\T1/cmr/m/n/12 (+20) Aufgaben
+Underfull \hbox (badness 7832) in paragraph at lines 315--315
+[]|\T1/cmr/m/n/12 (+20) Aufgaben über-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 299--299
+Underfull \hbox (badness 10000) in paragraph at lines 315--315
 []|\T1/cmr/m/n/12 (+20) Zuständigkeit
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 299--299
-[]|\T1/cmr/m/n/12 (+20) Aufgaben
+Underfull \hbox (badness 5231) in paragraph at lines 315--315
+[]|\T1/cmr/m/n/12 (+20) US-33 Er-in-ne-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 299--299
-\T1/cmr/m/n/12 (+20) als erledigt
+Underfull \hbox (badness 1521) in paragraph at lines 315--315
+[]|\T1/cmr/m/n/12 (+20) nichts ver-ges-sen
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 299--299
-[]|\T1/cmr/m/n/12 (+20) US-33 Erin-
- []
-
-
-Underfull \hbox (badness 6944) in paragraph at lines 299--299
-[]|\T1/cmr/m/n/12 (+20) an of-fene Auf-
- []
-
-
-Underfull \hbox (badness 1521) in paragraph at lines 299--299
-[]|\T1/cmr/m/n/12 (+20) nichts vergessen
- []
-
-
-Overfull \hbox (100.45313pt too wide) in alignment at lines 299--299
+Overfull \hbox (100.45313pt too wide) in alignment at lines 315--315
  [] [] [] [] [] [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 304--304
-[]|\T1/cmr/bx/n/12 (+20) In mein-er
+Underfull \hbox (badness 10000) in paragraph at lines 320--320
+[]|\T1/cmr/bx/n/12 (+20) In mei-ner
  []
 
 
-Overfull \hbox (10.6852pt too wide) in paragraph at lines 304--304
+Overfull \hbox (10.6852pt too wide) in paragraph at lines 320--320
 []|\T1/cmr/bx/n/12 (-20) Priorität| 
  []
 
 
-Overfull \hbox (100.45313pt too wide) in alignment at lines 304--304
+Overfull \hbox (100.45313pt too wide) in alignment at lines 320--320
  [] [] [] [] [] [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 304--304
-[]|\T1/cmr/bx/n/12 (+20) In mein-er
+Underfull \hbox (badness 10000) in paragraph at lines 320--320
+[]|\T1/cmr/bx/n/12 (+20) In mei-ner
  []
 
 
-Overfull \hbox (10.6852pt too wide) in paragraph at lines 304--304
+Overfull \hbox (10.6852pt too wide) in paragraph at lines 320--320
 []|\T1/cmr/bx/n/12 (-20) Priorität| 
  []
 
 
-Overfull \hbox (100.45313pt too wide) in alignment at lines 304--304
+Overfull \hbox (100.45313pt too wide) in alignment at lines 320--320
  [] [] [] [] [] [] 
  []
 
 
-Underfull \hbox (badness 2680) in paragraph at lines 304--304
+Underfull \hbox (badness 2680) in paragraph at lines 320--320
 []|\T1/cmr/m/n/12 (+20) US-34 Me-di-en
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 304--304
+Underfull \hbox (badness 10000) in paragraph at lines 320--320
 []|\T1/cmr/m/n/12 (+20) US-35 Kom-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 304--304
-\T1/cmr/m/n/12 (+20) mentare
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 304--304
+Underfull \hbox (badness 10000) in paragraph at lines 320--320
 []|\T1/cmr/m/n/12 (+20) Bewertungen
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 304--304
-\T1/cmr/m/n/12 (+20) oder Kom-
+Underfull \hbox (badness 2689) in paragraph at lines 320--320
+[]|\T1/cmr/m/n/12 (+20) Erfahrungen ge-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 304--304
-\T1/cmr/m/n/12 (+20) mentare hin-ter-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 304--304
-[]|\T1/cmr/m/n/12 (+20) Erfahrungen
- []
-
-
-Overfull \hbox (2.2606pt too wide) in paragraph at lines 304--304
+Overfull \hbox (2.2606pt too wide) in paragraph at lines 320--320
 []|\T1/cmr/bx/n/12 (-20) Könnte| 
  []
 
 
-Overfull \hbox (100.45313pt too wide) in alignment at lines 304--304
+Overfull \hbox (100.45313pt too wide) in alignment at lines 320--320
  [] [] [] [] [] [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 310--310
-[]|\T1/cmr/bx/n/12 (+20) In mein-er
+Underfull \hbox (badness 10000) in paragraph at lines 326--326
+[]|\T1/cmr/bx/n/12 (+20) In mei-ner
  []
 
 
-Overfull \hbox (10.6852pt too wide) in paragraph at lines 310--310
+Overfull \hbox (10.6852pt too wide) in paragraph at lines 326--326
 []|\T1/cmr/bx/n/12 (-20) Priorität| 
  []
 
 
-Overfull \hbox (100.45313pt too wide) in alignment at lines 310--310
+Overfull \hbox (100.45313pt too wide) in alignment at lines 326--326
  [] [] [] [] [] [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 310--310
-[]|\T1/cmr/bx/n/12 (+20) In mein-er
+Underfull \hbox (badness 10000) in paragraph at lines 326--326
+[]|\T1/cmr/bx/n/12 (+20) In mei-ner
  []
 
 
-Overfull \hbox (10.6852pt too wide) in paragraph at lines 310--310
+Overfull \hbox (10.6852pt too wide) in paragraph at lines 326--326
 []|\T1/cmr/bx/n/12 (-20) Priorität| 
  []
 
 
-Overfull \hbox (100.45313pt too wide) in alignment at lines 310--310
+Overfull \hbox (100.45313pt too wide) in alignment at lines 326--326
  [] [] [] [] [] [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 310--310
-[]|\T1/cmr/m/n/12 (+20) US-36 Rollen
+Underfull \hbox (badness 10000) in paragraph at lines 326--326
+[]|\T1/cmr/m/n/12 (+20) US-36 Rol-len
  []
 
 
-Overfull \hbox (15.36586pt too wide) in paragraph at lines 310--310
+Overfull \hbox (15.36586pt too wide) in paragraph at lines 326--326
 []|\T1/cmr/m/n/12 (-20) Institutionsadmin| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 310--310
+Underfull \hbox (badness 10000) in paragraph at lines 326--326
 []|\T1/cmr/m/n/12 (+20) Berechtigungen wer-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 310--310
-[]|\T1/cmr/m/n/12 (+20) US-37
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 310--310
-\T1/cmr/m/n/12 (+20) Leserechte
- []
-
-
-Overfull \hbox (24.95934pt too wide) in paragraph at lines 310--310
+Overfull \hbox (24.95934pt too wide) in paragraph at lines 326--326
 []|\T1/cmr/m/n/12 (-20) Institutionsmitglied| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 310--310
-[]|\T1/cmr/m/n/12 (+20) Schreibfunktionen
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 310--310
-[]|\T1/cmr/m/n/12 (+20) US-38 Lizen-
- []
-
-
-Overfull \hbox (15.36586pt too wide) in paragraph at lines 310--310
+Overfull \hbox (15.36586pt too wide) in paragraph at lines 326--326
 []|\T1/cmr/m/n/12 (-20) Institutionsadmin| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 310--310
+Underfull \hbox (badness 10000) in paragraph at lines 326--326
 []|\T1/cmr/m/n/12 (+20) Community-
  []
 
 
-Overfull \hbox (100.45313pt too wide) in alignment at lines 310--310
+Overfull \hbox (100.45313pt too wide) in alignment at lines 326--326
  [] [] [] [] [] [] 
  []
 
 
 
 [9]
-Underfull \hbox (badness 10000) in paragraph at lines 315--315
-[]|\T1/cmr/bx/n/12 (+20) In mein-er
+Underfull \hbox (badness 10000) in paragraph at lines 331--331
+[]|\T1/cmr/bx/n/12 (+20) In mei-ner
  []
 
 
-Overfull \hbox (10.6852pt too wide) in paragraph at lines 315--315
+Overfull \hbox (10.6852pt too wide) in paragraph at lines 331--331
 []|\T1/cmr/bx/n/12 (-20) Priorität| 
  []
 
 
-Overfull \hbox (100.45313pt too wide) in alignment at lines 315--315
+Overfull \hbox (100.45313pt too wide) in alignment at lines 331--331
  [] [] [] [] [] [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 315--315
-[]|\T1/cmr/bx/n/12 (+20) In mein-er
+Underfull \hbox (badness 10000) in paragraph at lines 331--331
+[]|\T1/cmr/bx/n/12 (+20) In mei-ner
  []
 
 
-Overfull \hbox (10.6852pt too wide) in paragraph at lines 315--315
+Overfull \hbox (10.6852pt too wide) in paragraph at lines 331--331
 []|\T1/cmr/bx/n/12 (-20) Priorität| 
  []
 
 
-Overfull \hbox (100.45313pt too wide) in alignment at lines 315--315
+Overfull \hbox (100.45313pt too wide) in alignment at lines 331--331
  [] [] [] [] [] [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 315--315
-[]|\T1/cmr/m/n/12 (+20) US-39 Event-
+Underfull \hbox (badness 10000) in paragraph at lines 331--331
+[]|\T1/cmr/m/n/12 (+20) eine öf-fent-li-che
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 315--315
-[]|\T1/cmr/m/n/12 (+20) eine öf-fentliche
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 315--315
+Underfull \hbox (badness 10000) in paragraph at lines 331--331
 []|\T1/cmr/m/n/12 (+20) US-40 QR-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 315--315
-\T1/cmr/m/n/12 (+20) Code gener-
+Underfull \hbox (badness 10000) in paragraph at lines 331--331
+\T1/cmr/m/n/12 (+20) Code ge-ne-rie-
  []
 
 
-Underfull \hbox (badness 6592) in paragraph at lines 315--315
+Underfull \hbox (badness 6592) in paragraph at lines 331--331
 []|\T1/cmr/m/n/12 (+20) einen QR-Code
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 315--315
+Underfull \hbox (badness 10000) in paragraph at lines 331--331
 []|\T1/cmr/m/n/12 (+20) ich den Link
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 315--315
-\T1/cmr/m/n/12 (+20) schnell teilen
+Underfull \hbox (badness 10000) in paragraph at lines 331--331
+\T1/cmr/m/n/12 (+20) schnell tei-len
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 315--315
-[]|\T1/cmr/m/n/12 (+20) Code wird ko-r-rekt
- []
-
-
-Overfull \hbox (100.45313pt too wide) in alignment at lines 315--315
+Overfull \hbox (100.45313pt too wide) in alignment at lines 331--331
  [] [] [] [] [] [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 323--323
-[]|\T1/cmr/bx/n/12 (+20) In mein-er
+Underfull \hbox (badness 10000) in paragraph at lines 339--339
+[]|\T1/cmr/bx/n/12 (+20) In mei-ner
  []
 
 
-Overfull \hbox (10.6852pt too wide) in paragraph at lines 323--323
+Overfull \hbox (10.6852pt too wide) in paragraph at lines 339--339
 []|\T1/cmr/bx/n/12 (-20) Priorität| 
  []
 
 
-Overfull \hbox (100.45313pt too wide) in alignment at lines 323--323
+Overfull \hbox (100.45313pt too wide) in alignment at lines 339--339
  [] [] [] [] [] [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 323--323
-[]|\T1/cmr/bx/n/12 (+20) In mein-er
+Underfull \hbox (badness 10000) in paragraph at lines 339--339
+[]|\T1/cmr/bx/n/12 (+20) In mei-ner
  []
 
 
-Overfull \hbox (10.6852pt too wide) in paragraph at lines 323--323
+Overfull \hbox (10.6852pt too wide) in paragraph at lines 339--339
 []|\T1/cmr/bx/n/12 (-20) Priorität| 
  []
 
 
-Overfull \hbox (100.45313pt too wide) in alignment at lines 323--323
+Overfull \hbox (100.45313pt too wide) in alignment at lines 339--339
  [] [] [] [] [] [] 
  []
 
 
-Underfull \hbox (badness 5091) in paragraph at lines 323--323
-[]|\T1/cmr/m/n/12 (+20) sie au-toma-tisch
+Underfull \hbox (badness 5091) in paragraph at lines 339--339
+[]|\T1/cmr/m/n/12 (+20) sie au-to-ma-tisch
  []
 
 
-Overfull \hbox (2.2606pt too wide) in paragraph at lines 323--323
+Overfull \hbox (2.2606pt too wide) in paragraph at lines 339--339
 []|\T1/cmr/bx/n/12 (-20) Könnte| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 323--323
-[]|\T1/cmr/m/n/12 (+20) US-42 Be-
+Underfull \hbox (badness 10000) in paragraph at lines 339--339
+\T1/cmr/m/n/12 (+20) rich-ti-gun-gen
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 323--323
-\T1/cmr/m/n/12 (+20) nachrich-ti-gun-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 323--323
-[]|\T1/cmr/m/n/12 (+20) Nachrichten
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 323--323
-[]|\T1/cmr/m/n/12 (+20) Versand über
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 323--323
-\T1/cmr/m/n/12 (+20) gewählten Kanal
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 323--323
+Underfull \hbox (badness 10000) in paragraph at lines 339--339
 []|\T1/cmr/m/n/12 (+20) US-42a
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 323--323
+Underfull \hbox (badness 10000) in paragraph at lines 339--339
 \T1/cmr/m/n/12 (+20) Sprachas-sis-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 323--323
-[]|\T1/cmr/m/n/12 (+20) einen dig-i-tal-en
+Underfull \hbox (badness 10000) in paragraph at lines 339--339
+[]|\T1/cmr/m/n/12 (+20) einen di-gi-ta-len
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 323--323
+Underfull \hbox (badness 10000) in paragraph at lines 339--339
 \T1/cmr/m/n/12 (+20) Sprachas-sis-ten-
  []
 
 
-Overfull \hbox (2.2606pt too wide) in paragraph at lines 323--323
+Overfull \hbox (2.2606pt too wide) in paragraph at lines 339--339
 []|\T1/cmr/bx/n/12 (-20) Könnte| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 323--323
-[]|\T1/cmr/m/n/12 (+20) US-42b Ter-
+Underfull \hbox (badness 1189) in paragraph at lines 339--339
+[]|\T1/cmr/m/n/12 (+20) US-42b Ter-mi-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 323--323
-\T1/cmr/m/n/12 (+20) mine per
+Underfull \hbox (badness 6792) in paragraph at lines 339--339
+[]|\T1/cmr/m/n/12 (+20) meine nächs-ten
  []
 
 
-Underfull \hbox (badness 2617) in paragraph at lines 323--323
-\T1/cmr/m/n/12 (+20) Sprache abfra-
+Underfull \hbox (badness 10000) in paragraph at lines 339--339
+\T1/cmr/m/n/12 (+20) Ter-mi-ne per
  []
 
 
-Underfull \hbox (badness 6792) in paragraph at lines 323--323
-[]|\T1/cmr/m/n/12 (+20) meine näch-sten
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 323--323
-\T1/cmr/m/n/12 (+20) Ter-mine per
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 323--323
+Underfull \hbox (badness 10000) in paragraph at lines 339--339
 \T1/cmr/m/n/12 (+20) Sprach-be-fehl
  []
 
 
-Overfull \hbox (2.2606pt too wide) in paragraph at lines 323--323
+Overfull \hbox (2.2606pt too wide) in paragraph at lines 339--339
 []|\T1/cmr/bx/n/12 (-20) Könnte| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 323--323
+Underfull \hbox (badness 10000) in paragraph at lines 339--339
 []|\T1/cmr/m/n/12 (+20) einfache Ak-tio-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 323--323
-\T1/cmr/m/n/12 (+20) nen wie Auf-
+Underfull \hbox (badness 10000) in paragraph at lines 339--339
+\T1/cmr/m/n/12 (+20) ab-ha-ken oder
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 323--323
-\T1/cmr/m/n/12 (+20) gaben ab-hak-en
+Underfull \hbox (badness 10000) in paragraph at lines 339--339
+\T1/cmr/m/n/12 (+20) Ein-zah-lun-gen
  []
 
 
-Underfull \hbox (badness 3724) in paragraph at lines 323--323
-\T1/cmr/m/n/12 (+20) oder Ein-zahlun-
+Underfull \hbox (badness 10000) in paragraph at lines 339--339
+\T1/cmr/m/n/12 (+20) be-stä-ti-gen per
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 323--323
-\T1/cmr/m/n/12 (+20) gen bestäti-gen
+Underfull \hbox (badness 4492) in paragraph at lines 339--339
+\T1/cmr/m/n/12 (+20) Spra-che aus-füh-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 323--323
-\T1/cmr/m/n/12 (+20) per Sprache
+Underfull \hbox (badness 1394) in paragraph at lines 339--339
+[]|\T1/cmr/m/n/12 (+20) Aktion wird kor-rekt
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 323--323
-[]|\T1/cmr/m/n/12 (+20) ich schnell
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 323--323
-\T1/cmr/m/n/12 (+20) reagieren kann
- []
-
-
-Underfull \hbox (badness 1394) in paragraph at lines 323--323
-[]|\T1/cmr/m/n/12 (+20) Aktion wird ko-r-rekt
- []
-
-
-Overfull \hbox (2.2606pt too wide) in paragraph at lines 323--323
+Overfull \hbox (2.2606pt too wide) in paragraph at lines 339--339
 []|\T1/cmr/bx/n/12 (-20) Könnte| 
  []
 
 
-Overfull \hbox (100.45313pt too wide) in alignment at lines 323--323
+Overfull \hbox (100.45313pt too wide) in alignment at lines 339--339
  [] [] [] [] [] [] 
  []
 
-[10]
-Underfull \hbox (badness 10000) in paragraph at lines 330--330
-[]|\T1/cmr/bx/n/12 (+20) In mein-er
+
+Underfull \hbox (badness 10000) in paragraph at lines 346--346
+[]|\T1/cmr/bx/n/12 (+20) In mei-ner
  []
 
 
-Overfull \hbox (10.6852pt too wide) in paragraph at lines 330--330
+Overfull \hbox (10.6852pt too wide) in paragraph at lines 346--346
 []|\T1/cmr/bx/n/12 (-20) Priorität| 
  []
 
 
-Overfull \hbox (100.45313pt too wide) in alignment at lines 330--330
+Overfull \hbox (100.45313pt too wide) in alignment at lines 346--346
  [] [] [] [] [] [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 330--330
-[]|\T1/cmr/bx/n/12 (+20) In mein-er
+Underfull \hbox (badness 10000) in paragraph at lines 346--346
+[]|\T1/cmr/bx/n/12 (+20) In mei-ner
  []
 
 
-Overfull \hbox (10.6852pt too wide) in paragraph at lines 330--330
+Overfull \hbox (10.6852pt too wide) in paragraph at lines 346--346
 []|\T1/cmr/bx/n/12 (-20) Priorität| 
  []
 
 
-Overfull \hbox (100.45313pt too wide) in alignment at lines 330--330
+Overfull \hbox (100.45313pt too wide) in alignment at lines 346--346
  [] [] [] [] [] [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 330--330
-[]|\T1/cmr/m/n/12 (+20) ein Ange-bot
- []
-
-
-Underfull \hbox (badness 2951) in paragraph at lines 330--330
-[]|\T1/cmr/m/n/12 (+20) ich Kun-den in-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 330--330
+Underfull \hbox (badness 10000) in paragraph at lines 346--346
 []|\T1/cmr/m/n/12 (+20) Angebotsdokument
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 330--330
+Underfull \hbox (badness 10000) in paragraph at lines 346--346
 []|\T1/cmr/m/n/12 (+20) US-45 Rech-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 330--330
-[]|\T1/cmr/m/n/12 (+20) eine Rech-nung
+Underfull \hbox (badness 10000) in paragraph at lines 346--346
+[]|\T1/cmr/m/n/12 (+20) ich ab-rech-nen
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 330--330
-[]|\T1/cmr/m/n/12 (+20) ich abrech-nen
+Underfull \hbox (badness 1472) in paragraph at lines 346--346
+[]|\T1/cmr/m/n/12 (+20) an of-fe-ne Rech-
  []
 
 
-Underfull \hbox (badness 1472) in paragraph at lines 330--330
-[]|\T1/cmr/m/n/12 (+20) an of-fene Rech-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 330--330
-[]|\T1/cmr/m/n/12 (+20) Zahlungen
- []
-
-
-Underfull \hbox (badness 1320) in paragraph at lines 330--330
-[]|\T1/cmr/m/n/12 (+20) Erinnerung wird au-
- []
-
-
-Overfull \hbox (100.45313pt too wide) in alignment at lines 330--330
+Overfull \hbox (100.45313pt too wide) in alignment at lines 346--346
  [] [] [] [] [] [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 337--337
-[]|\T1/cmr/bx/n/12 (+20) In mein-er
+
+[10]
+Underfull \hbox (badness 10000) in paragraph at lines 353--353
+[]|\T1/cmr/bx/n/12 (+20) In mei-ner
  []
 
 
-Overfull \hbox (10.6852pt too wide) in paragraph at lines 337--337
+Overfull \hbox (10.6852pt too wide) in paragraph at lines 353--353
 []|\T1/cmr/bx/n/12 (-20) Priorität| 
  []
 
 
-Overfull \hbox (100.45313pt too wide) in alignment at lines 337--337
+Overfull \hbox (100.45313pt too wide) in alignment at lines 353--353
  [] [] [] [] [] [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 337--337
-[]|\T1/cmr/bx/n/12 (+20) In mein-er
+Underfull \hbox (badness 10000) in paragraph at lines 353--353
+[]|\T1/cmr/bx/n/12 (+20) In mei-ner
  []
 
 
-Overfull \hbox (10.6852pt too wide) in paragraph at lines 337--337
+Overfull \hbox (10.6852pt too wide) in paragraph at lines 353--353
 []|\T1/cmr/bx/n/12 (-20) Priorität| 
  []
 
 
-Overfull \hbox (100.45313pt too wide) in alignment at lines 337--337
+Overfull \hbox (100.45313pt too wide) in alignment at lines 353--353
  [] [] [] [] [] [] 
  []
 
 
-Underfull \hbox (badness 3128) in paragraph at lines 337--337
-[]|\T1/cmr/m/n/12 (+20) Bestand ak-tuell
+Underfull \hbox (badness 3128) in paragraph at lines 353--353
+[]|\T1/cmr/m/n/12 (+20) Bestand ak-tu-ell
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 337--337
-[]|\T1/cmr/m/n/12 (+20) Material einem
+Underfull \hbox (badness 10000) in paragraph at lines 353--353
+[]|\T1/cmr/m/n/12 (+20) Material ei-nem
  []
 
 
-Overfull \hbox (1.48685pt too wide) in paragraph at lines 337--337
+Overfull \hbox (1.48685pt too wide) in paragraph at lines 353--353
 []|\T1/cmr/m/n/12 (-20) Doppelbuchungen
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 337--337
-\T1/cmr/m/n/12 (+20) ver-mieden wer-
+Underfull \hbox (badness 10000) in paragraph at lines 353--353
+\T1/cmr/m/n/12 (+20) ver-mie-den wer-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 337--337
-[]|\T1/cmr/m/n/12 (+20) Material ist im
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 337--337
-[]|\T1/cmr/m/n/12 (+20) US-49 Mi-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 337--337
-\T1/cmr/m/n/12 (+20) tar-beit-er
- []
-
-
-Underfull \hbox (badness 3449) in paragraph at lines 337--337
+Underfull \hbox (badness 3449) in paragraph at lines 353--353
 []|\T1/cmr/m/n/12 (+20) Mitarbeiter pla-
  []
 
 
-Underfull \hbox (badness 2165) in paragraph at lines 337--337
+Underfull \hbox (badness 2165) in paragraph at lines 353--353
 []|\T1/cmr/m/n/12 (+20) Personal ver-füg-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 337--337
-[]|\T1/cmr/m/n/12 (+20) Einsatzplan berück-
+Underfull \hbox (badness 10000) in paragraph at lines 353--353
+[]|\T1/cmr/m/n/12 (+20) Einsatzplan be-rück-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 337--337
-[]|\T1/cmr/m/n/12 (+20) Wartungen
+Underfull \hbox (badness 10000) in paragraph at lines 353--353
+[]|\T1/cmr/m/n/12 (+20) US-50 War-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 337--337
-[]|\T1/cmr/m/n/12 (+20) Geräte sich-er
- []
-
-
-Overfull \hbox (100.45313pt too wide) in alignment at lines 337--337
+Overfull \hbox (100.45313pt too wide) in alignment at lines 353--353
  [] [] [] [] [] [] 
  []
 
@@ -1679,189 +1449,211 @@ Overfull \hbox (100.45313pt too wide) in alignment at lines 337--337
 [13]
 
 [14]
-Overfull \hbox (8.16806pt too wide) in paragraph at lines 400--401
-\T1/cmr/m/n/12 (-20) prak-tisch umzuset-zen. Dazu gehören ein nachvol-lziehbares Lösch- und Auf-be-wahrungskonzept
- []
-
+<pngs/zustandsdiagramm_privatnutzer.png, id=491, 1285.80376pt x 705.63625pt>
+File: pngs/zustandsdiagramm_privatnutzer.png Graphic file (type png)
+<use pngs/zustandsdiagramm_privatnutzer.png>
+Package pdftex.def Info: pngs/zustandsdiagramm_privatnutzer.png  used on input line 447.
+(pdftex.def)             Requested size: 455.24411pt x 249.82967pt.
 
 
 [15]
-<pngs/zustandsdiagramm_privatnutzer.png, id=490, 1285.80376pt x 705.63625pt>
-File: pngs/zustandsdiagramm_privatnutzer.png Graphic file (type png)
-<use pngs/zustandsdiagramm_privatnutzer.png>
-Package pdftex.def Info: pngs/zustandsdiagramm_privatnutzer.png  used on input line 432.
-(pdftex.def)             Requested size: 455.24411pt x 249.82967pt.
-<pngs/zustandsdiagramm_organisator.png, id=491, 1184.425pt x 800.9925pt>
+<pngs/zustandsdiagramm_organisator.png, id=496, 1184.425pt x 800.9925pt>
 File: pngs/zustandsdiagramm_organisator.png Graphic file (type png)
 <use pngs/zustandsdiagramm_organisator.png>
-Package pdftex.def Info: pngs/zustandsdiagramm_organisator.png  used on input line 439.
+Package pdftex.def Info: pngs/zustandsdiagramm_organisator.png  used on input line 454.
 (pdftex.def)             Requested size: 455.24411pt x 307.86362pt.
-
-
-[16 <./pngs/zustandsdiagramm_privatnutzer.png>]
-<pngs/zustandsdiagramm_dienstleister.png, id=498, 1034.86626pt x 1454.43375pt>
+<pngs/zustandsdiagramm_dienstleister.png, id=497, 1034.86626pt x 1454.43375pt>
 File: pngs/zustandsdiagramm_dienstleister.png Graphic file (type png)
 <use pngs/zustandsdiagramm_dienstleister.png>
-Package pdftex.def Info: pngs/zustandsdiagramm_dienstleister.png  used on input line 446.
+Package pdftex.def Info: pngs/zustandsdiagramm_dienstleister.png  used on input line 461.
 (pdftex.def)             Requested size: 455.24411pt x 639.81967pt.
 
 
-[17 <./pngs/zustandsdiagramm_organisator.png>]
-<mockups/login.png, id=505, 1541.76pt x 1027.84pt>
+[16 <./pngs/zustandsdiagramm_privatnutzer.png> <./pngs/zustandsdiagramm_organisator.png>]
+<mockups/login.png, id=506, 1541.76pt x 1027.84pt>
 File: mockups/login.png Graphic file (type png)
 <use mockups/login.png>
-Package pdftex.def Info: mockups/login.png  used on input line 456.
+Package pdftex.def Info: mockups/login.png  used on input line 471.
 (pdftex.def)             Requested size: 455.24411pt x 303.49248pt.
 
 
-[18 <./pngs/zustandsdiagramm_dienstleister.png>]
-<mockups/Dashboard.png, id=513, 1541.76pt x 1027.84pt>
+[17 <./pngs/zustandsdiagramm_dienstleister.png>]
+<mockups/Dashboard.png, id=514, 1541.76pt x 1027.84pt>
 File: mockups/Dashboard.png Graphic file (type png)
 <use mockups/Dashboard.png>
-Package pdftex.def Info: mockups/Dashboard.png  used on input line 463.
+Package pdftex.def Info: mockups/Dashboard.png  used on input line 478.
 (pdftex.def)             Requested size: 455.24411pt x 303.49248pt.
 
 
-[19 <./mockups/login.png>]
+[18 <./mockups/login.png>]
 <mockups/Gruppenuebersicht.png, id=521, 1541.76pt x 1027.84pt>
 File: mockups/Gruppenuebersicht.png Graphic file (type png)
 <use mockups/Gruppenuebersicht.png>
-Package pdftex.def Info: mockups/Gruppenuebersicht.png  used on input line 470.
+Package pdftex.def Info: mockups/Gruppenuebersicht.png  used on input line 485.
 (pdftex.def)             Requested size: 455.24411pt x 303.49248pt.
 
 
-[20 <./mockups/Dashboard.png (PNG copy)>]
-<mockups/Event-Detail.png, id=527, 1541.76pt x 1027.84pt>
+[19 <./mockups/Dashboard.png (PNG copy)>]
+<mockups/Event-Detail.png, id=528, 1541.76pt x 1027.84pt>
 File: mockups/Event-Detail.png Graphic file (type png)
 <use mockups/Event-Detail.png>
-Package pdftex.def Info: mockups/Event-Detail.png  used on input line 477.
+Package pdftex.def Info: mockups/Event-Detail.png  used on input line 492.
 (pdftex.def)             Requested size: 455.24411pt x 303.49248pt.
 
 
-[21 <./mockups/Gruppenuebersicht.png>]
-<mockups/Finanzen.png, id=534, 1541.76pt x 1027.84pt>
+[20 <./mockups/Gruppenuebersicht.png>]
+<mockups/Finanzen.png, id=535, 1541.76pt x 1027.84pt>
 File: mockups/Finanzen.png Graphic file (type png)
 <use mockups/Finanzen.png>
-Package pdftex.def Info: mockups/Finanzen.png  used on input line 484.
+Package pdftex.def Info: mockups/Finanzen.png  used on input line 499.
 (pdftex.def)             Requested size: 455.24411pt x 303.49248pt.
 
 
-[22 <./mockups/Event-Detail.png (PNG copy)>]
-<mockups/Notizen_Umfragen.png, id=540, 1541.76pt x 1027.84pt>
+[21 <./mockups/Event-Detail.png (PNG copy)>]
+<mockups/Notizen_Umfragen.png, id=541, 1541.76pt x 1027.84pt>
 File: mockups/Notizen_Umfragen.png Graphic file (type png)
 <use mockups/Notizen_Umfragen.png>
-Package pdftex.def Info: mockups/Notizen_Umfragen.png  used on input line 491.
+Package pdftex.def Info: mockups/Notizen_Umfragen.png  used on input line 506.
 (pdftex.def)             Requested size: 455.24411pt x 303.49248pt.
 
 
-[23 <./mockups/Finanzen.png>]
-<mockups/AufgabenÃ¼bersicht.png, id=547, 1541.76pt x 1027.84pt>
+[22 <./mockups/Finanzen.png>]
+<mockups/AufgabenÃ¼bersicht.png, id=548, 1541.76pt x 1027.84pt>
 File: mockups/AufgabenÃ¼bersicht.png Graphic file (type png)
 <use mockups/AufgabenÃ¼bersicht.png>
-Package pdftex.def Info: mockups/AufgabenÃ¼bersicht.png  used on input line 498.
+Package pdftex.def Info: mockups/AufgabenÃ¼bersicht.png  used on input line 513.
 (pdftex.def)             Requested size: 455.24411pt x 303.49248pt.
 
 
-[24 <./mockups/Notizen_Umfragen.png>]
-<mockups/Profil.png, id=555, 1541.76pt x 1027.84pt>
+[23 <./mockups/Notizen_Umfragen.png>]
+<mockups/Profil.png, id=556, 1541.76pt x 1027.84pt>
 File: mockups/Profil.png Graphic file (type png)
 <use mockups/Profil.png>
-Package pdftex.def Info: mockups/Profil.png  used on input line 505.
+Package pdftex.def Info: mockups/Profil.png  used on input line 520.
 (pdftex.def)             Requested size: 455.24411pt x 303.49248pt.
 
 
-[25 <./mockups/AufgabenÃ¼bersicht.png>]
+[24 <./mockups/AufgabenÃ¼bersicht.png>]
 <mockups/dienstleister_dashboard.png, id=563, 1541.76pt x 1027.84pt>
 File: mockups/dienstleister_dashboard.png Graphic file (type png)
 <use mockups/dienstleister_dashboard.png>
-Package pdftex.def Info: mockups/dienstleister_dashboard.png  used on input line 512.
+Package pdftex.def Info: mockups/dienstleister_dashboard.png  used on input line 527.
 (pdftex.def)             Requested size: 455.24411pt x 303.49248pt.
 
 
-[26 <./mockups/Profil.png>]
-<mockups/rollen_rechteverwaltung.png, id=570, 1541.76pt x 1027.84pt>
+[25 <./mockups/Profil.png>]
+<mockups/rollen_rechteverwaltung.png, id=571, 1541.76pt x 1027.84pt>
 File: mockups/rollen_rechteverwaltung.png Graphic file (type png)
 <use mockups/rollen_rechteverwaltung.png>
-Package pdftex.def Info: mockups/rollen_rechteverwaltung.png  used on input line 519.
+Package pdftex.def Info: mockups/rollen_rechteverwaltung.png  used on input line 534.
 (pdftex.def)             Requested size: 455.24411pt x 303.49248pt.
 
 
-[27 <./mockups/dienstleister_dashboard.png>]
-<mockups/eventanfrage.png, id=577, 1541.76pt x 1027.84pt>
+[26 <./mockups/dienstleister_dashboard.png>]
+<mockups/eventanfrage.png, id=578, 1541.76pt x 1027.84pt>
 File: mockups/eventanfrage.png Graphic file (type png)
 <use mockups/eventanfrage.png>
-Package pdftex.def Info: mockups/eventanfrage.png  used on input line 526.
+Package pdftex.def Info: mockups/eventanfrage.png  used on input line 541.
 (pdftex.def)             Requested size: 455.24411pt x 303.49248pt.
 
 
-[28 <./mockups/rollen_rechteverwaltung.png (PNG copy)>]
-<mockups/eventuebersicht_lesemodus.png, id=583, 1541.76pt x 1027.84pt>
+[27 <./mockups/rollen_rechteverwaltung.png (PNG copy)>]
+<mockups/eventuebersicht_lesemodus.png, id=584, 1541.76pt x 1027.84pt>
 File: mockups/eventuebersicht_lesemodus.png Graphic file (type png)
 <use mockups/eventuebersicht_lesemodus.png>
-Package pdftex.def Info: mockups/eventuebersicht_lesemodus.png  used on input line 533.
+Package pdftex.def Info: mockups/eventuebersicht_lesemodus.png  used on input line 548.
 (pdftex.def)             Requested size: 455.24411pt x 303.49248pt.
 
 
-[29 <./mockups/eventanfrage.png (PNG copy)>]
-<mockups/mobile_dashboard.png, id=589, 1027.84pt x 1541.76pt>
+[28 <./mockups/eventanfrage.png (PNG copy)>]
+<mockups/mobile_dashboard.png, id=590, 1027.84pt x 1541.76pt>
 File: mockups/mobile_dashboard.png Graphic file (type png)
 <use mockups/mobile_dashboard.png>
-Package pdftex.def Info: mockups/mobile_dashboard.png  used on input line 543.
+Package pdftex.def Info: mockups/mobile_dashboard.png  used on input line 558.
 (pdftex.def)             Requested size: 273.14923pt x 409.7172pt.
 
 
-[30 <./mockups/eventuebersicht_lesemodus.png (PNG copy)>]
-<mockups/mobile_eventdetail.png, id=595, 1027.84pt x 1541.76pt>
+[29 <./mockups/eventuebersicht_lesemodus.png (PNG copy)>]
+<mockups/mobile_eventdetail.png, id=596, 1027.84pt x 1541.76pt>
 File: mockups/mobile_eventdetail.png Graphic file (type png)
 <use mockups/mobile_eventdetail.png>
-Package pdftex.def Info: mockups/mobile_eventdetail.png  used on input line 550.
+Package pdftex.def Info: mockups/mobile_eventdetail.png  used on input line 565.
 (pdftex.def)             Requested size: 273.14923pt x 409.7172pt.
 
 
-[31 <./mockups/mobile_dashboard.png (PNG copy)>]
+[30 <./mockups/mobile_dashboard.png (PNG copy)>]
 <mockups/mobile_aufgaben.png, id=602, 1027.84pt x 1541.76pt>
 File: mockups/mobile_aufgaben.png Graphic file (type png)
 <use mockups/mobile_aufgaben.png>
-Package pdftex.def Info: mockups/mobile_aufgaben.png  used on input line 557.
+Package pdftex.def Info: mockups/mobile_aufgaben.png  used on input line 572.
 (pdftex.def)             Requested size: 273.14923pt x 409.7172pt.
 
 
-[32 <./mockups/mobile_eventdetail.png (PNG copy)>]
-<mockups/mobile_finanzen.png, id=608, 1027.84pt x 1541.76pt>
+[31 <./mockups/mobile_eventdetail.png (PNG copy)>]
+<mockups/mobile_finanzen.png, id=609, 1027.84pt x 1541.76pt>
 File: mockups/mobile_finanzen.png Graphic file (type png)
 <use mockups/mobile_finanzen.png>
-Package pdftex.def Info: mockups/mobile_finanzen.png  used on input line 564.
+Package pdftex.def Info: mockups/mobile_finanzen.png  used on input line 579.
 (pdftex.def)             Requested size: 273.14923pt x 409.7172pt.
 
 
-[33 <./mockups/mobile_aufgaben.png (PNG copy)>]
+[32 <./mockups/mobile_aufgaben.png (PNG copy)>]
+
+[33 <./mockups/mobile_finanzen.png (PNG copy)>]
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `cmtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 599.
 
 
-[34 <./mockups/mobile_finanzen.png (PNG copy)>] (./abgabe.aux)
+[34]
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `cmtt' (encoding: TS1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+
+
+[35]
+
+[36]
+
+[37]
+
+[38]
+
+[39]
+
+[40]
+
+[41]
+
+[42]
+
+[43]
+
+[44] (./abgabe.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
 Package rerunfilecheck Info: File `abgabe.out' has not changed.
-(rerunfilecheck)             Checksum: 943FE9E5D36BA3FE61389D0B778763C2;14453.
+(rerunfilecheck)             Checksum: B09EAB4A1084E16C72306F48F254487E;14713.
  ) 
 Here is how much of TeX's memory you used:
- 13432 strings out of 475171
- 215995 string characters out of 5767096
- 684980 words of memory out of 5000000
- 35994 multiletter control sequences out of 15000+600000
- 572490 words of font info for 124 fonts, out of 8000000 for 9000
+ 14987 strings out of 475118
+ 245111 string characters out of 5764903
+ 769453 words of memory out of 5000000
+ 37501 multiletter control sequences out of 15000+600000
+ 575029 words of font info for 135 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 75i,6n,79p,1039b,617s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm2074.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on abgabe.pdf (34 pages, 16103519 bytes).
+ 75i,9n,79p,1039b,719s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm2074.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb>
+Output written on abgabe.pdf (44 pages, 16132474 bytes).
 PDF statistics:
- 691 PDF objects out of 1000 (max. 8388607)
- 604 compressed objects within 7 object streams
- 155 named destinations out of 1000 (max. 500000)
- 29904 words of extra memory for PDF output out of 35830 (max. 10000000)
+ 765 PDF objects out of 1000 (max. 8388607)
+ 667 compressed objects within 7 object streams
+ 182 named destinations out of 1000 (max. 500000)
+ 37080 words of extra memory for PDF output out of 42996 (max. 10000000)
 
