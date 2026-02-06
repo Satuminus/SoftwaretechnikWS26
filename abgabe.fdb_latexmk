@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1770372436.65594 "/home/felix/dev/SoftwaretechnikWS26/abgabe.tex" "abgabe.pdf" "abgabe" 1770372462.69318 0
-  "/home/felix/dev/SoftwaretechnikWS26/abgabe.tex" 1770372436.43452 52866 7a178127da7e24bf4cc004dd16d7b3c0 ""
+["pdflatex"] 1770375442.75887 "/home/felix/dev/SoftwaretechnikWS26/abgabe.tex" "abgabe.pdf" "abgabe" 1770375469.04762 0
+  "/home/felix/dev/SoftwaretechnikWS26/abgabe.tex" 1770375442.54049 52944 d149d73c712001aeb77454c2a0c9d779 ""
   "/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1767555874 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1767555874 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1767555874 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -102,10 +102,10 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1767555874 42087 b0f9697c952c8f5a8eede4134282cb0d ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1770327351 5311557 9da84c45f5b388655502706482323571 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1770330027 2492029 72f06c7fe5538f51f5932867b9cbbdda ""
-  "abgabe.aux" 1770372462.56267 19529 fe66d6054ae5036ff6aa2f2db37d4e78 "pdflatex"
-  "abgabe.out" 1770372462.56467 14713 b09eab4a1084e16c72306f48f254487e "pdflatex"
-  "abgabe.tex" 1770372436.43452 52866 7a178127da7e24bf4cc004dd16d7b3c0 ""
-  "abgabe.toc" 1770372462.56588 9289 94dcd307aac5d47b7c41683237f18bd5 "pdflatex"
+  "abgabe.aux" 1770375468.92683 19529 fe66d6054ae5036ff6aa2f2db37d4e78 "pdflatex"
+  "abgabe.out" 1770375468.92883 14713 b09eab4a1084e16c72306f48f254487e "pdflatex"
+  "abgabe.tex" 1770375442.54049 52944 d149d73c712001aeb77454c2a0c9d779 ""
+  "abgabe.toc" 1770375468.92939 9289 94dcd307aac5d47b7c41683237f18bd5 "pdflatex"
   "mockups/Aufgabenübersicht.png" 1770307844.47834 1231515 295dbe229c780437dbbfe3b9f2339afc ""
   "mockups/Dashboard.png" 1770305194.76724 302999 5784b5f8c4f33098d67027a9d6c5abec ""
   "mockups/Event-Detail.png" 1770304792.61475 277497 acc33d329c4200ad7f1c89578a52a1c2 ""

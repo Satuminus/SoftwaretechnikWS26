@@ -35,6 +35,19 @@
 \usepackage{fancyvrb}
 \usepackage{fvextra}
 
+\DefineVerbatimEnvironment{prompt}{Verbatim}{
+  breaklines=true,
+  breakanywhere=true,
+  breaksymbolleft={},   % ← Pfeil AUS
+  breaksymbolright={},  % ← Sicherheitshalber auch AUS
+  fontsize=\small
+}
+
+
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\newcommand{\prio}[1]{\textbf{#1}}
+
+
 \title{\textbf{EventHub}}
 \author{\textbf{Felix Franke 1318821}\\ \textbf{Markus Wurms 50106907}}
 \date{\textbf{6. Februar 2026}}
@@ -53,105 +66,536 @@
 
 \newpage
 
-\section{Einleitung}
+\section{Fachliche Grundlagen und Anforderungen}
 
+\subsection{Zielsetzung des Softwareprodukts}
+Die Zielsetzung des Softwareprodukts ist es, eine zentrale Plattform zur Planung, Organisation, Durchführung und Nachbereitung von Veranstaltungen zu erstellen. Dazu sollen viele verschiedene Tools zusammengelegt werden, wie zum Beispiel verschiedene Messenger, E-Mail, Excel und Ticketsysteme. Das System sammelt alle relevanten Informationen an einem Ort bzw. auf einer Plattform.
 
-\subsection{Ziel der Ausarbeitung}
+Das System soll Transparenz über Termine, Aufgaben, Finanzen und Teilnehmer bieten. Dabei soll das Softwareprodukt sowohl für private als auch kommerzielle Nutzung dienen. Weitere Anforderungen sind die Endgeräteunabhängigkeit und die Skalierbarkeit des Produktes. Das Produkt bietet eine Kombination aus Eventplanung, Finanzverwaltung und Dienstleisterintegration.
 
-\subsection{Systemüberblick}
+\subsubsection{Produktname und Begründung}
+Wir nennen das Softwareprodukt EventHub. Der Name ist leicht merkbar und simpel, spiegelt den Zweck der Software gut wieder und ist international verständlich. Außerdem ist er nicht zu technisch, aber gleichzeitig professionell.
 
-\subsection{Aufgabenteilung \textbf{Felix Franke}}
+% ---------------------------------------------------------
+\subsection{Akteure und Rollen}
 
-\subsubsection{Fachliche Grundlagen}
-\begin{itemize}
-    \item Analyse der Aufgabenstellung und fachlichen Anforderungen
-    \item Festlegung eines aussagekräftigen Produktnamens
-    \item Identifikation und Beschreibung aller Akteure und Rollen
-    \item Erstellung des Glossars der Fachdomäne
+\subsubsection{Nicht registrierte / unangemeldete Akteure}
+Ein nicht angemeldeter Akteur hat folgende Optionen:
+\begin{itemize}[leftmargin=*,nosep]
+  \item Registrierung durchführen
+  \item Login durchführen
+  \item öffentliche Event- und Dienstleisterseiten aufrufen
 \end{itemize}
 
-\subsubsection{Funktionale Anforderungen}
+\subsubsection{Registrierte Akteure}
 
-\begin{itemize}
-    \item Definition funktionaler Gruppen (z. B. Benutzerverwaltung, Gruppenmanagement, Eventplanung)
-    \item Ausformulierung aller User Stories je funktionaler Gruppe unter Angabe von Rolle, Ziel, Nutzen, Akzeptanzkriterien und MoSCoW-Priorisierung
-    \item Ergänzung fehlender funktionaler Anforderungen (Plausibilitätsprüfung)
+\paragraph{Privatnutzer/Teilnehmer}
+Das sind die Nutzer, die Events beitreten und daran teilnehmen. Sie können:
+\begin{itemize}[leftmargin=*,nosep]
+  \item sich registrieren/anmelden
+  \item Gruppen beitreten/verlassen
+  \item Notizen, Termine, Umfragen erstellen und daran teilnehmen
+  \item abstimmen \& kommentieren
+  \item Einzahlungen vornehmen
+  \item Aufgaben übernehmen
+  \item Medien hochladen
+  \item Kalender synchronisieren
 \end{itemize}
 
-\subsubsection{Nicht-funktionale Anforderungen}
-
-\begin{itemize}
-    \item Beschreibung der Qualitätsmerkmale nach ISO 25010 (Usability, Sicherheit, Performance,
-Wartbarkeit etc.)
-    \item Rechtliche und organisatorische Anforderungen (DSGVO, Zustimmungspflichten)
+\paragraph{Gruppenmitglied}
+Ein Gruppenmitglied kann:
+\begin{itemize}[leftmargin=*,nosep]
+  \item Inhalte einer Gruppe lesen
+  \item Notizen erstellen/bearbeiten/löschen
+  \item an Umfragen teilnehmen
+  \item Aufgaben übernehmen
+  \item Einzahlungen vornehmen
+  \item Multimedia hochladen
+  \item Gruppe verlassen
 \end{itemize}
 
-\subsubsection{GUI \& Usability}
-
-\begin{itemize}
-    \item Entwurf der GUI‑Mockups für Webbrowser
-    \item Entwurf der GUI‑Mockups für mobile Endgeräte
-    \item Zustandsdiagramme für die Navigation (je Akteur/Rolle)
-    \item Zuordnung der Screens zu den jeweiligen User Stories
-    \item Beschreibung der angewandten UI-/UX‑Designprinzipien
-\end{itemize} 
-
-\subsection{Aufgabenteilung \textbf{Markus Wurms}}
-
-\subsubsection{Domänen- \& Datenmodellierung}
-
-\begin{itemize}
-    \item Ableitung der Domänenklassen aus den User Stories
-    \item Erstellung des fachlichen Domänenmodells (UML‑Klassendiagramm)
-    \item Modellierung von Beziehungen, Multiplizitäten und Vererbungen
-    \item Ergänzung sinnvoller Attribute und Klassen
+\paragraph{Organisator/Gruppenleiter}
+\begin{itemize}[leftmargin=*,nosep]
+  \item Gruppe/Event erstellen und löschen
+  \item Mitglieder einladen/entfernen/sperren
+  \item Beitrittscode verwalten
+  \item Mindestteilnehmerzahl festlegen
+  \item Mindestbudget festlegen
+  \item Aufgaben zuweisen
+  \item Rückzahlungen veranlassen
+  \item Eventseite verwalten
+  \item Übersicht über Finanzen
+  \item Moderationsmöglichkeiten
 \end{itemize}
 
-\subsubsection{Zustände \& Datenpersistenz}
-
-\begin{itemize}
-    \item Zustandsdiagramme für zentrale Klassen (z. B. Event, Rechnung, Aufgabe)
-    \item Überführung des fachlichen Modells in ein logisches Datenmodell
-    \item Definition von Bewegungsdaten (Zahlungen, Buchungen, Statusänderungen)
-    \item Erstellung der CRUD‑Matrix (User Stories $\leftrightarrow$ Klassen)
+\paragraph{Institutionsadministrator}
+Das können zum Beispiel Lehrer oder Firmenverantwortliche sein:
+\begin{itemize}[leftmargin=*,nosep]
+  \item mehrere Events verwalten
+  \item Rollen und Berechtigungen vergeben
+  \item Benutzerkonten innerhalb der Institution verwalten
+  \item Übersicht über alle Veranstaltungen der Organisation
+  \item Nutzungslimits überwachen
+  \item Abrechnungen/Events archivieren
 \end{itemize}
 
-\subsubsection{Systemarchitektur \& Schnittstellen}
-
-\begin{itemize}
-    \item Beschreibung der Drei‑Schichten‑Architektur (Client – Server – Datenbank)
-    \item UML‑Verteilungsdiagramm (Hardware-/Systemlandschaft)
-    \item Definition der REST‑API (Ressourcen, Endpunkte, HTTP‑Methoden)
-    \item Sequenzdiagramme für ausgewählte Kern-Use‑Cases
+\paragraph{Institutionsmitglied}
+\begin{itemize}[leftmargin=*,nosep]
+  \item meist nur Leserechte
+  \item Teilnahme an Events
+  \item Aufgaben ausführen
 \end{itemize}
 
-\subsubsection{Sicherheit \& Datenschutz}
-
-\begin{itemize}
-    \item Sicherheitsanalyse mittels STRIDE
-    \item Beschreibung der Schutzmaßnahmen (Authentifizierung, Autorisierung, Verschlüsselung)
-    \item Technische Umsetzung von DSGVO‑Anforderungen (Zugriffsschutz, Datenminimierung,
-Löschkonzepte)
+\paragraph{Veranstaltungs-Dienstleister}
+\begin{itemize}[leftmargin=*,nosep]
+  \item eigenes Profil/Homepage verwalten
+  \item Eventanfragen empfangen
+  \item Angebote erstellen
+  \item Rechnungen generieren
+  \item Ressourcen planen
+  \item Material und Personal verwalten
+  \item Budgets kalkulieren
+  \item durch Kunden bewerten lassen
 \end{itemize}
 
+\paragraph{Mitarbeiter eines Dienstleisters}
+\begin{itemize}[leftmargin=*,nosep]
+  \item persönliche Verfügbarkeit pflegen
+  \item Einsätze/Arbeitspläne einsehen
+  \item Benachrichtigungen bei Zuweisung erhalten
+  \item Qualifikationen verwalten
+\end{itemize}
 
-\section{Szenarien-Sicht (Use-Case View)}
+\paragraph{Kunde/Veranstalter (extern)}
+\begin{itemize}[leftmargin=*,nosep]
+  \item Event anfragen
+  \item Budget angeben
+  \item Angebote erhalten
+  \item Angebote annehmen und ablehnen
+  \item Rechnungen bezahlen
+  \item Dienstleister bewerten
+\end{itemize}
 
-\subsection{Stakeholder und Benutzerrollen}
+\subsubsection{Sekundäre Akteure}
 
-\subsection{Überblick über die User Stories}
+\paragraph{Externe Systeme}
+\begin{itemize}[leftmargin=*,nosep]
+  \item Kalenderdienste (z.\,B. Outlook, Google Kalender)
+  \item Kommunikationsdienste (E-Mail, SMS, Messenger)
+  \item Zahlungsdienste
+  \item Ticketing-Systeme
+  \item Datenaustausch über APIs
+\end{itemize}
 
-\subsection{Use-Case-Diagramm}
+\paragraph{Systemadministrator}
+\begin{itemize}[leftmargin=*,nosep]
+  \item Benutzer sperren/verwalten
+  \item Systemkonfiguration
+  \item Backups/Wartung
+\end{itemize}
 
-\subsection{Beschreibung zentraler Use Cases}
+% ---------------------------------------------------------
+\subsection{Glossar der Fachdomäne}
 
-\subsubsection{Gruppe erstellen und verwalten}
+\subsubsection{Event}
+Eine geplante Veranstaltung innerhalb des Systems, die organisatorische Informationen wie Termine, Aufgaben, Finanzen, Teilnehmer und Dokumentation bündelt.
 
-\subsubsection{Gruppe per Code beitreten}
+\subsubsection{Gruppe}
+Eine Menge von Benutzern, die gemeinsam ein Event planen oder daran teilnehmen. Gruppen dienen als organisatorische Einheit zur Zusammenarbeit.
 
-\subsubsection{Event planen und durchführen}
+\subsubsection{Teilnehmer (Privatnutzer)}
+Ein registrierter Benutzer, der einer oder mehreren Gruppen beitritt und aktiv an Events teilnimmt, beispielsweise durch Abstimmungen, Aufgabenübernahme oder Einzahlungen.
 
-\subsubsection{Finanzverwaltung (Einzahlungen/Ausgaben)}
+\subsubsection{Organisator (Gruppenleiter)}
+Ein Benutzer mit erweiterten Rechten innerhalb einer Gruppe, der Events erstellt, Mitglieder verwaltet und organisatorische Entscheidungen trifft.
+
+\subsubsection{Dienstleister}
+Ein externer Anbieter von Leistungen oder Ressourcen für Events, der Anfragen empfängt, Angebote erstellt, Rechnungen ausstellt und Material sowie Personal plant.
+
+\subsubsection{Aufgabe}
+Ein konkretes To-do innerhalb eines Events, das einer oder mehreren Personen zugewiesen werden kann und einen Status wie offen, in Bearbeitung oder erledigt besitzt.
+
+\subsubsection{Notiz}
+Ein freier Informationseintrag innerhalb eines Events zur Dokumentation von Ideen, Absprachen oder Hinweisen.
+
+\subsubsection{Umfrage}
+Ein strukturiertes Abstimmungswerkzeug mit mehreren Antwortoptionen, das zur Entscheidungsfindung innerhalb einer Gruppe genutzt wird.
+
+\subsubsection{Budget}
+Der für ein Event verfügbare Geldrahmen, bestehend aus Einzahlungen und Ausgaben, der zur Planung und Kontrolle der Finanzierung dient.
+
+\subsubsection{Rolle}
+Eine Sammlung von Berechtigungen, die festlegt, welche Funktionen ein Benutzer im System ausführen darf, beispielsweise Lesen, Bearbeiten oder Administrieren.
+
+\subsubsection{Institution}
+Eine organisatorische Einheit wie Schule oder Unternehmen, die mehrere Events verwaltet und eigene Administratoren besitzt.
+
+\subsubsection{Institutionsadministrator}
+Ein Benutzer mit globalen Verwaltungsrechten innerhalb einer Institution, der Rollen vergibt und Benutzerkonten verwaltet.
+
+\subsubsection{Ressource}
+Materielle oder personelle Mittel (z.\,B. Geräte oder Mitarbeiter), die einem Event zugeordnet und eingeplant werden.
+
+% =========================================================
+\section{Funktionale Anforderungen}
+
+\subsection{Funktionale Gruppen Übersicht}
+\begin{itemize}[leftmargin=*,nosep]
+  \item FG1 Account und Authentifizierung
+  \item FG2 Profil und Einstellungen
+  \item FG3 Gruppen- und Eventmanagement
+  \item FG4 Notizen und Umfragen
+  \item FG5 Finanzen
+  \item FG6 Aufgabenmanagement
+  \item FG7 Medien und Dokumentation
+  \item FG8 Rollen- und Rechtesystem
+  \item FG9 Öffentliche Eventseite und QR-Code
+  \item FG10 Integration und Benachrichtigungen
+  \item FG11 Dienstleister und Anfragen
+  \item FG12 Angebote, Rechnungen und Mahnungen
+  \item FG13 Ressourcenplanung
+\end{itemize}
+
+% ---------- Tabellen-Template ----------
+\newcommand{\ustable}[2]{%
+\subsection{#1}
+\begin{longtable}{p{2.3cm}p{2.1cm}p{2.7cm}p{2.7cm}p{3.4cm}p{1.2cm}}
+\toprule
+\textbf{Name/ID} & \textbf{In meiner Rolle als...} & \textbf{...möchte ich...} & \textbf{..., so dass...} & \textbf{Akzeptiert, wenn...} & \textbf{Priorität}\\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Name/ID} & \textbf{In meiner Rolle als...} & \textbf{...möchte ich...} & \textbf{..., so dass...} & \textbf{Akzeptiert, wenn...} & \textbf{Priorität}\\
+\midrule
+\endhead
+#2
+\bottomrule
+\end{longtable}
+}
+
+\ustable{FG1 Account und Authentifizierung}{
+US-01 Registrierung & Gast & mich registrieren & ich das System nutzen kann & Pflichtfelder sind ausgefüllt und Account wird erstellt & \prio{Muss}\\
+US-02 Login & Benutzer & mich anmelden & ich Zugriff auf meine Daten habe & korrekte Zugangsdaten erlauben Anmeldung & \prio{Muss}\\
+US-03 Logout & Benutzer & mich abmelden & niemand mein Konto missbraucht & Sitzung wird beendet & \prio{Muss}\\
+US-04 Passwort zurücksetzen & Benutzer & mein Passwort zurücksetzen & ich wieder Zugriff bekomme & Reset-Link oder Code ermöglicht neues Passwort & \prio{Muss}\\
+US-05 2FA aktivieren & Benutzer & Zwei-Faktor-Authentifizierung nutzen & mein Account sicherer ist & zusätzlicher Faktor wird beim Login geprüft & \prio{Sollte}\\
+}
+
+\ustable{FG2 Profil und Einstellungen}{
+US-06 Profil anzeigen & Benutzer & mein Profil sehen & ich meine Daten prüfen kann & gespeicherte Daten werden angezeigt & \prio{Muss}\\
+US-07 Profil bearbeiten & Benutzer & meine Daten ändern & sie aktuell bleiben & Änderungen werden gespeichert & \prio{Muss}\\
+US-08 Kommunikationsweg wählen & Benutzer & bevorzugte Benachrichtigungen einstellen & ich passende Nachrichten erhalte & gewählter Kanal wird gespeichert & \prio{Sollte}\\
+US-09 Sprache wählen & Benutzer & die Sprache ändern & ich die Oberfläche verstehe & UI-Texte werden angepasst & \prio{Sollte}\\
+}
+
+\ustable{FG3 Gruppen- und Eventmanagement}{
+US-10 Gruppe erstellen & Organisator & eine Gruppe anlegen & ich ein Event planen kann & Name und Beschreibung werden gespeichert & \prio{Muss}\\
+US-11 Gruppe löschen & Organisator & meine Gruppe löschen & alte Events entfernt werden & Gruppe wird archiviert oder gelöscht & \prio{Muss}\\
+US-12 Gruppe beitreten & Benutzer & einer Gruppe beitreten & ich teilnehmen kann & gültiger Beitrittscode erlaubt Beitritt & \prio{Muss}\\
+US-13 Gruppe verlassen & Benutzer & eine Gruppe verlassen & ich nicht mehr beteiligt bin & Mitgliedschaft endet & \prio{Muss}\\
+US-14 Mitglieder anzeigen & Benutzer & alle Mitglieder sehen & ich Überblick habe & Liste wird angezeigt & \prio{Muss}\\
+US-15 Mitglieder verwalten & Organisator & Mitglieder entfernen oder sperren & Regeln durchgesetzt werden & Zugriff wird entzogen & \prio{Muss}\\
+US-16 Mindestteilnehmer festlegen & Organisator & eine Mindestzahl definieren & Event nur bei genug Teilnehmern stattfindet & Status wird automatisch geprüft & \prio{Sollte}\\
+}
+
+\ustable{FG4 Notizen und Umfragen}{
+US-17 Notiz erstellen & Benutzer & eine Notiz anlegen & Infos dokumentiert sind & Notiz erscheint in der Liste & \prio{Muss}\\
+US-18 Notiz bearbeiten & Benutzer & Notizen ändern & Fehler korrigiert werden & Änderungen werden gespeichert & \prio{Muss}\\
+US-19 Notiz löschen & Benutzer & Notizen entfernen & irrelevante Infos verschwinden & Notiz wird entfernt & \prio{Muss}\\
+US-20 Notizen filtern & Benutzer & nach Typ filtern & ich schneller finde, was ich suche & Filter zeigt passende Einträge & \prio{Sollte}\\
+US-21 Termin erfassen & Benutzer & Termine mit Datum und Ort speichern & alle informiert sind & Termin enthält strukturierte Felder & \prio{Muss}\\
+US-22 Umfrage erstellen & Benutzer & eine Umfrage anlegen & Entscheidungen getroffen werden & Antwortoptionen frei wählbar & \prio{Muss}\\
+US-23 Abstimmen & Benutzer & an Umfragen teilnehmen & meine Meinung zählt & Stimme wird gezählt & \prio{Muss}\\
+US-24 Ergebnis anzeigen & Benutzer & Ergebnisse sehen & Transparenz besteht & Stimmenverteilung wird angezeigt & \prio{Muss}\\
+}
+
+\ustable{FG5 Finanzen}{
+US-25 Einzahlung tätigen & Benutzer & Geld einzahlen & Event finanziert wird & Betrag wird gespeichert & \prio{Muss}\\
+US-26 Zahlungsstand anzeigen & Benutzer & Gesamtbetrag sehen & ich Überblick habe & eingegangenes Geld und Zielsumme werden angezeigt & \prio{Muss}\\
+US-27 Ausgabe erfassen & Benutzer & Ausgaben dokumentieren & Kosten transparent sind & Betrag und Beschreibung werden gespeichert & \prio{Muss}\\
+US-28 Kassenübersicht & Organisator & alle Einnahmen und Ausgaben sehen & ich abrechnen kann & Summen werden korrekt berechnet & \prio{Muss}\\
+US-29 Rückzahlung auslösen & Organisator & Rückzahlungen durchführen & Guthaben ausgeglichen wird & Rückzahlung wird dokumentiert & \prio{Sollte}\\
+}
+
+\ustable{FG6 Aufgabenmanagement}{
+US-30 Aufgabe erstellen & Organisator & Aufgaben anlegen & To-dos geplant sind & Aufgabe erscheint in Liste & \prio{Muss}\\
+US-31 Aufgabe übernehmen & Benutzer & Aufgaben übernehmen & Zuständigkeit klar ist & Aufgabe wird mir zugeordnet & \prio{Muss}\\
+US-32 Aufgabe abschließen & Benutzer & Aufgaben als erledigt markieren & Fortschritt sichtbar ist & Status ändert sich auf erledigt & \prio{Muss}\\
+US-33 Erinnerung senden & System & an offene Aufgaben erinnern & nichts vergessen wird & Benachrichtigung wird automatisch gesendet & \prio{Sollte}\\
+}
+
+\ustable{FG7 Medien und Dokumentation}{
+US-34 Medien hochladen & Benutzer & Fotos oder Videos hochladen & das Event dokumentiert ist & Dateien werden gespeichert und angezeigt & \prio{Sollte}\\
+US-35 Kommentare schreiben & Benutzer & Bewertungen oder Kommentare hinterlassen & Erfahrungen geteilt werden & Text wird gespeichert & \prio{Könnte}\\
+}
+
+\ustable{FG8 Rollen- und Rechtesystem}{
+US-36 Rollen vergeben & Institutions\-admin & Rollen zuweisen & Rechte gesteuert werden & Berechtigungen werden gespeichert & \prio{Muss}\\
+US-37 Leserechte einschränken & Institutions\-admin & nur lesen können & Regeln eingehalten werden & Schreibfunktionen deaktiviert & \prio{Muss}\\
+US-38 Lizenzlimit prüfen & Institutions\-admin & Events begrenzen & Community-Regeln gelten & mehr als drei Events werden verhindert & \prio{Sollte}\\
+}
+
+\ustable{FG9 Öffentliche Eventseite und QR-Code}{
+US-39 Eventseite anzeigen & Organisator & eine öffentliche Seite haben & ich das Event bewerben kann & feste URL ist erreichbar & \prio{Sollte}\\
+US-40 QR-Code generieren & Benutzer & einen QR-Code erhalten & ich den Link schnell teilen kann & Code wird korrekt erzeugt & \prio{Sollte}\\
+}
+
+\ustable{FG10 Integration und Benachrichtigungen}{
+US-41 Kalender synchronisieren & Benutzer & Termine synchronisieren & sie automatisch im Kalender erscheinen & Synchronisation funktioniert & \prio{Könnte}\\
+US-42 Benachrichtigungen senden & System & Nachrichten versenden & Nutzer informiert bleiben & Versand über gewählten Kanal erfolgt & \prio{Sollte}\\
+US-42a Sprachassistent verbinden & Benutzer & einen digitalen Sprachassistenten koppeln & ich per Sprache auf meine Events zugreifen kann & Verbindung wird autorisiert und Konto ist verknüpft & \prio{Könnte}\\
+US-42b Termine per Sprache abfragen & Benutzer & meine nächsten Termine per Sprachbefehl abrufen & ich Informationen freihändig erhalten kann & Assistent gibt korrekte Termine aus & \prio{Könnte}\\
+US-42c Aktion per Sprache ausführen & Benutzer & einfache Aktionen wie Aufgaben abhaken oder Einzahlungen bestätigen per Sprache ausführen & ich schnell reagieren kann ohne die App zu öffnen & Aktion wird korrekt ausgeführt und im System gespeichert & \prio{Könnte}\\
+}
+
+\ustable{FG11 Dienstleister und Anfragen}{
+US-43 Anfrage stellen & Kunde & ein Event anfragen & ich ein Angebot erhalte & Formular speichert alle Pflichtdaten & \prio{Muss}\\
+US-44 Angebot erstellen & Dienstleister & ein Angebot generieren & ich Kunden informieren kann & Angebotsdokument wird erstellt & \prio{Muss}\\
+US-45 Rechnung erstellen & Dienstleister & eine Rechnung erzeugen & ich abrechnen kann & Rechnung enthält alle Pflichtangaben & \prio{Muss}\\
+US-46 Zahlung erinnern & System & an offene Rechnungen erinnern & Zahlungen rechtzeitig eingehen & Erinnerung wird automatisch versendet & \prio{Sollte}\\
+}
+
+\newpage
+
+\ustable{FG12 Ressourcenplanung}{
+US-47 Material verwalten & Dienstleister & Material anlegen oder ändern & Bestand aktuell bleibt & Materialdaten werden gespeichert & \prio{Muss}\\
+US-48 Material buchen & Dienstleister & Material einem Event zuordnen & Doppelbuchungen vermieden werden & Material ist im Zeitraum gesperrt & \prio{Muss}\\
+US-49 Mitarbeiter verwalten & Dienstleister & Mitarbeiter planen & Personal verfügbar ist & Einsatzplan berücksichtigt Verfügbarkeit & \prio{Muss}\\
+US-50 Wartungshinweis & System & Wartungen anzeigen & Geräte sicher bleiben & Hinweis erscheint bei fälligem Zyklus & \prio{Sollte}\\
+}
+
+% =========================================================
+\section{Nicht-funktionale Anforderungen (ISO 25010)}
+
+\subsection{Performance Efficiency}
+Die Plattform soll gemäß der Aufgabenstellung auch bei sehr vielen gleichzeitigen Benutzern eine hohe Leistungsfähigkeit aufweisen. Das System muss skalierbar sein und darf auch bei paralleler Nutzung mehrerer Gruppen und Events keine spürbaren Verzögerungen zeigen. Aktionen sollen innerhalb von maximal zwei Sekunden verarbeitet werden und der Seitenaufbau soll auch bei normaler Netzwerklatenz nur wenige Sekunden dauern. Das System soll mehrere tausende gleichzeitige Benutzer unterstützen und bei steigender Last einfach weiter skalierbar sein, z.\,B. durch weitere Serverinstanzen.
+
+Zusätzlich werden zur Sicherstellung einer stabilen Performance sinnvolle ergänzende Maßnahmen definiert. Ressourcenintensive Prozesse wie Datei-Uploads oder größere Berechnungen sollen asynchron im Hintergrund ausgeführt werden, damit die Benutzeroberfläche weiterhin reaktionsfähig bleibt. Der Ressourcenverbrauch von CPU, Arbeitsspeicher und Datenbank soll überwacht und regelmäßig optimiert werden, um auch bei wachsendem Datenbestand eine gleichbleibende Leistung zu gewährleisten.
+
+
+\subsection{Compatibility}
+Das System soll auf unterschiedlichen Endgeräten und Softwareumgebungen nutzbar sein. Gemäß der Aufgabenstellung muss die Anwendung sowohl im Webbrowser als auch auf mobilen Endgeräten lauffähig sein und funktional konsistent sein. Alle wesentlichen Funktionen der Webversion sollen somit auch in der mobilen Anwendung in gleicher oder gleichwertiger Form zur Verfügung stehen.
+
+Die Webanwendung soll in aktuellen Versionen der gängigen Browser Google Chrome, Microsoft Edge, Mozilla Firefox und Safari ohne zusätzliche Plugins oder Erweiterungen nutzbar sein. Für mobile Endgeräte soll eine Unterstützung der Betriebssysteme Android und iOS gewährleistet werden.
+
+Darüber hinaus soll das System die Integration externer Dienste ermöglichen. Es sollen Kalenderdienste wie Google Calendar, Outlook und iCal angebunden werden können, sodass Termine automatisch synchronisiert werden. Weitere Schnittstellen, beispielsweise zu Zahlungs- oder Ticketingsystemen, sollen über REST-APIs realisiert werden.
+
+Ergänzend werden folgende technische Maßnahmen geplant, um eine hohe Geräteunabhängigkeit sicherzustellen: Die Benutzeroberfläche soll responsiv gestaltet sein und sich automatisch an unterschiedliche Bildschirmgrößen und Auflösungen anpassen. Damit wird die explizit geforderte Endgeräteunabhängigkeit umgesetzt und durch zusätzliche Maßnahmen zur praktischen Nutzbarkeit abgesichert.
+
+\subsection{Usability (Gebrauchstauglichkeit)}
+Die Anwendung soll gemäß der Aufgabenstellung ohne lange Einarbeitung nutzbar sein. Neue Nutzer sollen grundlegende Funktionen wie das Erstellen oder Beitreten von Gruppen, das Anlegen von Notizen sowie das Verwalten von Aufgaben und Zahlungen intuitiv bedienen können, ohne zuvor eine Schulung oder umfangreiche Anleitung zu benötigen.
+
+Die Benutzeroberfläche soll klar strukturiert und konsistent aufgebaut sein. Navigationselemente, Bezeichnungen und Strukturen sollen über alle Bereiche der Anwendung hinweg einheitlich verwendet werden, damit sich Nutzer schnell orientieren können. Zentrale Funktionen sollen mit wenigen Interaktionen erreichbar sein, sodass typische Aufgaben ohne nervige Zwischenschritte ausgeführt werden können.
+
+Systemmeldungen und Fehlermeldungen sollen verständlich formuliert sein und dem Nutzer konkrete Hinweise zur Behebung von Problemen geben. Unterschiedliche Inhalte, wie beispielsweise Notiztypen oder Statusinformationen, sollen visuell eindeutig unterscheidbar dargestellt werden, etwa durch Farben oder Symbole.
+
+Zusätzlich werden sinnvolle ergänzende Maßnahmen zur Verbesserung der Gebrauchstauglichkeit berücksichtigt. Die Oberfläche soll responsiv gestaltet sein, ausreichend große Bedienelemente besitzen und auch auf mobilen Geräten gut lesbar und bedienbar bleiben. Damit wird die explizit geforderte einfache Nutzbarkeit umgesetzt und durch weitere Maßnahmen zur praktischen Benutzerfreundlichkeit ergänzt.
+
+\subsection{Reliability (Zuverlässigkeit)}
+Das System soll zuverlässig betrieben werden können und die zentralen Funktionen der Plattform dauerhaft bereitstellen. Da über die Anwendung unter anderem organisatorische Informationen und Finanzdaten (Einzahlungen und Ausgaben) verwaltet werden, muss eine konsistente Speicherung dieser Daten gewährleistet sein, sodass keine Daten durch technische Störungen verloren gehen oder in einen widersprüchlichen Zustand geraten.
+
+Zur Konkretisierung werden folgende Qualitätsziele festgelegt: Änderungen an relevanten Daten (z.\,B. Zahlungen, Ausgaben, Aufgabenstatus) sollen dauerhaft und konsistent gespeichert werden. Bei temporären Netzwerkproblemen oder kurzfristigen Serverstörungen sollen Benutzeraktionen nicht zu unvollständigen oder doppelten Einträgen führen. Außerdem sollen regelmäßig automatische Datensicherungen durchgeführt werden, sodass eine Wiederherstellung nach Systemausfällen möglich ist.
+
+Ergänzend werden sinnvolle technische Maßnahmen definiert, um die Zuverlässigkeit praktisch abzusichern. Fehlerzustände sollen protokolliert werden (Logging), und kritische Systemzustände sollen überwacht werden (Monitoring), um Ausfälle frühzeitig zu erkennen. Für zentrale Prozesse sollen geeignete Mechanismen vorgesehen werden, die eine sichere Verarbeitung auch bei hoher Last unterstützen.
+
+\subsection{Security (Sicherheit)}
+Die Aufgabenstellung legt einen besonderen Fokus auf Sicherheitsanforderungen. Die Datenkommunikation zwischen Client und Server muss verschlüsselt erfolgen, damit Inhalte nicht von Unbefugten abgefangen werden können. Passwörter dürfen nicht im Klartext gespeichert werden und müssen in der Datenbank ausschließlich in gehashter und gesalzener Form vorliegen. Zusätzlich sollen Nutzer zu starken Passwörtern ermutigt werden und es soll eine Zwei-Faktor-Authentifizierung, beispielsweise per SMS oder vergleichbar, unterstützt werden.
+
+Weiterhin ist aufgrund des Rollen- und Rechtesystems sicherzustellen, dass Benutzer nur auf diejenigen Gruppen- und Eventdaten zugreifen können, für die sie berechtigt sind. Insbesondere müssen administrative Aktionen wie das Entfernen oder Sperren von Mitgliedern auf Organisatoren bzw. Institutionsadministratoren beschränkt sein.
+
+Ergänzend werden technische Schutzmaßnahmen festgelegt, die in modernen Web- und App-Systemen üblich sind. Dazu zählen der Schutz vor typischen Angriffen wie SQL-Injection, Cross-Site Scripting (XSS) und Cross-Site Request Forgery (CSRF) sowie sichere Sitzungsverwaltung (z.\,B. Timeout bei Inaktivität). Sicherheitsrelevante Ereignisse wie fehlgeschlagene Loginversuche oder Änderungen sicherheitskritischer Einstellungen sollen protokolliert werden.
+
+\subsection{Maintainability (Wartbarkeit)}
+Für eine langfristige Nutzung und Weiterentwicklung soll die Plattform wartbar und gut erweiterbar sein. Gemäß der Aufgabenstellung wird ein Client-Server-System umgesetzt, das auf mobilen Endgeräten und im Webbrowser verfügbar ist. Daraus ergibt sich eine klare Trennung zwischen Client, Server und Datenhaltung, sodass Änderungen an einzelnen Komponenten möglichst isoliert vorgenommen werden können.
+
+Zur Konkretisierung werden folgende Qualitätsziele festgelegt: Schnittstellen zwischen den Systemkomponenten sollen klar definiert und dokumentiert sein. Insbesondere ist eine dokumentierte REST-API bereitzustellen, die die Kommunikation zwischen Client und Server nachvollziehbar beschreibt. Die Struktur des Systems soll so gestaltet sein, dass neue Funktionen (z.\,B. zusätzliche Integrationen oder neue Notiztypen) ohne grundlegende Umstrukturierung ergänzt werden können.
+
+Ergänzend werden Maßnahmen vorgesehen, die Wartbarkeit praktisch unterstützen. Dazu gehören ein konsistenter Code-Stil, eine nachvollziehbare Struktur der Komponenten sowie die Möglichkeit, zentrale Funktionen automatisiert zu testen. Konfigurationswerte (z.\,B. Rollenrechte oder Systemparameter) sollen soweit sinnvoll ohne Codeänderungen anpassbar sein.
+
+\subsection{Portability (Übertragbarkeit)}
+Das System soll auf aktuellen Plattformen betrieben werden können und nicht von spezieller Hardware abhängig sein. Da die Anwendung sowohl im Webbrowser als auch auf mobilen Endgeräten genutzt wird, soll die Lösung auf den gängigen Betriebssystemen lauffähig sein. Dazu gehören insbesondere Android und iOS für mobile Geräte sowie aktuelle Desktop-Umgebungen für die Webnutzung.
+
+Zur Konkretisierung wird festgelegt, dass die Serverkomponenten auf unterschiedlichen Serverumgebungen betrieben werden können sollen. Das Deployment soll standardisiert möglich sein, sodass ein Umzug zwischen unterschiedlichen Umgebungen (z.\,B. verschiedene Hosting-Anbieter) ohne große Anpassungen realisierbar bleibt.
+
+Ergänzend werden sinnvolle technische Maßnahmen berücksichtigt, um die Übertragbarkeit zu erhöhen. Dazu zählen standardisierte Deploymentverfahren (z.\,B. Containerisierung) sowie der Export und Import von Daten in gängigen Formaten, sofern dies für administrative oder datenschutzbezogene Zwecke erforderlich ist.
+
+\subsection{Datenschutz (nicht aus der ISO)}
+Neben den ISO-Qualitätsmerkmalen sind in der Aufgabenstellung explizite Anforderungen an Datenschutz und Vertraulichkeit genannt. Nutzerdaten müssen gemäß Datenschutzgrundverordnung (DSGVO) behandelt werden, und die Datenschutzrichtlinie muss von den Nutzern bestätigt werden, bevor die Software vollständig genutzt werden kann. Private Informationen, insbesondere Kontaktinformationen und ausgetauschte Nachrichten, dürfen nicht in falsche Hände geraten. Die Aufgabenstellung fordert daher eine verschlüsselte Speicherung und einen verschlüsselten Austausch sensibler Daten; darüber hinaus wird ein Ende-zu-Ende-Verschlüsselungssystem als mögliche Lösung genannt.
+
+Zur Konkretisierung werden folgende Anforderungen festgelegt: Es soll nur die für den Betrieb notwendige Menge personenbezogener Daten gespeichert werden (Datenminimierung). Nutzer sollen ihre eigenen Daten einsehen können und es soll ein Verfahren vorgesehen werden, um personenbezogene Daten auf Anfrage zu löschen. Der Zugriff auf personenbezogene Daten muss durch geeignete Berechtigungen geschützt werden.
+
+Ergänzend werden sinnvolle Maßnahmen vorgesehen, um Datenschutzanforderungen praktisch umzusetzen. Dazu gehören ein nachvollziehbares Lösch- und Aufbewahrungskonzept für Daten, sowie eine sichere Protokollierung, ohne dabei vertrauliche Inhalte im Klartext zu speichern.
+
+% =========================================================
+\section{Graphische Benutzungsschnittstelle}
+
+\subsection{Designprinzipien und UX-Grundlagen}
+
+\subsubsection{Zielsetzung der Benutzeroberfläche}
+Die Benutzeroberfläche von EventHub soll eine einfache und intuitive Bedienung der Plattform ermöglichen. Nutzer sollen typische Aufgaben wie Gruppen beitreten, Events verwalten, Aufgaben bearbeiten oder Zahlungen durchführen ohne Schulung ausführen können. Die Oberfläche ist daher klar strukturiert, reduziert gestaltet und auf die wesentlichen Funktionen fokussiert.
+
+\subsubsection{Konsistenz und Navigationskonzept}
+Alle Bereiche der Anwendung verwenden ein einheitliches Layout und wiederkehrende Navigationselemente. Gleichartige Funktionen sind an denselben Positionen erreichbar, sodass sich Nutzer schnell orientieren können. Zentrale Aktionen sind direkt sichtbar und nicht in tiefen Menüstrukturen versteckt. Häufig genutzte Funktionen sind mit maximal zwei bis drei Interaktionen erreichbar.
+
+\subsubsection{Rollenbasierte Darstellung}
+Die Oberfläche ist rollenabhängig gestaltet. Benutzer sehen ausschließlich Funktionen, für die sie berechtigt sind. Teilnehmer erhalten eine vereinfachte Ansicht mit Fokus auf Teilnahme und Interaktion, während Organisatoren und Institutionsadministratoren zusätzliche Verwaltungsfunktionen erhalten. Dadurch wird die Komplexität reduziert und Fehlbedienung vermieden.
+
+\subsubsection{Responsives Design und Geräteunabhängigkeit}
+Die Anwendung ist responsiv gestaltet und passt sich automatisch an unterschiedliche Bildschirmgrößen und Endgeräte an. Die Webversion ist für Desktop-Browser optimiert, während mobile Endgeräte eine vereinfachte Navigation und größere Bedienelemente erhalten. Alle wesentlichen Funktionen stehen auf beiden Plattformen in gleichwertiger Form zur Verfügung.
+
+\subsubsection{Fehlervermeidung und Systemfeedback}
+Pflichtfelder werden eindeutig gekennzeichnet und Eingaben vor dem Speichern validiert. Kritische Aktionen wie Löschen oder Rückzahlungen werden durch Bestätigungsdialoge abgesichert. Das System informiert Nutzer jederzeit über den aktuellen Status, beispielsweise durch Ladeanzeigen, Erfolgsmeldungen oder verständliche Fehlermeldungen. Dadurch bleibt das Systemverhalten nachvollziehbar und transparent.
+
+\subsubsection{Barrierearme Bedienbarkeit}
+Texte sind gut lesbar gestaltet und Bedienelemente ausreichend groß dimensioniert, sodass die Anwendung auch auf mobilen Geräten oder Touchscreens komfortabel nutzbar ist. Kontraste und klare Beschriftungen unterstützen eine schnelle Erfassbarkeit der Inhalte.
+
+% ---------------------------------------------------------
+\subsection{Navigationsmodelle}
+Die folgenden Zustandsdiagramme zeigen Navigation und mögliche Zustandsübergänge der Benutzeroberfläche.
+
+\subsubsection{Zustandsdiagramm -- Privatnutzer}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\linewidth]{pngs/zustandsdiagramm_privatnutzer.png}
+  \caption{Zustandsdiagramm Privatnutzer}
+\end{figure}
+
+\subsubsection{Zustandsdiagramm -- Organisator}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\linewidth]{pngs/zustandsdiagramm_organisator.png}
+  \caption{Zustandsdiagramm Organisator}
+\end{figure}
+
+\subsubsection{Zustandsdiagramm -- Dienstleister}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\linewidth]{pngs/zustandsdiagramm_dienstleister.png}
+  \caption{Zustandsdiagramm Dienstleister}
+\end{figure}
+
+% ---------------------------------------------------------
+\subsection{Webbrowser-Mockups}
+
+\subsubsection{Login \& Registrierung}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\linewidth]{mockups/login.png}
+  \caption{UI-Mockup Login und Registrierung (US-01, US-02, US-03, US-04, US-05)}
+\end{figure}
+
+\subsubsection{Dashboard}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\linewidth]{mockups/Dashboard.png}
+  \caption{UI-Mockup Dashboard (US-10, US-12, US-30, US-42)}
+\end{figure}
+
+\subsubsection{Gruppenübersicht}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\linewidth]{mockups/Gruppenuebersicht.png}
+  \caption{UI-Mockup Gruppenübersicht (US-10, US-11, US-12, US-13, US-14)}
+\end{figure}
+
+\subsubsection{Event-Detailseite}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\linewidth]{mockups/Event-Detail.png}
+  \caption{UI-Mockup Event-Detailseite (US-14, US-16, US-17--US-24, US-25--US-32, US-34, US-35, US-39, US-40)}
+\end{figure}
+
+\subsubsection{Finanzen}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\linewidth]{mockups/Finanzen.png}
+  \caption{UI-Mockup Finanzen (US-25, US-26, US-27, US-28, US-29)}
+\end{figure}
+
+\subsubsection{Notizen \& Umfragen}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\linewidth]{mockups/Notizen_Umfragen.png}
+  \caption{UI-Mockup Notizen und Umfragen (US-17, US-18, US-19, US-20, US-21, US-22, US-23, US-24)}
+\end{figure}
+
+\subsubsection{Aufgabenplanung}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\linewidth]{mockups/Aufgabenübersicht.png}
+  \caption{UI-Mockup Aufgabenübersicht (US-30, US-31, US-32, US-33)}
+\end{figure}
+
+\subsubsection{Profil \& Einstellungen}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\linewidth]{mockups/Profil.png}
+  \caption{UI-Mockup Profil \& Einstellungen (US-03, US-06, US-07, US-08, US-09, US-41, US-42a, US-42b, US-42c)}
+\end{figure}
+
+\subsubsection{Dienstleister-Dashboard}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\linewidth]{mockups/dienstleister_dashboard.png}
+  \caption{UI-Mockup Dienstleister-Dashboard (US-43, US-44, US-45, US-46, US-47, US-48, US-49)}
+\end{figure}
+
+\subsubsection{Rollen- und Rechteverwaltung}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\linewidth]{mockups/rollen_rechteverwaltung.png}
+  \caption{UI-Mockup Rollen- und Rechteverwaltung (US-36, US-37)}
+\end{figure}
+
+\subsubsection{Eventanfrage}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\linewidth]{mockups/eventanfrage.png}
+  \caption{UI-Mockup Eventanfrage (US-43)}
+\end{figure}
+
+\subsubsection{Eventübersicht (Lesemodus)}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\linewidth]{mockups/eventuebersicht_lesemodus.png}
+  \caption{UI-Mockup Eventübersicht (Lesemodus) (US-37)}
+\end{figure}
+
+% ---------------------------------------------------------
+\subsection{Mobile-App-Mockups}
+
+\subsubsection{Dashboard (Mobil)}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.6\linewidth]{mockups/mobile_dashboard.png}
+  \caption{UI-Mockup Dashboard Mobil (US-10, US-12, US-30, US-42)}
+\end{figure}
+
+\subsubsection{Event-Details (Mobil)}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.6\linewidth]{mockups/mobile_eventdetail.png}
+  \caption{UI-Mockup Event-Details Mobil (US-14, US-17, US-18, US-19, US-21, US-22, US-23, US-24, US-25, US-26, US-30, US-31, US-32)}
+\end{figure}
+
+\subsubsection{Aufgaben (Mobil)}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.6\linewidth]{mockups/mobile_aufgaben.png}
+  \caption{UI-Mockup Aufgaben Mobil (US-30, US-31, US-32, US-33)}
+\end{figure}
+
+\subsubsection{Finanzen (Mobil)}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.6\linewidth]{mockups/mobile_finanzen.png}
+  \caption{UI-Mockup Finanzen Mobil (US-25, US-26, US-27, US-28, US-29)}
+\end{figure}
+
+% =========================================================
+
+
+
 
 
 \section{Logische Sicht}
@@ -195,7 +639,7 @@ Klassendiagramm und dienen als Ausgangspunkt für das logische Datenmodell.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1.3\textwidth]{Klassendiagramm1.png}
+    \includegraphics[width=1.0\textwidth]{Klassendiagramm1.png}
     \caption{Klassendiagramm1.png}
     \label{fig:klassendiagramm}
 \end{figure}
@@ -208,7 +652,7 @@ Klassendiagramm und dienen als Ausgangspunkt für das logische Datenmodell.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1.3\textwidth]{ldm_user_group_event.png}
+    \includegraphics[width=1.0\textwidth]{ldm_user_group_event.png}
     \caption{LDM Benutzer, Gruppen und Events}
     \label{fig:ldm1}
 \end{figure}
@@ -240,7 +684,7 @@ Alle Beziehungen sind über Fremdschlüssel eindeutig definiert.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1.3\textwidth]{ldm_notes_polls.png}
+    \includegraphics[width=1.0\textwidth]{ldm_notes_polls.png}
     \caption{LDM Notizen \& Umfragen}
     \label{fig:ldm2}
 \end{figure}
@@ -266,7 +710,7 @@ Umfragedaten nachträglich zu verändern.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1.3\textwidth]{ldm_payments_tasks.png}
+    \includegraphics[width=1.0\textwidth]{ldm_payments_tasks.png}
     \caption{LDM Finanzen \& Aufgaben}
     \label{fig:ldm3}
 \end{figure}
@@ -298,7 +742,7 @@ konsistent.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1.0\textwidth]{ldm_providers_invoices.png}
+    \includegraphics[width=1.3\textwidth]{ldm_providers_invoices.png}
     \caption{LDM Dienstleister \& Abrechnung}
     \label{fig:ldm4}
 \end{figure}
@@ -378,7 +822,7 @@ wird über Angebote konkret für einzelne Aufträge/Events gebucht bzw. eingepla
 Die Übersicht dient als Navigationshilfe und stellt sicher, dass die Teilmodelle
 konsistent aufeinander referenzieren.
 
-\subsection{CRUD-Matrix (User Stories $\leftrightarrow$ Entitäten)}
+\newpage
 
 \subsection{CRUD-Matrix}
 
@@ -628,7 +1072,7 @@ Bewegungsdaten (z.\,B. Zahlungen, Abstimmungen, Buchungen) werden ausschließlic
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1.3\textwidth]{Zustandsdiagramm_Event.png}
+    \includegraphics[width=1.0\textwidth]{Zustandsdiagramm_Event.png}
     \caption{Zustandsdiagramm\_Event.png}
     \label{fig:zustandsdiagramm_event}
 \end{figure}
@@ -651,7 +1095,7 @@ definiert sind und der Eventstatus jederzeit konsistent ist.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1.3\textwidth]{Zustandsdiagramm_Rechnung.png}
+    \includegraphics[width=1.0\textwidth]{Zustandsdiagramm_Rechnung.png}
     \caption{Zustandsdiagramm Rechnung}
     \label{fig:zustandsdiagramm_rechnung}
 \end{figure}
@@ -673,7 +1117,7 @@ bearbeitet werden und finanzielle Prozesse transparent und regelkonform ablaufen
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1.3\textwidth]{Sequenzdiagramm_Gruppebeitreten.png}
+    \includegraphics[width=1.0\textwidth]{Sequenzdiagramm_Gruppebeitreten.png}
     \caption{Sequenzdiagramm Gruppe per Beitritscode beitreten}
     \label{fig:seq-join-group}
 \end{figure}
@@ -694,7 +1138,7 @@ Datenhaltung sowie die serverseitige Durchsetzung fachlicher Regeln.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1.3\textwidth]{Sequenzdiagramm_Einzahlungerfassen.png}
+    \includegraphics[width=1.0\textwidth]{Sequenzdiagramm_Einzahlungerfassen.png}
     \caption{Sequenzdiagramm Einzahlung erfassen}
     \label{fig:seq-payment}
 \end{figure}
@@ -731,8 +1175,8 @@ verantwortlich für:
 \end{itemize}
 
 \noindent
-\textbf{Wichtig:} Fachlogik (z.\,B. Rollenprüfung oder Finanzberechnungen) liegt nicht im
-Client, sondern ausschließlich in der Server-Schicht, um eine Umgehung fachlicher Regeln
+Die Logik (z.\,B. Rollenprüfung oder Finanzberechnungen) liegt nicht im
+Client, sondern in der Server-Schicht, um eine Umgehung fachlicher Regeln
 zu verhindern.
 
 \subsection{Server-Schicht (Applikation / Geschäftslogik)}
@@ -789,13 +1233,13 @@ folgt:
 
 Die gewählte Drei-Schichten-Architektur bietet für EventHub folgende Vorteile:
 \begin{itemize}
-  \item \textbf{Sicherheit:} Rechte- und DSGVO-Regeln werden zentral im Server
+  \item Sicherheit: Rechte- und DSGVO-Regeln werden zentral im Server
         durchgesetzt und können nicht clientseitig umgangen werden.
-  \item \textbf{Wartbarkeit:} Benutzeroberfläche, Geschäftslogik und Datenhaltung
+  \item Wartbarkeit: Benutzeroberfläche, Geschäftslogik und Datenhaltung
         können unabhängig voneinander weiterentwickelt werden.
-  \item \textbf{Skalierbarkeit:} Die Server-Schicht kann horizontal skaliert werden,
+  \item Skalierbarkeit: Die Server-Schicht kann horizontal skaliert werden,
         während die Datenbank separat optimiert werden kann.
-  \item \textbf{Portabilität:} Web- und Mobile-Clients nutzen dieselbe REST-API.
+  \item Portabilität: Web- und Mobile-Clients nutzen dieselbe REST-API.
 \end{itemize}
 
 \subsection{Komponentendiagramm}
@@ -817,16 +1261,18 @@ rollenbasierte Zugriffsprüfung zentral durchsetzt. Persistente Daten werden in 
 Datenbank-Schicht gespeichert; der Zugriff darauf erfolgt ausschließlich serverseitig,
 wodurch Konsistenz- und Sicherheitsanforderungen zentral kontrolliert werden können.
 
+\newpage
+
 \subsection{REST-API-Spezifikation}
 
 \subsubsection{API – Konventionen}
 
 \begin{itemize}
-  \item \textbf{Base URL:} \texttt{/api/v1}
-  \item \textbf{Datenformat:} JSON (UTF-8)
-  \item \textbf{Authentifizierung:} Token-basiert (Authorization: Bearer Token)
-  \item \textbf{Autorisierung:} Rollen- und Rechteprüfung serverseitig
-  \item \textbf{Statuscodes:} 200 OK, 201 Created, 204 No Content, 400 Bad Request,
+  \item Base URL: \texttt{/api/v1}
+  \item Datenformat: JSON (UTF-8)
+  \item Authentifizierung: Token-basiert (Authorization: Bearer Token)
+  \item Autorisierung: Rollen- und Rechteprüfung serverseitig
+  \item Statuscodes: 200 OK, 201 Created, 204 No Content, 400 Bad Request,
         401 Unauthorized, 403 Forbidden, 404 Not Found, 409 Conflict
 \end{itemize}
 
@@ -834,7 +1280,7 @@ wodurch Konsistenz- und Sicherheitsanforderungen zentral kontrolliert werden kö
 
 \paragraph{Authentifizierung und Benutzer}
 
-\begin{longtable}{|p{5cm}|p{2cm}|p{7cm}|}
+\begin{longtable}{|p{5,4cm}|p{1,8cm}|p{7cm}|}
 \hline
 \textbf{Endpoint} & \textbf{Methode} & \textbf{Beschreibung} \\
 \hline
@@ -862,7 +1308,7 @@ wodurch Konsistenz- und Sicherheitsanforderungen zentral kontrolliert werden kö
 
 \paragraph{Gruppen und Mitgliedschaften}
 
-\begin{longtable}{|p{5cm}|p{2cm}|p{7cm}|}
+\begin{longtable}{|p{5,4cm}|p{1,8cm}|p{7cm}|}
 \hline
 \textbf{Endpoint} & \textbf{Methode} & \textbf{Beschreibung} \\
 \hline
@@ -892,7 +1338,7 @@ wodurch Konsistenz- und Sicherheitsanforderungen zentral kontrolliert werden kö
 
 \paragraph{Events}
 
-\begin{longtable}{|p{5cm}|p{2cm}|p{7cm}|}
+\begin{longtable}{|p{5,4cm}|p{1,8cm}|p{7cm}|}
 \hline
 \textbf{Endpoint} & \textbf{Methode} & \textbf{Beschreibung} \\
 \hline
@@ -918,7 +1364,7 @@ wodurch Konsistenz- und Sicherheitsanforderungen zentral kontrolliert werden kö
 
 \paragraph{Notizen, Umfragen und Finanzen}
 
-\begin{longtable}{|p{5cm}|p{2cm}|p{7cm}|}
+\begin{longtable}{|p{5,4cm}|p{1,8cm}|p{7cm}|}
 \hline
 \textbf{Endpoint} & \textbf{Methode} & \textbf{Beschreibung} \\
 \hline
@@ -959,7 +1405,7 @@ Geschäftslogik sowie Sicherheits- und Datenschutzregeln werden serverseitig dur
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1.2\textwidth]{Verteilungsdiagramm.png}
+    \includegraphics[width=1.0\textwidth]{Verteilungsdiagramm.png}
     \caption{Verteilungsdiagramm}
     \label{fig:deployment}
 \end{figure}
@@ -978,8 +1424,6 @@ Zusätzlich sind optionale externe Dienste angebunden, darunter ein
 Benachrichtigungsdienst (E-Mail/SMS/Push), ein Kalenderdienst sowie ein
 Objektspeicher für Medieninhalte. Diese werden über gesicherte HTTPS-Schnittstellen
 vom Backend aus integriert.
-
-\subsection{Systemlandschaft und externe Dienste}
 
 
 \section{Sicherheit und Datenschutz}
@@ -1085,10 +1529,607 @@ Das System unterstützt die Rechte auf Auskunft, Berichtigung und Löschung pers
 Daten. Ein Export der eigenen Daten kann in strukturierter Form bereitgestellt werden.
 
 
-\section{Fazit und Ausblick (eventuell entfernen)}
+\section{Arbeitsteilung}
+\subsection{Aufgabenteilung \textbf{Felix Franke}}
+
+\subsubsection{Fachliche Grundlagen}
+\begin{itemize}
+    \item Analyse der Aufgabenstellung und fachlichen Anforderungen
+    \item Festlegung eines aussagekräftigen Produktnamens
+    \item Identifikation und Beschreibung aller Akteure und Rollen
+    \item Erstellung des Glossars der Fachdomäne
+\end{itemize}
+
+\subsubsection{Funktionale Anforderungen}
+
+\begin{itemize}
+    \item Definition funktionaler Gruppen (z. B. Benutzerverwaltung, Gruppenmanagement, Eventplanung)
+    \item Ausformulierung aller User Stories je funktionaler Gruppe unter Angabe von Rolle, Ziel, Nutzen, Akzeptanzkriterien und MoSCoW-Priorisierung
+    \item Ergänzung fehlender funktionaler Anforderungen (Plausibilitätsprüfung)
+\end{itemize}
+
+\subsubsection{Nicht-funktionale Anforderungen}
+
+\begin{itemize}
+    \item Beschreibung der Qualitätsmerkmale nach ISO 25010 (Usability, Sicherheit, Performance,
+Wartbarkeit etc.)
+    \item Rechtliche Anforderungen (DSGVO)
+\end{itemize}
+
+\subsubsection{GUI \& Usability}
+
+\begin{itemize}
+    \item Entwurf der GUI‑Mockups für Webbrowser
+    \item Entwurf der GUI‑Mockups für mobile Endgeräte
+    \item Zustandsdiagramme für die Navigation
+    \item Zuordnung der Screens zu den jeweiligen User Stories
+    \item Beschreibung der angewandten UI-/UX‑Designprinzipien
+\end{itemize} 
+
+\subsection{Aufgabenteilung \textbf{Markus Wurms}}
+
+\subsubsection{Domänen- \& Datenmodellierung}
+
+\begin{itemize}
+    \item Ableitung der Domänenklassen aus den User Stories
+    \item Erstellung des fachlichen Domänenmodells (UML‑Klassendiagramm)
+    \item Modellierung von Beziehungen, Multiplizitäten und Vererbungen
+    \item Ergänzung sinnvoller Attribute und Klassen
+\end{itemize}
+
+\subsubsection{Zustände \& Datenpersistenz}
+
+\begin{itemize}
+    \item Zustandsdiagramme für zentrale Klassen (z. B. Event, Rechnung, Aufgabe)
+    \item Überführung des fachlichen Modells in ein logisches Datenmodell
+    \item Definition von Bewegungsdaten (Zahlungen, Buchungen, Statusänderungen)
+    \item Erstellung der CRUD‑Matrix (User Stories $\leftrightarrow$ Klassen)
+\end{itemize}
+
+\subsubsection{Systemarchitektur \& Schnittstellen}
+
+\begin{itemize}
+    \item Beschreibung der Drei‑Schichten‑Architektur (Client – Server – Datenbank)
+    \item UML‑Verteilungsdiagramm (Hardware-/Systemlandschaft)
+    \item Definition der REST‑API (Ressourcen, Endpunkte, HTTP‑Methoden)
+    \item Sequenzdiagramme für ausgewählte Kern-Use‑Cases
+\end{itemize}
+
+\subsubsection{Sicherheit \& Datenschutz}
+
+\begin{itemize}
+    \item Sicherheitsanalyse mittels STRIDE
+    \item Beschreibung der Schutzmaßnahmen (Authentifizierung, Autorisierung, Verschlüsselung)
+    \item Technische Umsetzung von DSGVO‑Anforderungen (Zugriffsschutz, Datenminimierung,
+Löschkonzepte)
+\end{itemize}
 
 
-\section{AB HIER ENDET DAS OFFIZIELLE INHALTSVERZEICHNISS}
+
+\section{Übersicht verwendeter Hilfsmittel}
+
+\subsection{OpenAI ChatGPT (openai.com, chatgpt.com)}
+
+\subsubsection{Nutzung von ChatGPT zur Formatierung}
+ChatGPT wurde zur Hilfe gezogen beim Formatieren dieses Dokuments, insbesondere bei den Tabellen der User-Stories.
+Außerdem haben wir mit ChatGPT im ganzen Dokument auf Rechtschreibfehler kontrolliert.
+
+\subsubsection{Generierung von Mockups}
+ChatGPT wurde zur Generierung von Mockups genutzt. Die jeweils verwendeten Prompts werden hier ausgelistet. Jedes generierte Mockup wurde per Bildbearbeitungsprogramm meist noch ein wenig verändert. Die Prompts selber wurden per Hand erstellt und in ein einfaches Eingabefeld in ChatGPT 5.2 eingefügt (Version Stand 05.02.2026).
+
+\subsubsection{Prompts}
+
+\paragraph{Login \& Registrierung}
+\textbf{Prompt:}
+\begin{prompt}
+Erstelle ein wireframe-ui mockup einer desktop-website mit dem Namen "EventHub". Grauskala, keine Designelemente, nur einfache Rechtecke und Text-Label.
+
+Layout:
+desktop browser window {
+zentrierter content-bereich ohne sidebar,
+
+oben logo und schriftzug "EventHub",
+
+darunter rechteckige login-box mit title "Login",
+
+in der box mehrere rechteckige eingabefelder:
+
+E-Mail
+
+Passwort
+
+darunter button "Login",
+
+darunter text-links:
+
+"Registrieren"
+
+"Passwort vergessen",
+
+ checkbox "Angemeldet bleiben",
+
+ kleiner hinweisbereich "2-Faktor-Authentifizierung Code",
+
+unter der login-box eine zweite kleinere box oder link "Anmelden"
+}
+
+Stil: flach, minimal, nur rechtecke und platzhaltertext, kein realistisches UI-design, kein schatten, keine farben, nur wireframe.
+\end{prompt}
+
+\paragraph{Dashboard}
+\textbf{Prompt:}
+\begin{prompt}
+Erstelle ein wireframe-ui mockup einer desktop-website mit dem Namen "EventHub". Grauskala, keine Designelemente, nur einfache Rechtecke und Text-Label.
+
+Layout:
+desktop browser window {
+top header bar { "EventHub" Schriftzug und Logo links und Navigation mit "Dashboard", "Gruppen", "Aufgaben", "Profil" rechts }
+sidebar navigation on the left { "Dashboard" (active), "Gruppen", "Aufgaben", "Finanzen", "Profil" }
+mittiger Content-Bereich rechts neben der Sidebar {
+title: "Dashboard",
+
+darunter mehrere übersichts-karten in einem grid-layout:
+
+karte "Meine Gruppen" -> liste von 3 rechteckigen listen-objekten mit Gruppennamen
+
+karte "Nächste Termine" -> liste von 3 rechteckigen listen-objekten mit Datum + Titel
+
+karte "Offene Aufgaben" -> liste von 3 rechteckigen listen-objekten mit Aufgabenname + Status
+
+karte "Benachrichtigungen" -> liste von 2-3 rechteckigen meldungen
+
+oben rechts ein button "+ Gruppe erstellen"
+}
+}
+
+Stil: flach, minimal, nur rechtecke und platzhaltertext, kein realistisches UI-design, kein schatten, keine farben, nur wireframe.
+\end{prompt}
+
+\paragraph{Gruppenübersicht}
+\textbf{Prompt:}
+\begin{prompt}
+Erstelle ein wireframe-ui mockup einer desktop-website mit dem Namen "EventHub". Grauskala, keine Designelemente, nur einfache Rechtecke und Text-Label.
+
+Layout:
+desktop browser window {
+top header bar { "EventHub" Schriftzug und Logo links und Navigation mit "Dashboard", "Gruppen", "Aufgaben", "Profil" rechts }
+sidebar navigation on the left { "Gruppen" (active), "Dashboard", "Aufgaben", "Finanzen", "Profil" }
+mittiger Content-Bereich rechts neben der Sidebar {
+title: "Gruppenübersicht",
+
+oben eine suchleiste "Gruppe suchen" und ein eingabefeld "Beitrittscode eingeben" mit button "Beitreten",
+
+darunter sektion "Meine Gruppen" → liste von 4 rechteckigen listen-objekten mit:
+
+Gruppenname
+
+kurze Beschreibung
+
+1x Button "Öffnen"
+
+1x Button "Verlassen",
+
+oben rechts ein button "+ Gruppe erstellen"
+}
+}
+
+Stil: flach, minimal, nur rechtecke und platzhaltertext, kein realistisches UI-design, kein schatten, keine farben, nur wireframe.
+\end{prompt}
+
+\paragraph{Event-Detailseite}
+\textbf{Prompt:}
+\begin{prompt}
+Erstelle ein wireframe-ui mockup einer desktop-website mit dem Namen "EventHub". Grauskala, keine Designelemente, nur einfache Rechtecke und Text-Label. Layout: desktop browser window { top header bar { "Eventhub" Schriftzug und logo links und navigation mit "Dashboard", Gruppen", "Aufgaben", "Profil" rechts} sidebar navigation on the left {"Übersicht "(active), "Notizen/Umfragen", "Aufgaben", "Finanzen", "Medien", "Mitglieder"}Mittiger Content-Bereich recht neben der sidebar {title: "Event-Detail", darunter eine Zeile mit "Event-Titel" und "Ort,Datum", darunter action buttons: "+Notiz erstellen", "+Aufgabe hinzufügen", "Mitglieder verwalten", darunter Sektion "Übersicht" -> untergeordnet liste von 3 rechteckigen listen-objekten mit "Notizen/Aufgaben" als Titel und "Beschreibung der Notiz/Aufgabe" als untertext"}"
+\end{prompt}
+
+\paragraph{Finanzen}
+\textbf{Prompt:}
+\begin{prompt}
+Erstelle ein wireframe-ui mockup einer desktop-website mit dem Namen "EventHub". Grauskala, keine Designelemente, nur einfache Rechtecke und Text-Label.
+
+Layout:
+desktop browser window {
+top header bar { "EventHub" Schriftzug und Logo links und Navigation mit "Dashboard", "Gruppen", "Aufgaben", "Profil" rechts }
+sidebar navigation on the left { "Übersicht", "Notizen/Umfragen", "Aufgaben", "Finanzen" (active), "Medien", "Mitglieder" }
+mittiger Content-Bereich rechts neben der Sidebar {
+title: "Finanzen",
+
+oben budget-übersicht als rechteckige info-boxen:
+
+"Budget-Ziel"
+
+"Aktueller Stand"
+
+"Restbetrag"
+
+darunter action buttons: "+ Einzahlung hinzufügen", "+ Ausgabe erfassen", "Rückzahlung auslösen",
+
+darunter tabelle mit mehreren rechteckigen listen-objekten:
+
+Datum
+
+Typ (Einzahlung/Ausgabe)
+
+Beschreibung
+
+Betrag
+
+Buttons "Bearbeiten", "Löschen"
+
+optional einfache fortschrittsleiste als rechteckiger balken für Budgetfortschritt
+}
+}
+
+Stil: flach, minimal, nur rechtecke und platzhaltertext, kein realistisches UI-design, kein schatten, keine farben, nur wireframe.
+\end{prompt}
+
+\paragraph{Notizen \& Umfragen}
+\textbf{Prompt:}
+\begin{prompt}
+Erstelle ein wireframe-ui mockup einer desktop-website mit dem Namen "EventHub". Grauskala, keine Designelemente, nur einfache Rechtecke und Text-Label.
+
+Layout:
+desktop browser window {
+top header bar { "EventHub" Schriftzug und Logo links und Navigation mit "Dashboard", "Gruppen", "Aufgaben", "Profil" rechts }
+sidebar navigation on the left { "Übersicht", "Notizen/Umfragen" (active), "Aufgaben", "Finanzen", "Medien", "Mitglieder" }
+mittiger Content-Bereich rechts neben der Sidebar {
+title: "Notizen & Umfragen",
+
+oben action buttons: "+ Notiz erstellen", "+ Umfrage erstellen",
+
+darunter filterleiste mit dropdown "Typ filtern" und suchfeld,
+
+darunter liste von 4 rechteckigen listen-objekten mit:
+
+Titel der Notiz/Umfrage
+
+kurzer Beschreibungstext
+
+Status oder Anzahl Stimmen
+
+Buttons "Bearbeiten", "Löschen", 
+
+bei einer geöffneten Umfrage zusätzlich rechteckige Antwortoptionen mit Button "Ja" und Button "Nein" 
+}
+}
+
+Stil: flach, minimal, nur rechtecke und platzhaltertext, kein realistisches UI-design, kein schatten, keine farben, nur wireframe.
+\end{prompt}
+
+\paragraph{Aufgabenplanung}
+\textbf{Prompt:}
+\begin{prompt}
+Erstelle ein wireframe-ui mockup einer desktop-website mit dem Namen "EventHub". Grauskala, keine Designelemente, nur einfache Rechtecke und Text-Label.
+
+Layout:
+desktop browser window {
+top header bar { "EventHub" Schriftzug und Logo links und Navigation mit "Dashboard", "Gruppen", "Aufgaben", "Profil" rechts }
+sidebar navigation on the left { "Übersicht", "Notizen/Umfragen", "Aufgaben" (active), "Finanzen", "Medien", "Mitglieder" }
+mittiger Content-Bereich rechts neben der Sidebar {
+title: "Aufgabenmanagement",
+
+oben action button: "+ Aufgabe erstellen",
+
+darunter filterleiste mit dropdown "Status filtern" und suchfeld,
+
+darunter aufgabenliste als mehrere rechteckige listen-objekte mit:
+
+Aufgabenname
+
+kurze Beschreibung
+
+zugewiesene Person
+
+Status-Anzeige (offen / in Bearbeitung / erledigt)
+
+Buttons "Übernehmen", "Bearbeiten", "Erledigt",
+
+optional gruppiert in sektionen "Offen", "In Bearbeitung", "Erledigt"
+}
+}
+
+Stil: flach, minimal, nur rechtecke und platzhaltertext, kein realistisches UI-design, kein schatten, keine farben, nur wireframe.
+\end{prompt}
+
+\paragraph{Profil \& Einstellungen}
+\textbf{Prompt:}
+\begin{prompt}
+Erstelle ein wireframe-ui mockup einer desktop-website mit dem Namen "EventHub". Grauskala, keine Designelemente, nur einfache Rechtecke und Text-Label.
+
+Layout:
+desktop browser window {
+top header bar { "EventHub" Schriftzug und Logo links und Navigation mit "Dashboard", "Gruppen", "Aufgaben", "Profil" rechts }
+sidebar navigation on the left { "Dashboard", "Gruppen", "Aufgaben", "Finanzen", "Profil" (active) }
+mittiger Content-Bereich rechts neben der Sidebar {
+title: "Profil & Einstellungen",
+
+sektion "Profilinformationen" mit mehreren rechteckigen eingabefeldern:
+
+Name
+
+E-Mail
+
+Passwort ändern
+
+Speichern Button,
+
+sektion "Benachrichtigungen" mit checkboxen oder toggles:
+
+E-Mail
+
+Push
+
+SMS,
+
+sektion "Sprache" mit dropdown auswahl,
+
+sektion "Integrationen" mit zwei rechteckigen boxen:
+
+"Kalender synchronisieren" mit Button "Verbinden"
+
+"Sprachassistent koppeln" mit Button "Verbinden",
+
+unten Button "Logout"
+}
+}
+
+Stil: flach, minimal, nur rechtecke und platzhaltertext, kein realistisches UI-design, kein schatten, keine farben, nur wireframe.
+\end{prompt}
+
+\paragraph{Dienstleister-Dashboard}
+\textbf{Prompt:}
+\begin{prompt}
+Erstelle ein wireframe-ui mockup einer desktop-website mit dem Namen "EventHub". Grauskala, keine Designelemente, nur einfache Rechtecke und Text-Label.
+
+Layout:
+desktop browser window {
+top header bar { "EventHub" Schriftzug und Logo links und Navigation mit "Dashboard", "Anfragen", "Angebote", "Rechnungen", "Ressourcen", "Profil" rechts }
+sidebar navigation on the left { "Dashboard" (active), "Anfragen", "Angebote", "Rechnungen", "Material", "Mitarbeiter", "Profil" }
+mittiger Content-Bereich rechts neben der Sidebar {
+title: "Dienstleister Dashboard",
+
+darunter mehrere übersichts-karten in einem grid-layout:
+
+karte "Neue Anfragen" → liste von 3 rechteckigen einträgen mit Eventname + Datum + Button "Öffnen"
+
+karte "Offene Angebote" → liste von 2 rechteckigen einträgen mit Preis + Status
+
+karte "Offene Rechnungen" → liste von 2 rechteckigen einträgen mit Betrag + Fälligkeitsdatum
+
+karte "Ressourcenstatus" → einfache liste von Material oder Mitarbeitern mit Verfügbarkeit
+
+}
+}
+
+Stil: flach, minimal, nur rechtecke und platzhaltertext, kein realistisches UI-design, kein schatten, keine farben, nur wireframe.
+\end{prompt}
+
+\paragraph{Dashboard – Mobil}
+\textbf{Prompt:}
+\begin{prompt}
+Erstelle ein wireframe-ui mockup einer mobilen app-version der website mit dem Namen "EventHub". Hochformat, smartphone-format, Grauskala, keine Designelemente, nur einfache Rechtecke und Text-Label.
+
+Layout:
+smartphone screen im hochformat {
+
+oben eine schmale header bar mit schriftzug "EventHub",
+
+mittiger content-bereich mit vertikal gestapelten karten:
+
+karte "Meine Gruppen" → liste von 2–3 rechteckigen einträgen
+
+karte "Nächste Termine" → liste von 2 rechteckigen einträgen
+
+karte "Offene Aufgaben" → liste von 2 rechteckigen einträgen
+
+karte "Benachrichtigungen" → liste von 2 rechteckigen meldungen
+
+unten feste bottom-navigation bar mit 4 icons/text-labels:
+"Dashboard" (active), "Gruppen", "Aufgaben", "Profil"
+
+alle elemente groß und touch-geeignet, einfache rechtecke, viel abstand zwischen elementen
+}
+
+Stil: flach, minimal, nur rechtecke und platzhaltertext, kein realistisches UI-design, kein schatten, keine farben, nur wireframe.
+\end{prompt}
+
+\paragraph{Event-Detail – Mobil}
+\textbf{Prompt:}
+\begin{prompt}
+Erstelle ein wireframe-ui mockup einer mobilen app-version der website mit dem Namen "EventHub". Hochformat, smartphone-format, Grauskala, keine Designelemente, nur einfache Rechtecke und Text-Label.
+
+Layout:
+smartphone screen im hochformat {
+
+oben header bar mit titel "Event-Detail" und zurück-button,
+
+darunter event-informationen als block:
+
+Event-Titel
+
+Datum
+
+Ort
+
+darunter horizontale tab-leiste oder segmentierte navigation mit:
+"Übersicht" (active), "Notizen", "Aufgaben", "Finanzen",
+
+darunter scrollbarer content-bereich mit mehreren rechteckigen listen-objekten (Notizen/Aufgaben),
+
+unten zwei große touch-buttons:
+"+ Notiz"
+"+ Aufgabe"
+
+alle elemente groß, vertikal gestapelt, fingerfreundliche abstände, einfache rechtecke, kein desktop-layout
+}
+
+Stil: flach, minimal, nur einfache rechtecke und platzhaltertext, kein realistisches UI-design, kein schatten, keine farben, nur wireframe.
+\end{prompt}
+
+\paragraph{Aufgaben – Mobil}
+\textbf{Prompt:}
+\begin{prompt}
+Erstelle ein wireframe-ui mockup einer mobilen app-version der website mit dem Namen "EventHub". Hochformat, smartphone-format, Grauskala, keine Designelemente, nur einfache Rechtecke und Text-Label.
+
+Layout:
+smartphone screen im hochformat {
+
+oben header bar mit titel "Aufgaben",
+
+darunter filterleiste mit dropdown "Status" und suchfeld,
+
+darunter vertikal gestapelte aufgabenliste mit mehreren großen rechteckigen einträgen:
+
+Aufgabenname
+
+kurze Beschreibung
+
+zugewiesene Person
+
+Statusanzeige
+
+rechts oder unten pro eintrag große touch-buttons:
+"Übernehmen"
+"Erledigt",
+
+unten feste bottom-navigation bar mit:
+"Dashboard", "Gruppen", "Aufgaben" (active), "Profil"
+
+alle elemente groß, fingerfreundlich, viel abstand, nur einfache rechtecke
+}
+
+Stil: flach, minimal, nur rechtecke und platzhaltertext, kein realistisches UI-design, kein schatten, keine farben, nur wireframe.
+\end{prompt}
+
+\paragraph{Finanzen – Mobil}
+\textbf{Prompt:}
+\begin{prompt}
+Erstelle ein wireframe-ui mockup einer mobilen app-version der website mit dem Namen "EventHub". Hochformat, smartphone-format, Grauskala, keine Designelemente, nur einfache Rechtecke und Text-Label.
+
+Layout:
+smartphone screen im hochformat {
+
+oben header bar mit titel "Finanzen",
+
+darunter budget-übersicht als große info-boxen:
+
+"Budget-Ziel"
+
+"Aktueller Stand"
+
+"Restbetrag"
+
+darunter zwei große touch-buttons nebeneinander oder gestapelt:
+"+ Einzahlung"
+"+ Ausgabe",
+
+darunter vertikal gestapelte liste von einträgen mit:
+
+Datum
+
+Beschreibung
+
+Betrag (+ oder -)
+
+kleiner button "Details",
+
+unten feste bottom-navigation bar mit:
+"Dashboard", "Gruppen", "Aufgaben", "Profil"
+
+alle elemente groß, vertikal, fingerfreundlich, nur einfache rechtecke und text
+}
+
+Stil: flach, minimal, nur rechtecke und platzhaltertext, kein realistisches UI-design, kein schatten, keine farben, nur wireframe.
+\end{prompt}
+
+\paragraph{Rollen- und Rechteverteilung}
+\textbf{Prompt:}
+\begin{prompt}
+Erstelle ein wireframe-ui mockup einer desktop-website mit dem Namen “EventHub”. Grauskala, keine Designelemente, nur einfache Rechtecke und Text-Label.
+
+Layout:
+desktop browser window {
+top header bar { “EventHub” Schriftzug links, Navigation “Dashboard”, “Events”, “Benutzer”, “Admin” }
+sidebar navigation on the left { “Übersicht”, “Events”, “Benutzer”, “Rollen & Rechte” (active) }
+
+mittiger Content-Bereich rechts neben der Sidebar {
+title: “Rollen- und Rechteverwaltung”,
+
+oben dropdown “Institution auswählen”,
+
+darunter tabelle mit mehreren rechteckigen zeilen:
+Spalten:
+Benutzer | Rolle | Lesen | Schreiben
+
+Spalte Benutzer enthält Benutzernamen,
+Spalte Rolle enthäht Platzhalter Rollenname,
+Spalten lesen und schreiben sind checkboxen,
+
+
+oben rechts button “+ Rolle vergeben”,
+unten rechts button “Speichern”
+}
+}
+
+Stil: flach, minimal, nur rechtecke und platzhaltertext, kein realistisches UI-design, kein schatten, keine farben, nur wireframe.
+\end{prompt}
+
+\paragraph{Eventanfrage}
+\textbf{Prompt:}
+\begin{prompt}
+Erstelle ein wireframe-ui mockup einer desktop-website mit dem Namen "EventHub". Grauskala, keine Designelemente, nur einfache Rechtecke und Text-Label.
+
+Layout:
+desktop browser window {
+zentrierter content-bereich ohne sidebar {
+
+title: "Eventanfrage stellen",
+
+mehrere rechteckige formularfelder:
+
+Firmenname / Name
+
+Kontakt E-Mail
+
+Eventdatum
+
+Ort
+
+Budget
+
+Beschreibung / Anforderungen (großes Textfeld)
+
+darunter button "Anfrage senden"
+}
+}
+
+Stil: flach, minimal, nur rechtecke und platzhaltertext, kein realistisches UI-design, kein schatten, keine farben, nur wireframe.
+\end{prompt}
+
+\paragraph{Eventübersicht (Lesemodus)}
+\textbf{Prompt:}
+\begin{prompt}
+Erstelle ein wireframe-ui mockup einer desktop-website mit dem Namen "EventHub". Grauskala, keine Designelemente, nur einfache Rechtecke und Text-Label.
+
+Layout:
+desktop browser window {
+top header bar { "EventHub" }
+
+sidebar navigation on the left { "Übersicht" (active), "Notizen", "Aufgaben", "Finanzen" }
+
+mittiger Content-Bereich {
+title: "Eventübersicht (Lesemodus)",
+
+liste von einträgen ohne buttons oder bearbeitungsoptionen,
+
+kleiner hinweistext oben: "Schreibrechte deaktiviert – nur Lesen möglich"
+}
+}
+
+Stil: flach, minimal, nur rechtecke und platzhaltertext, kein realistisches UI-design, kein schatten, keine farben, nur wireframe.
+\end{prompt}
+
+
 
 
 \end{document}

@@ -1,0 +1,165 @@
+\babel@toc {ngerman}{}\relax 
+\contentsline {section}{\numberline {1}Fachliche Grundlagen und Anforderungen}{5}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Zielsetzung des Softwareprodukts}{5}{subsection.1.1}%
+\contentsline {subsubsection}{\numberline {1.1.1}Produktname und Begründung}{5}{subsubsection.1.1.1}%
+\contentsline {subsection}{\numberline {1.2}Akteure und Rollen}{5}{subsection.1.2}%
+\contentsline {subsubsection}{\numberline {1.2.1}Nicht registrierte / unangemeldete Akteure}{5}{subsubsection.1.2.1}%
+\contentsline {subsubsection}{\numberline {1.2.2}Registrierte Akteure}{5}{subsubsection.1.2.2}%
+\contentsline {paragraph}{Privatnutzer/Teilnehmer}{5}{section*.1}%
+\contentsline {paragraph}{Gruppenmitglied}{5}{section*.2}%
+\contentsline {paragraph}{Organisator/Gruppenleiter}{6}{section*.3}%
+\contentsline {paragraph}{Institutionsadministrator}{6}{section*.4}%
+\contentsline {paragraph}{Institutionsmitglied}{6}{section*.5}%
+\contentsline {paragraph}{Veranstaltungs-Dienstleister}{6}{section*.6}%
+\contentsline {paragraph}{Mitarbeiter eines Dienstleisters}{6}{section*.7}%
+\contentsline {paragraph}{Kunde/Veranstalter (extern)}{7}{section*.8}%
+\contentsline {subsubsection}{\numberline {1.2.3}Sekundäre Akteure}{7}{subsubsection.1.2.3}%
+\contentsline {paragraph}{Externe Systeme}{7}{section*.9}%
+\contentsline {paragraph}{Systemadministrator}{7}{section*.10}%
+\contentsline {subsection}{\numberline {1.3}Glossar der Fachdomäne}{7}{subsection.1.3}%
+\contentsline {subsubsection}{\numberline {1.3.1}Event}{7}{subsubsection.1.3.1}%
+\contentsline {subsubsection}{\numberline {1.3.2}Gruppe}{7}{subsubsection.1.3.2}%
+\contentsline {subsubsection}{\numberline {1.3.3}Teilnehmer (Privatnutzer)}{7}{subsubsection.1.3.3}%
+\contentsline {subsubsection}{\numberline {1.3.4}Organisator (Gruppenleiter)}{7}{subsubsection.1.3.4}%
+\contentsline {subsubsection}{\numberline {1.3.5}Dienstleister}{7}{subsubsection.1.3.5}%
+\contentsline {subsubsection}{\numberline {1.3.6}Aufgabe}{8}{subsubsection.1.3.6}%
+\contentsline {subsubsection}{\numberline {1.3.7}Notiz}{8}{subsubsection.1.3.7}%
+\contentsline {subsubsection}{\numberline {1.3.8}Umfrage}{8}{subsubsection.1.3.8}%
+\contentsline {subsubsection}{\numberline {1.3.9}Budget}{8}{subsubsection.1.3.9}%
+\contentsline {subsubsection}{\numberline {1.3.10}Rolle}{8}{subsubsection.1.3.10}%
+\contentsline {subsubsection}{\numberline {1.3.11}Institution}{8}{subsubsection.1.3.11}%
+\contentsline {subsubsection}{\numberline {1.3.12}Institutionsadministrator}{8}{subsubsection.1.3.12}%
+\contentsline {subsubsection}{\numberline {1.3.13}Ressource}{8}{subsubsection.1.3.13}%
+\contentsline {section}{\numberline {2}Funktionale Anforderungen}{8}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Funktionale Gruppen Übersicht}{8}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}FG1 Account und Authentifizierung}{9}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}FG2 Profil und Einstellungen}{9}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}FG3 Gruppen- und Eventmanagement}{9}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}FG4 Notizen und Umfragen}{10}{subsection.2.5}%
+\contentsline {subsection}{\numberline {2.6}FG5 Finanzen}{11}{subsection.2.6}%
+\contentsline {subsection}{\numberline {2.7}FG6 Aufgabenmanagement}{11}{subsection.2.7}%
+\contentsline {subsection}{\numberline {2.8}FG7 Medien und Dokumentation}{11}{subsection.2.8}%
+\contentsline {subsection}{\numberline {2.9}FG8 Rollen- und Rechtesystem}{12}{subsection.2.9}%
+\contentsline {subsection}{\numberline {2.10}FG9 Öffentliche Eventseite und QR-Code}{12}{subsection.2.10}%
+\contentsline {subsection}{\numberline {2.11}FG10 Integration und Benachrichtigungen}{12}{subsection.2.11}%
+\contentsline {subsection}{\numberline {2.12}FG11 Dienstleister und Anfragen}{13}{subsection.2.12}%
+\contentsline {subsection}{\numberline {2.13}FG12 Ressourcenplanung}{14}{subsection.2.13}%
+\contentsline {section}{\numberline {3}Nicht-funktionale Anforderungen (ISO 25010)}{14}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Performance Efficiency}{14}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Compatibility}{14}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Usability (Gebrauchstauglichkeit)}{15}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Reliability (Zuverlässigkeit)}{15}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.5}Security (Sicherheit)}{16}{subsection.3.5}%
+\contentsline {subsection}{\numberline {3.6}Maintainability (Wartbarkeit)}{16}{subsection.3.6}%
+\contentsline {subsection}{\numberline {3.7}Portability (Übertragbarkeit)}{17}{subsection.3.7}%
+\contentsline {subsection}{\numberline {3.8}Datenschutz (nicht aus der ISO)}{17}{subsection.3.8}%
+\contentsline {section}{\numberline {4}Graphische Benutzungsschnittstelle}{17}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Designprinzipien und UX-Grundlagen}{17}{subsection.4.1}%
+\contentsline {subsubsection}{\numberline {4.1.1}Zielsetzung der Benutzeroberfläche}{17}{subsubsection.4.1.1}%
+\contentsline {subsubsection}{\numberline {4.1.2}Konsistenz und Navigationskonzept}{18}{subsubsection.4.1.2}%
+\contentsline {subsubsection}{\numberline {4.1.3}Rollenbasierte Darstellung}{18}{subsubsection.4.1.3}%
+\contentsline {subsubsection}{\numberline {4.1.4}Responsives Design und Geräteunabhängigkeit}{18}{subsubsection.4.1.4}%
+\contentsline {subsubsection}{\numberline {4.1.5}Fehlervermeidung und Systemfeedback}{18}{subsubsection.4.1.5}%
+\contentsline {subsubsection}{\numberline {4.1.6}Barrierearme Bedienbarkeit}{18}{subsubsection.4.1.6}%
+\contentsline {subsection}{\numberline {4.2}Navigationsmodelle}{18}{subsection.4.2}%
+\contentsline {subsubsection}{\numberline {4.2.1}Zustandsdiagramm -- Privatnutzer}{19}{subsubsection.4.2.1}%
+\contentsline {subsubsection}{\numberline {4.2.2}Zustandsdiagramm -- Organisator}{19}{subsubsection.4.2.2}%
+\contentsline {subsubsection}{\numberline {4.2.3}Zustandsdiagramm -- Dienstleister}{20}{subsubsection.4.2.3}%
+\contentsline {subsection}{\numberline {4.3}Webbrowser-Mockups}{21}{subsection.4.3}%
+\contentsline {subsubsection}{\numberline {4.3.1}Login \& Registrierung}{21}{subsubsection.4.3.1}%
+\contentsline {subsubsection}{\numberline {4.3.2}Dashboard}{22}{subsubsection.4.3.2}%
+\contentsline {subsubsection}{\numberline {4.3.3}Gruppenübersicht}{23}{subsubsection.4.3.3}%
+\contentsline {subsubsection}{\numberline {4.3.4}Event-Detailseite}{24}{subsubsection.4.3.4}%
+\contentsline {subsubsection}{\numberline {4.3.5}Finanzen}{25}{subsubsection.4.3.5}%
+\contentsline {subsubsection}{\numberline {4.3.6}Notizen \& Umfragen}{26}{subsubsection.4.3.6}%
+\contentsline {subsubsection}{\numberline {4.3.7}Aufgabenplanung}{27}{subsubsection.4.3.7}%
+\contentsline {subsubsection}{\numberline {4.3.8}Profil \& Einstellungen}{28}{subsubsection.4.3.8}%
+\contentsline {subsubsection}{\numberline {4.3.9}Dienstleister-Dashboard}{29}{subsubsection.4.3.9}%
+\contentsline {subsubsection}{\numberline {4.3.10}Rollen- und Rechteverwaltung}{30}{subsubsection.4.3.10}%
+\contentsline {subsubsection}{\numberline {4.3.11}Eventanfrage}{31}{subsubsection.4.3.11}%
+\contentsline {subsubsection}{\numberline {4.3.12}Eventübersicht (Lesemodus)}{32}{subsubsection.4.3.12}%
+\contentsline {subsection}{\numberline {4.4}Mobile-App-Mockups}{33}{subsection.4.4}%
+\contentsline {subsubsection}{\numberline {4.4.1}Dashboard (Mobil)}{33}{subsubsection.4.4.1}%
+\contentsline {subsubsection}{\numberline {4.4.2}Event-Details (Mobil)}{34}{subsubsection.4.4.2}%
+\contentsline {subsubsection}{\numberline {4.4.3}Aufgaben (Mobil)}{35}{subsubsection.4.4.3}%
+\contentsline {subsubsection}{\numberline {4.4.4}Finanzen (Mobil)}{36}{subsubsection.4.4.4}%
+\contentsline {section}{\numberline {5}Logische Sicht}{36}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Ableitung der Domänenklassen aus den User Stories}{36}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Fachliches Domänenmodell (UML-Klassendiagramm)}{37}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Beziehungen, Multiplizitäten und Vererbungen}{38}{subsection.5.3}%
+\contentsline {subsection}{\numberline {5.4}Logisches Datenmodell}{38}{subsection.5.4}%
+\contentsline {subsubsection}{\numberline {5.4.1}Benutzer, Gruppen und Events}{38}{subsubsection.5.4.1}%
+\contentsline {subsubsection}{\numberline {5.4.2}Notizen \& Umfragen}{39}{subsubsection.5.4.2}%
+\contentsline {subsubsection}{\numberline {5.4.3}Finanzen \& Aufgaben}{40}{subsubsection.5.4.3}%
+\contentsline {subsubsection}{\numberline {5.4.4}Dienstleister \& Abrechnung}{42}{subsubsection.5.4.4}%
+\contentsline {subsubsection}{\numberline {5.4.5}Ressourcenplanung}{44}{subsubsection.5.4.5}%
+\contentsline {subsection}{\numberline {5.5}Übersicht der Teilmodelle und Querverweise}{45}{subsection.5.5}%
+\contentsline {subsection}{\numberline {5.6}CRUD-Matrix}{46}{subsection.5.6}%
+\contentsline {section}{\numberline {6}Prozess-Sicht}{47}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Zustandsdiagramm: Event}{47}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Zustandsdiagramm: Rechnung}{48}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}Sequenzdiagramm: Gruppe per Beitrittscode beitreten}{49}{subsection.6.3}%
+\contentsline {subsection}{\numberline {6.4}Sequenzdiagramm: Einzahlung erfassen}{50}{subsection.6.4}%
+\contentsline {section}{\numberline {7}Entwicklungs-Sicht}{50}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Drei-Schichten-Architektur (Client – Server – Datenbank)}{50}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Client-Schicht (Präsentation)}{50}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}Server-Schicht (Applikation / Geschäftslogik)}{51}{subsection.7.3}%
+\contentsline {subsection}{\numberline {7.4}Datenbank-Schicht (Persistenz)}{51}{subsection.7.4}%
+\contentsline {subsection}{\numberline {7.5}Datenfluss}{51}{subsection.7.5}%
+\contentsline {subsection}{\numberline {7.6}Vorteile der Architektur}{52}{subsection.7.6}%
+\contentsline {subsection}{\numberline {7.7}Komponentendiagramm}{52}{subsection.7.7}%
+\contentsline {subsection}{\numberline {7.8}REST-API-Spezifikation}{53}{subsection.7.8}%
+\contentsline {subsubsection}{\numberline {7.8.1}API – Konventionen}{53}{subsubsection.7.8.1}%
+\contentsline {subsubsection}{\numberline {7.8.2}Ressourcen und Endpunkte}{53}{subsubsection.7.8.2}%
+\contentsline {paragraph}{Authentifizierung und Benutzer}{53}{section*.11}%
+\contentsline {paragraph}{Gruppen und Mitgliedschaften}{53}{section*.12}%
+\contentsline {paragraph}{Events}{53}{section*.13}%
+\contentsline {paragraph}{Notizen, Umfragen und Finanzen}{53}{section*.14}%
+\contentsline {section}{\numberline {8}Verteilungs-Sicht}{54}{section.8}%
+\contentsline {subsection}{\numberline {8.1}UML-Verteilungsdiagramm}{54}{subsection.8.1}%
+\contentsline {section}{\numberline {9}Sicherheit und Datenschutz}{55}{section.9}%
+\contentsline {subsection}{\numberline {9.1}STRIDE-Sicherheitsanalyse}{55}{subsection.9.1}%
+\contentsline {subsection}{\numberline {9.2}Schutzmaßnahmen}{55}{subsection.9.2}%
+\contentsline {subsubsection}{\numberline {9.2.1}Authentifizierung}{55}{subsubsection.9.2.1}%
+\contentsline {subsubsection}{\numberline {9.2.2}Autorisierung}{55}{subsubsection.9.2.2}%
+\contentsline {subsubsection}{\numberline {9.2.3}Eingabevalidierung und Datenintegrität}{55}{subsubsection.9.2.3}%
+\contentsline {subsubsection}{\numberline {9.2.4}Transport- und Datensicherheit}{55}{subsubsection.9.2.4}%
+\contentsline {subsubsection}{\numberline {9.2.5}Logging und Monitoring}{56}{subsubsection.9.2.5}%
+\contentsline {subsection}{\numberline {9.3}Datenschutz und DSGVO-Umsetzung}{56}{subsection.9.3}%
+\contentsline {subsubsection}{\numberline {9.3.1}Zugriffsschutz (Privacy by Design)}{56}{subsubsection.9.3.1}%
+\contentsline {subsubsection}{\numberline {9.3.2}Datenminimierung}{56}{subsubsection.9.3.2}%
+\contentsline {subsubsection}{\numberline {9.3.3}Einwilligung und Transparenz}{56}{subsubsection.9.3.3}%
+\contentsline {subsubsection}{\numberline {9.3.4}Löschkonzept und Aufbewahrung}{56}{subsubsection.9.3.4}%
+\contentsline {subsubsection}{\numberline {9.3.5}Betroffenenrechte}{56}{subsubsection.9.3.5}%
+\contentsline {section}{\numberline {10}Arbeitsteilung}{56}{section.10}%
+\contentsline {subsection}{\numberline {10.1}Aufgabenteilung \textbf {Felix Franke}}{56}{subsection.10.1}%
+\contentsline {subsubsection}{\numberline {10.1.1}Fachliche Grundlagen}{56}{subsubsection.10.1.1}%
+\contentsline {subsubsection}{\numberline {10.1.2}Funktionale Anforderungen}{56}{subsubsection.10.1.2}%
+\contentsline {subsubsection}{\numberline {10.1.3}Nicht-funktionale Anforderungen}{57}{subsubsection.10.1.3}%
+\contentsline {subsubsection}{\numberline {10.1.4}GUI \& Usability}{57}{subsubsection.10.1.4}%
+\contentsline {subsection}{\numberline {10.2}Aufgabenteilung \textbf {Markus Wurms}}{57}{subsection.10.2}%
+\contentsline {subsubsection}{\numberline {10.2.1}Domänen- \& Datenmodellierung}{57}{subsubsection.10.2.1}%
+\contentsline {subsubsection}{\numberline {10.2.2}Zustände \& Datenpersistenz}{57}{subsubsection.10.2.2}%
+\contentsline {subsubsection}{\numberline {10.2.3}Systemarchitektur \& Schnittstellen}{57}{subsubsection.10.2.3}%
+\contentsline {subsubsection}{\numberline {10.2.4}Sicherheit \& Datenschutz}{57}{subsubsection.10.2.4}%
+\contentsline {section}{\numberline {11}Übersicht verwendeter Hilfsmittel}{58}{section.11}%
+\contentsline {subsection}{\numberline {11.1}OpenAI ChatGPT (openai.com, chatgpt.com)}{58}{subsection.11.1}%
+\contentsline {subsubsection}{\numberline {11.1.1}Nutzung von ChatGPT zur Formatierung}{58}{subsubsection.11.1.1}%
+\contentsline {subsubsection}{\numberline {11.1.2}Generierung von Mockups}{58}{subsubsection.11.1.2}%
+\contentsline {subsubsection}{\numberline {11.1.3}Prompts}{58}{subsubsection.11.1.3}%
+\contentsline {paragraph}{Login \& Registrierung}{58}{section*.15}%
+\contentsline {paragraph}{Dashboard}{59}{section*.16}%
+\contentsline {paragraph}{Gruppenübersicht}{59}{section*.17}%
+\contentsline {paragraph}{Event-Detailseite}{60}{section*.18}%
+\contentsline {paragraph}{Finanzen}{60}{section*.19}%
+\contentsline {paragraph}{Notizen \& Umfragen}{61}{section*.20}%
+\contentsline {paragraph}{Aufgabenplanung}{62}{section*.21}%
+\contentsline {paragraph}{Profil \& Einstellungen}{62}{section*.22}%
+\contentsline {paragraph}{Dienstleister-Dashboard}{63}{section*.23}%
+\contentsline {paragraph}{Dashboard – Mobil}{64}{section*.24}%
+\contentsline {paragraph}{Event-Detail – Mobil}{65}{section*.25}%
+\contentsline {paragraph}{Aufgaben – Mobil}{65}{section*.26}%
+\contentsline {paragraph}{Finanzen – Mobil}{66}{section*.27}%
+\contentsline {paragraph}{Rollen- und Rechteverteilung}{67}{section*.28}%
+\contentsline {paragraph}{Eventanfrage}{67}{section*.29}%
+\contentsline {paragraph}{Eventübersicht (Lesemodus)}{68}{section*.30}%
