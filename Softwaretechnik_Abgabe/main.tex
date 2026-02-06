@@ -1,0 +1,1094 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{enumitem}
+\usepackage{tocloft} % Optional: Falls du das Inhaltsverzeichnis schöner formatieren willst
+\usepackage{graphicx} % Required for inserting images
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{parskip}
+\usepackage{float}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+
+% --- Sprache/Encoding --- 
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+
+% --- Layout/Typo ---
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+\usepackage{microtype}
+
+% --- Tabellen ---
+\usepackage{longtable}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{ltablex} % kombiniert longtable + tabularx
+\keepXColumns
+
+\usepackage[hidelinks]{hyperref}
+
+% --- Prompt-/Codeblöcke (automatische Zeilenumbrüche) ---
+\usepackage{fancyvrb}
+\usepackage{fvextra}
+
+\title{\textbf{EventHub}}
+\author{\textbf{Felix Franke 1318821}\\ \textbf{Markus Wurms 50106907}}
+\date{\textbf{6. Februar 2026}}
+
+\begin{document}
+
+\maketitle
+
+\newpage
+
+\tableofcontents
+
+\newpage
+
+\vspace{\baselineskip}  % Zeilenumbruch der aktuellen Schriftgröße
+
+\newpage
+
+\section{Einleitung}
+
+
+\subsection{Ziel der Ausarbeitung}
+
+\subsection{Systemüberblick}
+
+\subsection{Aufgabenteilung \textbf{Felix Franke}}
+
+\subsubsection{Fachliche Grundlagen}
+\begin{itemize}
+    \item Analyse der Aufgabenstellung und fachlichen Anforderungen
+    \item Festlegung eines aussagekräftigen Produktnamens
+    \item Identifikation und Beschreibung aller Akteure und Rollen
+    \item Erstellung des Glossars der Fachdomäne
+\end{itemize}
+
+\subsubsection{Funktionale Anforderungen}
+
+\begin{itemize}
+    \item Definition funktionaler Gruppen (z. B. Benutzerverwaltung, Gruppenmanagement, Eventplanung)
+    \item Ausformulierung aller User Stories je funktionaler Gruppe unter Angabe von Rolle, Ziel, Nutzen, Akzeptanzkriterien und MoSCoW-Priorisierung
+    \item Ergänzung fehlender funktionaler Anforderungen (Plausibilitätsprüfung)
+\end{itemize}
+
+\subsubsection{Nicht-funktionale Anforderungen}
+
+\begin{itemize}
+    \item Beschreibung der Qualitätsmerkmale nach ISO 25010 (Usability, Sicherheit, Performance,
+Wartbarkeit etc.)
+    \item Rechtliche und organisatorische Anforderungen (DSGVO, Zustimmungspflichten)
+\end{itemize}
+
+\subsubsection{GUI \& Usability}
+
+\begin{itemize}
+    \item Entwurf der GUI‑Mockups für Webbrowser
+    \item Entwurf der GUI‑Mockups für mobile Endgeräte
+    \item Zustandsdiagramme für die Navigation (je Akteur/Rolle)
+    \item Zuordnung der Screens zu den jeweiligen User Stories
+    \item Beschreibung der angewandten UI-/UX‑Designprinzipien
+\end{itemize} 
+
+\subsection{Aufgabenteilung \textbf{Markus Wurms}}
+
+\subsubsection{Domänen- \& Datenmodellierung}
+
+\begin{itemize}
+    \item Ableitung der Domänenklassen aus den User Stories
+    \item Erstellung des fachlichen Domänenmodells (UML‑Klassendiagramm)
+    \item Modellierung von Beziehungen, Multiplizitäten und Vererbungen
+    \item Ergänzung sinnvoller Attribute und Klassen
+\end{itemize}
+
+\subsubsection{Zustände \& Datenpersistenz}
+
+\begin{itemize}
+    \item Zustandsdiagramme für zentrale Klassen (z. B. Event, Rechnung, Aufgabe)
+    \item Überführung des fachlichen Modells in ein logisches Datenmodell
+    \item Definition von Bewegungsdaten (Zahlungen, Buchungen, Statusänderungen)
+    \item Erstellung der CRUD‑Matrix (User Stories $\leftrightarrow$ Klassen)
+\end{itemize}
+
+\subsubsection{Systemarchitektur \& Schnittstellen}
+
+\begin{itemize}
+    \item Beschreibung der Drei‑Schichten‑Architektur (Client – Server – Datenbank)
+    \item UML‑Verteilungsdiagramm (Hardware-/Systemlandschaft)
+    \item Definition der REST‑API (Ressourcen, Endpunkte, HTTP‑Methoden)
+    \item Sequenzdiagramme für ausgewählte Kern-Use‑Cases
+\end{itemize}
+
+\subsubsection{Sicherheit \& Datenschutz}
+
+\begin{itemize}
+    \item Sicherheitsanalyse mittels STRIDE
+    \item Beschreibung der Schutzmaßnahmen (Authentifizierung, Autorisierung, Verschlüsselung)
+    \item Technische Umsetzung von DSGVO‑Anforderungen (Zugriffsschutz, Datenminimierung,
+Löschkonzepte)
+\end{itemize}
+
+
+\section{Szenarien-Sicht (Use-Case View)}
+
+\subsection{Stakeholder und Benutzerrollen}
+
+\subsection{Überblick über die User Stories}
+
+\subsection{Use-Case-Diagramm}
+
+\subsection{Beschreibung zentraler Use Cases}
+
+\subsubsection{Gruppe erstellen und verwalten}
+
+\subsubsection{Gruppe per Code beitreten}
+
+\subsubsection{Event planen und durchführen}
+
+\subsubsection{Finanzverwaltung (Einzahlungen/Ausgaben)}
+
+
+\section{Logische Sicht}
+
+\subsection{Ableitung der Domänenklassen aus den User Stories}
+
+Die Domänenklassen des Systems EventHub wurden systematisch aus den fachlichen
+Anforderungen und User Stories abgeleitet. Ziel war es, zentrale Konzepte des
+Anwendungsbereichs als eigenständige Klassen zu identifizieren und ihre Beziehungen
+zueinander fachlich korrekt abzubilden.
+
+Aus den User Stories zur Benutzer- und Gruppenverwaltung (z.\,B. Registrierung,
+Gruppenerstellung, Gruppenbeitritt) ergeben sich die Klassen \textit{Benutzer},
+\textit{Gruppe}, \textit{Mitgliedschaft} und \textit{Rolle}. Die Mitgliedschaft
+modelliert dabei explizit die Beziehung zwischen Benutzern und Gruppen inklusive
+Status und Rolle.
+
+User Stories zur Eventplanung und -durchführung führen zur Klasse \textit{Event}
+sowie zu abhängigen Konzepten wie \textit{Aufgabe}, \textit{AufgabenZuweisung},
+\textit{Medium} und \textit{Kommentar}. Diese Klassen ermöglichen die strukturierte
+Organisation und Dokumentation von Events.
+
+Funktionen zur Kommunikation und Abstimmung innerhalb von Gruppen werden durch
+Notizen und Umfragen abgebildet. Daraus ergeben sich die Klassen \textit{Notiz}
+mit ihren Spezialisierungen (Freitext-, Termin- und Ausgaben-Notiz) sowie
+\textit{Umfrage}, \textit{UmfrageOption} und \textit{Stimme}.
+
+Die User Stories zur Finanzverwaltung (Einzahlungen, Rückzahlungen, Kassenübersicht)
+resultieren in den Klassen \textit{Einzahlung}, \textit{Rueckzahlung} und
+berichtenden Strukturen wie dem \textit{Kassensturz}.
+
+Erweiterte User Stories für Dienstleisterprozesse und Ressourcenplanung führen zu
+Domänenklassen wie \textit{Dienstleister}, \textit{Anfrage}, \textit{Angebot},
+\textit{Rechnung}, \textit{Mahnung} sowie \textit{Material}, \textit{Mitarbeiter}
+und den zugehörigen Buchungs- und Einsatzklassen.
+
+Die so identifizierten Domänenklassen bilden die fachliche Grundlage für das
+Klassendiagramm und dienen als Ausgangspunkt für das logische Datenmodell.
+
+\subsection{Fachliches Domänenmodell (UML-Klassendiagramm)}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1.3\textwidth]{Klassendiagramm1.png}
+    \caption{Klassendiagramm1.png}
+    \label{fig:klassendiagramm}
+\end{figure}
+
+\subsection{Beziehungen, Multiplizitäten und Vererbungen}
+
+\subsection{Logisches Datenmodell}
+
+\subsubsection{Benutzer, Gruppen und Events}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1.3\textwidth]{ldm_user_group_event.png}
+    \caption{LDM Benutzer, Gruppen und Events}
+    \label{fig:ldm1}
+\end{figure}
+
+Das logische Datenmodell bildet die zentralen Stammdaten des Systems EventHub ab.
+Die Tabellen \texttt{users}, \texttt{groups} und \texttt{events} repräsentieren
+Benutzer, Gruppen sowie geplante oder durchgeführte Events und stellen damit
+die fachliche Grundlage der Anwendung dar.
+
+Die Beziehung zwischen Benutzern und Gruppen wird über die Tabelle
+\texttt{group\_memberships} modelliert. Dadurch können zusätzliche Informationen
+wie Rolle und Status einer Mitgliedschaft (z.\,B. aktiv, gesperrt oder verlassen)
+explizit gespeichert werden. Rollen werden separat verwaltet, um eine flexible
+Zuordnung von Rechten innerhalb einer Gruppe zu ermöglichen.
+
+Institutionen werden über die Tabelle \texttt{institutions} abgebildet. Die
+Mitgliedschaft von Benutzern in einer Institution erfolgt über
+\texttt{institution\_members}. Gruppen können optional einer Institution
+zugeordnet sein, wodurch sowohl institutionelle als auch private Gruppen
+unterstützt werden.
+
+Events sind eindeutig einer Gruppe zugeordnet und enthalten neben zeitlichen
+Angaben auch fachliche Attribute wie Mindestteilnehmerzahl, Mindestbudget
+und Status. Eindeutige Felder wie E-Mail-Adresse, Benutzername, Beitrittscode
+und öffentliche Event-URLs werden durch \texttt{unique}-Constraints abgesichert.
+Alle Beziehungen sind über Fremdschlüssel eindeutig definiert.
+
+\subsubsection{Notizen \& Umfragen}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1.3\textwidth]{ldm_notes_polls.png}
+    \caption{LDM Notizen \& Umfragen}
+    \label{fig:ldm2}
+\end{figure}
+
+Abbildung~\ref{fig:ldm2} zeigt das logische Datenmodell für gruppenbezogene
+Notizen und Umfragen. Die Tabelle \texttt{notes} speichert alle Notizen als gemeinsame
+Basisstruktur und unterscheidet über \texttt{note\_type} zwischen Freitext-, Termin-
+und Ausgaben-Notizen.
+
+Termin- und Ausgaben-spezifische Attribute werden in den Tabellen
+\texttt{note\_appointments} bzw. \texttt{note\_expenses} abgelegt. Diese Tabellen
+verwenden \texttt{note\_id} gleichzeitig als Primärschlüssel und Fremdschlüssel auf
+\texttt{notes}, wodurch eine 1:1-Beziehung zwischen Basisnotiz und Spezialisierung
+erzielt wird.
+
+Umfragen werden über \texttt{polls} modelliert und sind eindeutig einer Gruppe sowie
+einem Ersteller zugeordnet. Die Antwortmöglichkeiten sind in \texttt{poll\_options}
+abgebildet; abgegebene Stimmen werden als Bewegungsdaten in \texttt{poll\_votes}
+gespeichert. Dadurch sind Auswertungen (z.\,B. Ergebnisdarstellung) möglich, ohne
+Umfragedaten nachträglich zu verändern.
+
+\subsubsection{Finanzen \& Aufgaben}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1.3\textwidth]{ldm_payments_tasks.png}
+    \caption{LDM Finanzen \& Aufgaben}
+    \label{fig:ldm3}
+\end{figure}
+
+Das logische Datenmodell für Finanzen und Aufgaben bildet die zentralen
+Bewegungsdaten im Kontext von Gruppen und Events ab. Finanzielle Transaktionen
+werden über die Tabellen \texttt{payments} und \texttt{refunds} modelliert und
+ermöglichen die Nachverfolgung von Einzahlungen sowie Rückzahlungen innerhalb
+einer Gruppe.
+
+Einzahlungen (\texttt{payments}) sind jeweils einem Benutzer und einer Gruppe
+zugeordnet und enthalten neben dem Betrag auch Informationen zum Zahlungszeitpunkt,
+Zahlungskanal und Status. Rückzahlungen (\texttt{refunds}) referenzieren ebenfalls
+eine Gruppe und einen Benutzer als Empfänger; zusätzlich wird der auslösende
+Benutzer (z.\,B. ein Organisator) separat gespeichert, um Verantwortlichkeiten
+nachvollziehbar abzubilden.
+
+Aufgaben werden über die Tabelle \texttt{tasks} modelliert und sind eindeutig
+einem Event sowie einem Ersteller zugeordnet. Die konkrete Zuweisung von Aufgaben
+an Benutzer erfolgt über \texttt{task\_assignments}. Dadurch können Aufgaben
+mehreren Benutzern zugewiesen und Zustände wie Übernahme oder Erinnerung
+zeitlich dokumentiert werden.
+
+Durch die Trennung von Stammdaten (Aufgaben) und Bewegungsdaten (Zuweisungen,
+Zahlungen, Rückzahlungen) bleibt das Datenmodell flexibel, erweiterbar und
+konsistent.
+
+\subsubsection{Dienstleister \& Abrechnung}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1.0\textwidth]{ldm_providers_invoices.png}
+    \caption{LDM Dienstleister \& Abrechnung}
+    \label{fig:ldm4}
+\end{figure}
+
+Das logische Datenmodell für Dienstleister und Abrechnung bildet den vollständigen
+B2B-Prozess von der Anfrage über Angebot und Rechnung bis hin zu Mahnungen ab.
+Dienstleister werden in der Tabelle \texttt{providers} verwaltet und können optional
+mit einem Benutzerkonto verknüpft sein, sofern ein eigener Dienstleister-Login
+existiert.
+
+Anfragen an Dienstleister werden über \texttt{service\_requests} modelliert und
+enthalten organisatorische sowie zeitliche Rahmenbedingungen eines geplanten Events.
+Auf Basis einer Anfrage kann ein oder mehrere Angebote (\texttt{offers}) entstehen,
+die Preisangaben und einen Angebotsstatus enthalten.
+
+Wird ein Angebot angenommen, kann daraus eine Rechnung (\texttt{invoices}) erzeugt
+werden. Rechnungen enthalten eindeutige Rechnungsnummern, Beträge, Zahlungsfristen
+sowie Statusinformationen. Mahnungen werden in \texttt{reminders} separat gespeichert
+und referenzieren jeweils eine Rechnung, wodurch mehrere Mahnstufen abgebildet werden
+können.
+
+Bewertungen von Dienstleistern erfolgen über \texttt{provider\_ratings} und sind
+einem Benutzer sowie einem Dienstleister zugeordnet. Durch die klare Trennung der
+einzelnen Prozessschritte bleibt das Datenmodell nachvollziehbar, erweiterbar und
+fachlich konsistent.
+
+\subsubsection{Ressourcenplanung}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1.0\textwidth]{ldm_resource_planning.png}
+    \caption{LDM Ressourcenplanung}
+    \label{fig:ldm5}
+\end{figure}
+
+Das logische Datenmodell zur Ressourcenplanung bildet Material- und Personaleinsatz
+im Kontext von Dienstleisterangeboten ab. Materialien werden in \texttt{materials}
+verwaltet und sind eindeutig einem Dienstleister (\texttt{provider\_id}) zugeordnet.
+Über \texttt{material\_categories} können Materialien thematisch klassifiziert werden,
+wobei Kategorienamen durch einen \texttt{unique}-Constraint eindeutig sind.
+
+Konkrete Materialreservierungen für ein Angebot werden über \texttt{material\_bookings}
+modelliert. Jede Buchung referenziert ein \texttt{offer} sowie ein \texttt{material} und
+enthält Zeitraum und Menge, wodurch parallele Buchungen und wiederholte Ausleihen
+abbildbar sind. Wartungsereignisse werden in \texttt{material\_maintenance} als eigene
+Bewegungsdaten gespeichert und referenzieren das jeweilige Material, um Fälligkeiten
+und durchgeführte Wartungen nachvollziehbar zu dokumentieren.
+
+Mitarbeiter werden in \texttt{employees} verwaltet und ebenfalls einem Dienstleister
+zugeordnet. Die Einsatzplanung erfolgt über \texttt{employee\_assignments}, die einen
+Mitarbeiter mit einem Angebot verknüpft und Zeitraum sowie Einsatzstatus
+(z.\,B. geplant, bestätigt, krank, Urlaub) speichert. Insgesamt ermöglicht das Modell
+eine konsistente Planung und Nachverfolgung von Ressourcen pro Angebot.
+
+\subsection{Übersicht der Teilmodelle und Querverweise}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1.0\textwidth]{ldm_connection.png}
+    \caption{LDM Zusammenhang der LDM's}
+    \label{fig:ldm6}
+\end{figure}
+
+Abbildung~\ref{fig:ldm6} zeigt eine kompakte Übersicht über den Zusammenhang
+der fünf logischen Teilmodelle. Zentrale Entitäten sind \texttt{users}, \texttt{groups}
+und \texttt{events}, auf denen die Community-Funktionen wie Notizen, Umfragen, Finanzen
+und Aufgaben aufbauen.
+
+Notizen und Umfragen sind gruppenbezogen modelliert, ebenso Einzahlungen und
+Rückzahlungen. Aufgaben sind an Events gekoppelt und werden damit indirekt über die
+zugehörige Gruppe kontextualisiert. Der Dienstleisterprozess verläuft von
+\texttt{service\_requests} über \texttt{offers} zu \texttt{invoices} und ist über
+\texttt{providers} mit Dienstleistern verknüpft.
+
+Die Ressourcenplanung (Material und Mitarbeiter) ist dem Dienstleister zugeordnet und
+wird über Angebote konkret für einzelne Aufträge/Events gebucht bzw. eingeplant.
+Die Übersicht dient als Navigationshilfe und stellt sicher, dass die Teilmodelle
+konsistent aufeinander referenzieren.
+
+\subsection{CRUD-Matrix (User Stories $\leftrightarrow$ Entitäten)}
+
+\subsection{CRUD-Matrix}
+
+{\small
+\setlength{\LTpre}{0pt}
+\setlength{\LTpost}{0pt}
+
+\begin{longtable}{ |p{3cm}|p{2.5cm}|p{2.5cm}|p{2.5cm}|p{2.5cm}| }
+\caption{CRUD-Matrix}\\
+\hline
+\textbf{Entität (Tabelle)} & \textbf{Create (C)} & \textbf{Read (R)} & \textbf{Update (U)} & \textbf{Delete (D)} \\
+\hline
+\endfirsthead
+
+\hline
+\textbf{Entität (Tabelle)} & \textbf{Create (C)} & \textbf{Read (R)} & \textbf{Update (U)} & \textbf{Delete (D)} \\
+\hline
+\endhead
+
+% --- Teilmodell 1: Benutzer/Gruppe/Event ---
+users &
+US-01 &
+US-02, US-06 &
+US-04, US-05, US-07, US-08, US-09 &
+-- \\
+\hline
+
+institutions &
+-- &
+US-38 &
+-- &
+-- \\
+\hline
+
+institution\_members &
+-- &
+-- &
+US-36, US-37 &
+-- \\
+\hline
+
+groups &
+US-10 &
+US-14 &
+US-15 (Code verwalten implizit), US-16 (Min. Teilnehmer/Budget) &
+US-11 \\
+\hline
+
+group\_memberships &
+US-10 (Organisator wird Mitglied), US-12 &
+US-14 &
+US-13 (Austritt als Statuswechsel), US-15 (sperren/entfernen), US-36, US-37 &
+-- \\
+\hline
+
+events &
+US-10 (Event im Rahmen der Gruppe anlegen), US-39 (öffentliche Seite implizit) &
+US-39 &
+US-16 &
+US-11 (archivieren/löschen) \\
+\hline
+
+% --- Teilmodell 2: Notizen/Umfragen ---
+notes &
+US-17, US-21, US-27 &
+US-20 &
+US-18 &
+US-19 \\
+\hline
+
+note\_appointments &
+US-21 &
+US-21, US-41 &
+US-18 (wenn Termin-Notiz bearbeitet wird) &
+US-19 (via Notiz löschen) \\
+\hline
+
+note\_expenses &
+US-27 &
+US-26, US-28 &
+US-18 (wenn Ausgabe-Notiz bearbeitet wird) &
+US-19 (via Notiz löschen) \\
+\hline
+
+polls &
+US-22 &
+US-24 &
+-- &
+-- \\
+\hline
+
+poll\_options &
+US-22 &
+US-24 &
+-- &
+-- \\
+\hline
+
+poll\_votes &
+US-23 &
+US-24 &
+-- &
+-- \\
+\hline
+
+% --- Teilmodell 3: Finanzen/Aufgaben ---
+payments &
+US-25 &
+US-26, US-28 &
+-- &
+-- \\
+\hline
+
+refunds &
+US-29 &
+US-28 &
+-- &
+-- \\
+\hline
+
+tasks &
+US-30 &
+-- &
+US-32 &
+-- \\
+\hline
+
+task\_assignments &
+US-31 &
+-- &
+US-33 (Erinnerung/Statusdaten) &
+-- \\
+\hline
+
+% --- Medien/Kommentare (falls in eurem Modell) ---
+media &
+US-34 &
+US-34 &
+-- &
+-- \\
+\hline
+
+comments &
+US-35 &
+-- &
+-- &
+-- \\
+\hline
+
+% --- Teilmodell 4: Dienstleister/Abrechnung ---
+providers &
+-- &
+-- &
+-- &
+-- \\
+\hline
+
+service\_requests &
+US-43 &
+-- &
+-- &
+-- \\
+\hline
+
+offers &
+US-44 &
+-- &
+-- &
+-- \\
+\hline
+
+invoices &
+US-45 &
+-- &
+-- &
+-- \\
+\hline
+
+reminders &
+US-46 &
+-- &
+-- &
+-- \\
+\hline
+
+provider\_ratings &
+-- &
+-- &
+-- &
+-- \\
+\hline
+
+% --- Teilmodell 5: Ressourcenplanung ---
+material\_categories &
+-- &
+-- &
+-- &
+-- \\
+\hline
+
+materials &
+US-47 &
+US-47, US-50 &
+US-47 &
+US-47 (falls ``entfernen'' vorgesehen) \\
+\hline
+
+material\_maintenance &
+-- &
+US-50 &
+-- &
+-- \\
+\hline
+
+material\_bookings &
+US-48 &
+-- &
+-- &
+-- \\
+\hline
+
+employees &
+US-49 &
+US-49 &
+US-49 &
+US-49 (falls ``entfernen'' vorgesehen) \\
+\hline
+
+employee\_assignments &
+US-49 (Einsatzplanung implizit) &
+US-49 &
+US-49 &
+-- \\
+\hline
+
+\end{longtable}
+\noindent
+\\
+Die CRUD-Matrix zeigt die Zuordnung der User Stories zu den persistierten Entitäten.
+Bewegungsdaten (z.\,B. Zahlungen, Abstimmungen, Buchungen) werden ausschließlich erzeugt
+(Create) und gelesen (Read), jedoch nicht verändert oder gelöscht.
+
+
+\section{Prozess-Sicht}
+
+\subsection{Zustandsdiagramm: Event}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1.3\textwidth]{Zustandsdiagramm_Event.png}
+    \caption{Zustandsdiagramm\_Event.png}
+    \label{fig:zustandsdiagramm_event}
+\end{figure}
+
+Das Zustandsdiagramm beschreibt den Lebenszyklus eines Events von der initialen
+Erstellung bis zur Archivierung oder Löschung. Nach dem Anlegen befindet sich ein
+Event zunächst im Zustand \textit{Entwurf} und kann geplant, geändert oder verworfen
+werden.
+
+Im Zustand \textit{Geplant} werden fachliche Bedingungen wie Mindestteilnehmerzahl
+und Mindestbudget geprüft. Sind diese erfüllt, wird das Event freigeschaltet und kann
+zum geplanten Zeitpunkt oder manuell in den Zustand \textit{Aktiv} übergehen. Nach
+Abschluss der Veranstaltung wechselt das Event in den Zustand \textit{Abgeschlossen}
+und kann anschließend archiviert oder gemäß definierter Regeln gelöscht werden.
+
+Das Diagramm stellt sicher, dass alle fachlich zulässigen Zustandsübergänge eindeutig
+definiert sind und der Eventstatus jederzeit konsistent ist.
+
+\subsection{Zustandsdiagramm: Rechnung}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1.3\textwidth]{Zustandsdiagramm_Rechnung.png}
+    \caption{Zustandsdiagramm Rechnung}
+    \label{fig:zustandsdiagramm_rechnung}
+\end{figure}
+
+Das Zustandsdiagramm für Rechnungen modelliert den fachlichen Ablauf von der Erstellung
+einer Rechnung bis zu deren Abschluss. Eine Rechnung wird zunächst im Zustand
+\textit{offen} angelegt und kann durch Zahlung in den Zustand \textit{bezahlt}
+übergehen.
+
+Erfolgt innerhalb der definierten Frist keine Zahlung, wechselt die Rechnung in den
+Zustand \textit{überfällig}. In diesem Zustand können Mahnungen erzeugt werden, wodurch
+der Status entsprechend aktualisiert wird. Nach vollständigem Zahlungseingang gilt
+die Rechnung als abgeschlossen.
+
+Durch die Modellierung der Zustände wird sichergestellt, dass Rechnungen nachvollziehbar
+bearbeitet werden und finanzielle Prozesse transparent und regelkonform ablaufen.
+
+\subsection{Sequenzdiagramm: Gruppe per Beitrittscode beitreten}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1.3\textwidth]{Sequenzdiagramm_Gruppebeitreten.png}
+    \caption{Sequenzdiagramm Gruppe per Beitritscode beitreten}
+    \label{fig:seq-join-group}
+\end{figure}
+
+Abbildung~\ref{fig:seq-join-group} zeigt den Ablauf eines Gruppenbeitritts über einen
+Beitrittscode. Der Benutzer initiiert den Vorgang über den Web- oder Mobile-Client,
+welcher einen REST-Request an die Server-Schnittstelle sendet.
+
+Die Server-Schicht prüft die Gültigkeit des Beitrittscodes, den Status der Gruppe
+sowie bestehende Mitgliedschaften. Ist der Beitritt zulässig, wird eine neue
+Mitgliedschaft mit der Rolle \textit{Mitglied} angelegt und persistiert. Andernfalls
+wird eine geeignete Fehlermeldung an den Client zurückgegeben.
+
+Das Diagramm verdeutlicht die Trennung von Präsentation, Geschäftslogik und
+Datenhaltung sowie die serverseitige Durchsetzung fachlicher Regeln.
+
+\subsection{Sequenzdiagramm: Einzahlung erfassen}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1.3\textwidth]{Sequenzdiagramm_Einzahlungerfassen.png}
+    \caption{Sequenzdiagramm Einzahlung erfassen}
+    \label{fig:seq-payment}
+\end{figure}
+
+Abbildung~\ref{fig:seq-payment} zeigt den Ablauf zur Erfassung einer Einzahlung durch
+ein Gruppenmitglied. Der Benutzer gibt den Betrag im Client ein, woraufhin ein
+authentifizierter REST-Request an die Server-Schnittstelle gesendet wird.
+
+Die Server-Schicht prüft zunächst, ob der Benutzer aktives Mitglied der angegebenen
+Gruppe ist. Ist dies der Fall, wird die Einzahlung als Bewegungsdatum in der Datenbank
+persistiert und dem Client eine erfolgreiche Bestätigung zurückgegeben. Andernfalls
+wird der Vorgang mit einem Fehlerstatus abgelehnt.
+
+Das Sequenzdiagramm verdeutlicht die serverseitige Durchsetzung fachlicher Regeln
+sowie die klare Trennung zwischen Client, Geschäftslogik und Datenhaltung.
+
+\section{Entwicklungs-Sicht}
+
+\subsection{Drei-Schichten-Architektur (Client – Server – Datenbank)}
+
+EventHub wird als klassische Drei-Schichten-Architektur umgesetzt. Ziel ist eine klare
+Trennung von Verantwortlichkeiten zwischen Darstellung, Geschäftslogik und Datenhaltung.
+Dadurch werden Wartbarkeit, Skalierbarkeit und Sicherheit verbessert.
+
+\subsection{Client-Schicht (Präsentation)}
+
+Die Client-Schicht umfasst die Webanwendung (Browser) sowie die Mobile App. Sie ist
+verantwortlich für:
+\begin{itemize}
+  \item Benutzerinteraktion (Formulare, Navigation, Validierung auf UI-Ebene)
+  \item Darstellung von Gruppen, Events, Notizen, Umfragen, Finanzen und Aufgaben
+  \item Aufruf der Backend-Schnittstellen über HTTPS (REST)
+  \item Token-basierte Authentifizierung (z.\,B. Speicherung eines Access Tokens)
+\end{itemize}
+
+\noindent
+\textbf{Wichtig:} Fachlogik (z.\,B. Rollenprüfung oder Finanzberechnungen) liegt nicht im
+Client, sondern ausschließlich in der Server-Schicht, um eine Umgehung fachlicher Regeln
+zu verhindern.
+
+\subsection{Server-Schicht (Applikation / Geschäftslogik)}
+
+Die Server-Schicht stellt die zentrale REST-API bereit und enthält die vollständige
+Geschäftslogik der Anwendung. Sie übernimmt unter anderem:
+\begin{itemize}
+  \item Authentifizierung (Login, Zwei-Faktor-Authentifizierung) und Autorisierung
+        (Rollen und Rechte wie Organisator, Mitglied, Institutionsadministrator,
+        Dienstleister)
+  \item Validierung fachlicher Regeln (z.\,B. Beitrittscode, Mindestteilnehmer,
+        Mindestbudget, Sperrstatus)
+  \item Orchestrierung komplexer Use Cases (z.\,B. Anfrage $\rightarrow$ Angebot
+        $\rightarrow$ Rechnung $\rightarrow$ Mahnung)
+  \item Aggregationen und Berichte (z.\,B. Kassenübersicht aus Einzahlungen, Ausgaben
+        und Rückzahlungen)
+  \item Integration externer Dienste (z.\,B. Kalendersynchronisation oder
+        Benachrichtigungskanäle) über Adapter oder Services
+\end{itemize}
+
+Die Server-Schicht kapselt sämtliche Datenzugriffe (z.\,B. über Repository- oder
+DAO-Konzepte) und gibt nach außen ausschließlich kontrollierte Datenobjekte
+(DTOs/JSON) zurück.
+
+\subsection{Datenbank-Schicht (Persistenz)}
+
+Die Datenbank-Schicht ist für die persistente Speicherung aller relevanten Daten
+verantwortlich. Dazu zählen unter anderem:
+\begin{itemize}
+  \item Stammdaten: Benutzer, Gruppen, Events, Dienstleister, Material, Mitarbeiter
+  \item Bewegungsdaten: Einzahlungen, Abstimmungen, Buchungen, Einsätze, Mahnungen
+  \item Status- und Historieninformationen (z.\,B. Mitgliedschaft aktiv, gesperrt oder
+        verlassen)
+\end{itemize}
+
+Zugriffe auf die Datenbank erfolgen ausschließlich über die Server-Schicht. Ein direkter
+Datenbankzugriff vom Client ist nicht möglich. Dadurch können Rechteprüfungen,
+Datenschutzmaßnahmen und Konsistenzregeln zentral durchgesetzt werden.
+
+\subsection{Datenfluss}
+
+Der typische Datenfluss innerhalb der Drei-Schichten-Architektur gestaltet sich wie
+folgt:
+\begin{enumerate}
+  \item Der Client sendet einen Request (HTTPS/REST) an den Server, inklusive
+        Authentifizierungs-Token.
+  \item Der Server prüft Token und Berechtigungen und führt die entsprechende
+        Geschäftslogik aus.
+  \item Der Server liest oder schreibt Daten in der Datenbank.
+  \item Der Server antwortet mit einem JSON-Ergebnis, das vom Client dargestellt wird.
+\end{enumerate}
+
+\subsection{Vorteile der Architektur}
+
+Die gewählte Drei-Schichten-Architektur bietet für EventHub folgende Vorteile:
+\begin{itemize}
+  \item \textbf{Sicherheit:} Rechte- und DSGVO-Regeln werden zentral im Server
+        durchgesetzt und können nicht clientseitig umgangen werden.
+  \item \textbf{Wartbarkeit:} Benutzeroberfläche, Geschäftslogik und Datenhaltung
+        können unabhängig voneinander weiterentwickelt werden.
+  \item \textbf{Skalierbarkeit:} Die Server-Schicht kann horizontal skaliert werden,
+        während die Datenbank separat optimiert werden kann.
+  \item \textbf{Portabilität:} Web- und Mobile-Clients nutzen dieselbe REST-API.
+\end{itemize}
+
+\subsection{Komponentendiagramm}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{Komponentendiagramm.png}
+    \caption{Komponentendiagramm}
+    \label{fig:Komponentendiagramm}
+\end{figure}
+
+Abbildung~\ref{fig:Komponentendiagramm} visualisiert die Drei-Schichten-Architektur von
+EventHub als Komponentendiagramm. Die Client-Schicht (Web Client und Mobile App)
+kommuniziert ausschließlich über HTTPS/JSON mit der REST-API der Server-Schicht.
+
+In der Server-Schicht kapselt die \textit{Business Logic} die fachlichen Regeln und
+Use-Case-Abläufe, während \textit{Authentification \& Authorization} die Authentifizierung und
+rollenbasierte Zugriffsprüfung zentral durchsetzt. Persistente Daten werden in der
+Datenbank-Schicht gespeichert; der Zugriff darauf erfolgt ausschließlich serverseitig,
+wodurch Konsistenz- und Sicherheitsanforderungen zentral kontrolliert werden können.
+
+\subsection{REST-API-Spezifikation}
+
+\subsubsection{API – Konventionen}
+
+\begin{itemize}
+  \item \textbf{Base URL:} \texttt{/api/v1}
+  \item \textbf{Datenformat:} JSON (UTF-8)
+  \item \textbf{Authentifizierung:} Token-basiert (Authorization: Bearer Token)
+  \item \textbf{Autorisierung:} Rollen- und Rechteprüfung serverseitig
+  \item \textbf{Statuscodes:} 200 OK, 201 Created, 204 No Content, 400 Bad Request,
+        401 Unauthorized, 403 Forbidden, 404 Not Found, 409 Conflict
+\end{itemize}
+
+\subsubsection{Ressourcen und Endpunkte}
+
+\paragraph{Authentifizierung und Benutzer}
+
+\begin{longtable}{|p{5cm}|p{2cm}|p{7cm}|}
+\hline
+\textbf{Endpoint} & \textbf{Methode} & \textbf{Beschreibung} \\
+\hline
+\endfirsthead
+\hline
+\textbf{Endpoint} & \textbf{Methode} & \textbf{Beschreibung} \\
+\hline
+\endhead
+
+/auth/register & POST & Benutzer registrieren (US-01) \\
+\hline
+/auth/login & POST & Benutzer anmelden (US-02) \\
+\hline
+/auth/2fa/verify & POST & Zwei-Faktor-Authentifizierung bestätigen \\
+\hline
+/auth/logout & POST & Benutzer abmelden \\
+\hline
+/users/me & GET & Eigenes Benutzerprofil abrufen (US-06) \\
+\hline
+/users/me & PATCH & Profil bearbeiten (US-04, US-07, US-08, US-09) \\
+\hline
+/users/me/privacy-consent & POST & DSGVO-Zustimmung speichern \\
+\hline
+\end{longtable}
+
+\paragraph{Gruppen und Mitgliedschaften}
+
+\begin{longtable}{|p{5cm}|p{2cm}|p{7cm}|}
+\hline
+\textbf{Endpoint} & \textbf{Methode} & \textbf{Beschreibung} \\
+\hline
+\endfirsthead
+\hline
+\textbf{Endpoint} & \textbf{Methode} & \textbf{Beschreibung} \\
+\hline
+\endhead
+
+/groups & POST & Gruppe anlegen (US-10) \\
+\hline
+/groups & GET & Eigene Gruppen anzeigen (US-14) \\
+\hline
+/groups/{groupId} & GET & Gruppendetails anzeigen \\
+\hline
+/groups/{groupId} & DELETE & Gruppe löschen/archivieren (US-11) \\
+\hline
+/groups/{groupId}/join-code & POST & Beitrittscode verwalten (US-15) \\
+\hline
+/groups/{groupId}/members/join & POST & Gruppe per Code beitreten (US-12) \\
+\hline
+/groups/{groupId}/members/{userId} & PATCH & Mitglied sperren/Rolle ändern (US-15) \\
+\hline
+/groups/{groupId}/leave & POST & Gruppe verlassen (US-13) \\
+\hline
+\end{longtable}
+
+\paragraph{Events}
+
+\begin{longtable}{|p{5cm}|p{2cm}|p{7cm}|}
+\hline
+\textbf{Endpoint} & \textbf{Methode} & \textbf{Beschreibung} \\
+\hline
+\endfirsthead
+\hline
+\textbf{Endpoint} & \textbf{Methode} & \textbf{Beschreibung} \\
+\hline
+\endhead
+
+/groups/{groupId}/events & POST & Event anlegen \\
+\hline
+/groups/{groupId}/events & GET & Events einer Gruppe anzeigen \\
+\hline
+/events/{eventId} & GET & Eventdetails anzeigen \\
+\hline
+/events/{eventId} & PATCH & Event bearbeiten (US-16) \\
+\hline
+/events/{eventId}/archive & POST & Event archivieren \\
+\hline
+/events/{eventId}/public & GET & Öffentliche Eventseite (US-39) \\
+\hline
+\end{longtable}
+
+\paragraph{Notizen, Umfragen und Finanzen}
+
+\begin{longtable}{|p{5cm}|p{2cm}|p{7cm}|}
+\hline
+\textbf{Endpoint} & \textbf{Methode} & \textbf{Beschreibung} \\
+\hline
+\endfirsthead
+\hline
+\textbf{Endpoint} & \textbf{Methode} & \textbf{Beschreibung} \\
+\hline
+\endhead
+
+/groups/{groupId}/notes & POST & Notiz anlegen (US-17, US-21, US-27) \\
+\hline
+/groups/{groupId}/notes & GET & Notizen anzeigen (US-20) \\
+\hline
+/notes/{noteId} & PATCH & Notiz bearbeiten (US-18) \\
+\hline
+/notes/{noteId} & DELETE & Notiz löschen (US-19) \\
+\hline
+/groups/{groupId}/polls & POST & Umfrage anlegen (US-22) \\
+\hline
+/polls/{pollId}/vote & POST & Abstimmen (US-23) \\
+\hline
+/groups/{groupId}/payments & POST & Einzahlung erfassen (US-25) \\
+\hline
+/groups/{groupId}/finance/summary & GET & Kassenübersicht (US-28) \\
+\hline
+\end{longtable}
+
+\noindent
+\\
+Die REST-API stellt alle Systemfunktionen als versionierte Ressourcen bereit.
+Die Kommunikation erfolgt ausschließlich über HTTPS mit JSON als Austauschformat.
+Geschäftslogik sowie Sicherheits- und Datenschutzregeln werden serverseitig durchgesetzt.
+
+
+\section{Verteilungs-Sicht}
+
+\subsection{UML-Verteilungsdiagramm}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1.2\textwidth]{Verteilungsdiagramm.png}
+    \caption{Verteilungsdiagramm}
+    \label{fig:deployment}
+\end{figure}
+
+Abbildung~\ref{fig:deployment} zeigt die physische Verteilung der Systemkomponenten
+von EventHub zur Laufzeit. Web-Client (Browser) und Mobile App laufen auf
+Client-Geräten und kommunizieren ausschließlich über HTTPS/REST mit dem
+Backend-Server.
+
+Der Backend-Server hostet die REST-API sowie zentrale Komponenten für
+Geschäftslogik und Authentifizierung/Autorisierung. Persistente Daten werden auf
+einem separaten Datenbank-Server gespeichert, der ausschließlich vom Backend
+angesprochen wird.
+
+Zusätzlich sind optionale externe Dienste angebunden, darunter ein
+Benachrichtigungsdienst (E-Mail/SMS/Push), ein Kalenderdienst sowie ein
+Objektspeicher für Medieninhalte. Diese werden über gesicherte HTTPS-Schnittstellen
+vom Backend aus integriert.
+
+\subsection{Systemlandschaft und externe Dienste}
+
+
+\section{Sicherheit und Datenschutz}
+
+\subsection{STRIDE-Sicherheitsanalyse}
+
+Die Sicherheitsanalyse des Systems erfolgt anhand des STRIDE-Modells. Betrachtet wird
+der Systemkontext bestehend aus Web-/Mobile-Client, REST-API (Backend) und Datenbank.
+\\
+\begin{longtable}{|p{2cm}|p{4cm}|p{4cm}|p{5cm}|}
+\hline
+\textbf{STRIDE} & \textbf{Risiko} & \textbf{Beispiel} & \textbf{Gegenmaßnahmen} \\
+\hline
+\endfirsthead
+\hline
+\textbf{STRIDE} & \textbf{Risiko} & \textbf{Beispiel} & \textbf{Gegenmaßnahmen} \\
+\hline
+\endhead
+
+S (Spoofing) &
+Identitätsvortäuschung &
+Account-Übernahme durch gestohlene Zugangsdaten &
+Passwort-Hashing (Argon2/bcrypt), HTTPS, 2FA, Rate-Limiting, Token mit begrenzter Laufzeit \\
+\hline
+
+T (Tampering) &
+Manipulation von Daten &
+Manipulierte Requests mit fremden IDs &
+Serverseitige Validierung, Autorisierungsprüfungen, Prepared Statements, Ownership-Checks \\
+\hline
+
+R (Repudiation) &
+Abstreitbarkeit von Aktionen &
+Benutzer bestreitet Zahlung oder Sperre &
+Audit-Logging (wer/was/wann), serverseitige Zeitstempel, Request-IDs \\
+\hline
+
+I (Information Disclosure) &
+Informationsleck &
+Unbefugter Zugriff auf Gruppen- oder Profildaten &
+RBAC, Datenminimierung, sichere Fehlerausgaben, Verschlüsselung in Transit und at Rest \\
+\hline
+
+D (Denial of Service) &
+Dienstverweigerung &
+Brute-Force-Login oder API-Spam &
+Rate-Limits, Timeouts, Paging, WAF/Reverse-Proxy \\
+\hline
+
+E (Elevation of Privilege) &
+Rechteausweitung &
+Mitglied wird unberechtigt Organisator &
+Serverseitige Rollenprüfung, getrennte Admin-Endpunkte, gültige Rollen-Constraints \\
+\hline
+\end{longtable}
+
+\subsection{Schutzmaßnahmen}
+
+\subsubsection{Authentifizierung}
+Die Authentifizierung erfolgt über ein tokenbasiertes Verfahren (Bearer Token).
+Passwörter werden ausschließlich gehasht und gesalzen gespeichert. Optional kann eine
+Zwei-Faktor-Authentifizierung (2FA) aktiviert werden.
+
+\subsubsection{Autorisierung}
+Die Autorisierung erfolgt serverseitig über rollenbasierte Zugriffskontrollen (RBAC).
+Zusätzlich wird bei jedem Zugriff geprüft, ob der Benutzer zur angeforderten Ressource
+(z.\,B. Gruppe oder Event) gehört.
+
+\subsubsection{Eingabevalidierung und Datenintegrität}
+Alle Eingaben werden serverseitig validiert. Datenbankzugriffe erfolgen ausschließlich
+über vorbereitete Statements oder ORM-Mechanismen, um Manipulationen zu verhindern.
+
+\subsubsection{Transport- und Datensicherheit}
+Die gesamte Kommunikation erfolgt über TLS (HTTPS). Persistente Daten werden verschlüsselt
+gespeichert oder auf verschlüsselten Datenträgern abgelegt. Backups werden ebenfalls
+verschlüsselt gespeichert.
+
+\subsubsection{Logging und Monitoring}
+Sicherheitsrelevante Aktionen wie Login-Versuche, Rollenänderungen oder Zahlungen werden
+auditierbar protokolliert. Monitoring-Mechanismen erkennen ungewöhnliche Zugriffsmuster.
+
+\subsection{Datenschutz und DSGVO-Umsetzung}
+
+\subsubsection{Zugriffsschutz (Privacy by Design)}
+Der Zugriff auf personenbezogene Daten ist ausschließlich berechtigten Benutzern möglich.
+Öffentlich zugängliche Inhalte zeigen nur explizit freigegebene Informationen.
+
+\subsubsection{Datenminimierung}
+Es werden nur Daten erhoben und gespeichert, die für den Betrieb der Anwendung erforderlich
+sind. Sensible Informationen wie Passwörter werden niemals im Klartext gespeichert.
+
+\subsubsection{Einwilligung und Transparenz}
+Die Zustimmung zur Datenschutzerklärung wird mit Zeitstempel und Versionsnummer
+(\texttt{privacy\_accepted\_at}, \texttt{privacy\_version}) gespeichert und ist nachvollziehbar.
+
+\subsubsection{Löschkonzept und Aufbewahrung}
+Benutzer können ihr Konto löschen lassen. Personenbezogene Daten werden dabei gelöscht oder
+anonymisiert. Beim Austritt aus Gruppen werden zugehörige Einzahlungen gemäß fachlicher
+Vorgabe entfernt oder logisch gelöscht (Soft-Delete).
+
+\subsubsection{Betroffenenrechte}
+Das System unterstützt die Rechte auf Auskunft, Berichtigung und Löschung personenbezogener
+Daten. Ein Export der eigenen Daten kann in strukturierter Form bereitgestellt werden.
+
+
+\section{Fazit und Ausblick (eventuell entfernen)}
+
+
+\section{AB HIER ENDET DAS OFFIZIELLE INHALTSVERZEICHNISS}
+
+
+\end{document}
